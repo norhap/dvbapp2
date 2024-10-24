@@ -2929,6 +2929,9 @@ msgstr "Reposo automático"
 msgid "Auto(not available)"
 msgstr "Auto (no disponible)"
 
+msgid "AutoBoquetsMaker was installed successfully.\nIt is necessary to restart enigma2 to apply the changes.\nDo you want to do it now?"
+msgstr "AutoBoquetsMaker se instaló correctamente.\nEs necesario reiniciar enigma2 para aplicar los cambios.\n¿Quiere hacerlo ahora?"
+
 #
 msgid "AutoMountManager"
 msgstr "Administrador de automontaje"
@@ -7929,6 +7932,9 @@ msgstr ""
 
 msgid "Encrypted: "
 msgstr "Cifrado: "
+
+msgid "Encrypted TV"
+msgstr "TV encriptado"
 
 #
 msgid "Encryption"
@@ -14117,6 +14123,9 @@ msgstr ""
 msgid "Other panel directory (%s)"
 msgstr "Otro panel de directorio (%s)"
 
+msgid "Others"
+msgstr "Otros"
+
 msgid "Output text:"
 msgstr "Texto de salida:"
 
@@ -18875,6 +18884,9 @@ msgstr "Información de canal"
 msgid "Services"
 msgstr "Canales"
 
+msgid "Services list"
+msgstr "Lista de Canales"
+
 msgid ""
 "Services may be grouped in bouquets. When enabled, you can use more than one "
 "bouquet."
@@ -23164,6 +23176,9 @@ msgid ""
 msgstr ""
 "Para restaurar la imagen, use la opción Flash Online del Administrador de "
 "software."
+
+msgid "To view and sort channels with YELLOW button:\nYou can install AutoBouquetsMaker.\nDo you want to install it now?"
+msgstr "Para ver y clasificar canales con botón AMARILLO:\nPuedes instalar AutoBouquetsMaker.\n¿Quieres instalarlo ahora?"
 
 #, python-format
 msgid "To where would you like to extract '%s'?"

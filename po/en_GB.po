@@ -2652,6 +2652,9 @@ msgstr ""
 msgid "Auto(not available)"
 msgstr ""
 
+msgid "AutoBoquetsMaker was installed successfully.\nIt is necessary to restart enigma2 to apply the changes.\nDo you want to do it now?"
+msgstr ""
+
 msgid "AutoCam Settings"
 msgstr ""
 
@@ -7038,6 +7041,9 @@ msgstr ""
 
 msgid "Encrypted: "
 msgstr "Encrypted: "
+
+msgid "Encrypted TV"
+msgstr ""
 
 msgid "Encryption"
 msgstr "Encryption"
@@ -12557,6 +12563,9 @@ msgstr ""
 msgid "Other panel directory (%s)"
 msgstr ""
 
+msgid "Others"
+msgstr ""
+
 msgid "Output text:"
 msgstr ""
 
@@ -16548,7 +16557,10 @@ msgid "Services"
 msgstr "Services"
 
 msgid "Services may be grouped in bouquets. When enabled, you can use more than one bouquet."
-msgstr "Services may be grouped in bouquets. When enabled, you can use more than one bouquet."
+msgstr ""
+
+msgid "Services list"
+msgstr ""
 
 msgid "Set As Startup Service"
 msgstr ""
@@ -20162,6 +20174,9 @@ msgid "To restore the image check the manual or documentation for the receiver."
 msgstr ""
 
 msgid "To restore the image use 'OnlineFlash' option in the 'SoftwareManager' menu."
+msgstr ""
+
+msgid "To view and sort channels with YELLOW button:\nYou can install AutoBouquetsMaker.\nDo you want to install it now?"
 msgstr ""
 
 #, python-format
