@@ -102,8 +102,8 @@
     <panel name="RelojAbajo" />
   </screen>
   <screen name="MenuSummary" position="0,0" size="220,176">
-    <widget source="Title" render="Label" position="0,0" size="220,52" font="VFD; 33" halign="center" valign="center" foregroundColor="azul" />
-    <widget source="entry" render="Label" position="top" size="*,53" font="FdLcD;26" halign="center" valign="center"/>
+    <widget source="Title" render="Label" position="top" size="*,52" font="VFD; 33" halign="center" valign="top" foregroundColor="azul" />
+    <widget source="entry" render="Label" position="top" size="*,53" font="VFD;32" halign="center" valign="center"/>
     <panel name="RelojAbajo" />
   </screen>
   <screen name="ServiceScanSummary" position="0,0" size="220,176">
