@@ -28688,7 +28688,7 @@ msgid "Connect to the Internet"
 msgstr "Conectar a internet"
 
 msgid "Continue with package download and installation"
-msgstr "Continuar con la descarga e instalación de paquetes"
+msgstr "Continuar con la descarga e instalación de paquetes básicos"
 
 msgid "Create Expander"
 msgstr "Crear expander"
@@ -28924,7 +28924,7 @@ msgstr "Apagando. Espera por favor..."
 
 msgid "Skip package installation, only core packages will be available"
 msgstr ""
-"Omitir instalación de paquetes, solo estarán disponibles los paquetes básicos"
+"Omitir instalación de paquetes, solo paquetes básicos (sin servicio FTP)"
 
 msgid "Small Box Preparation"
 msgstr "Preparación receptor"
