@@ -1235,8 +1235,8 @@ msgstr "%s importados del tuner reserva"
 
 #. TRANSLATORS: The satellite with name '%s' is no longer used after a configuration change. The user is asked whether or not the satellite should be deleted.
 #, python-format
-msgid "%s is no longer used. Should it be deleted?"
-msgstr "%s ya no se utiliza. ¿Quieres borrarlo?"
+msgid "\n%s is no longer used.\nYou want to delete services?"
+msgstr "\n%s ya no se utiliza.\n¿Quieres eliminar los canales?"
 
 #, python-format
 msgid "%s long"
@@ -1413,13 +1413,6 @@ msgstr "0"
 #
 msgid "1"
 msgstr "1"
-
-msgid ""
-"1. Set this channel as the standby start channel.\n"
-"2. Put the receiver into standby, then recording will start.\n"
-msgstr ""
-"1. Establezca como canal de inicio en reposo este canal.\n"
-"2. Ponga el receptor en standby, la grabación entonces comenzará.\n"
 
 msgid "1. Tune to an imported channel with at least EPG EIT.\n2. Restart enigma2.\n3. Now try to download EPG cache from the reserve receiver."
 msgstr "1. Sintonice un canal importado con al menos EPG EIT.\n2. Reinicie Enigma2.\n3. Ahora intente descargar la caché EPG del receptor reserva."
@@ -1725,6 +1718,9 @@ msgid ""
 msgstr ""
 "Se ha iniciado una grabación:\n"
 "%s"
+
+msgid "A recording has started:"
+msgstr "Ha comenzado una grabación:"
 
 #
 msgid ""
@@ -4136,6 +4132,9 @@ msgstr "Información de canal"
 msgid "Channel List"
 msgstr "Lista de canales"
 
+msgid "Channel Number"
+msgstr "Número de canal"
+
 #
 msgid "Channel List Menu"
 msgstr "Menú de lista de canales"
@@ -4329,8 +4328,8 @@ msgstr "Chino"
 msgid "Chinese (Simplified)"
 msgstr "Chino (simplificado)"
 
-msgid "Choice Box"
-msgstr "Elige receptor"
+msgid "Choice action"
+msgstr "Elige acción"
 
 msgid "Choice List Actions"
 msgstr "Acciones lista de opciones"
@@ -6603,6 +6602,9 @@ msgstr "Eliminar entrada en la lista de reproducción"
 msgid "Delete saved play list"
 msgstr "Eliminar lista de reproducción guardada"
 
+msgid "Delete services"
+msgstr "Eliminar canales"
+
 msgid "Delete the character to the left of text cursor"
 msgstr "Eliminar el carácter a la izquierda del cursor de texto"
 
@@ -7036,6 +7038,9 @@ msgstr "No cambiar"
 
 msgid "Do not check the Internet and packages"
 msgstr "No revisar Internet y paquetes"
+
+msgid "Do not delete services"
+msgstr "No eliminar canales"
 
 msgid "Do not flash image"
 msgstr "No instalar la imagen"
@@ -13526,10 +13531,6 @@ msgstr "¡No se encontró ningún Timeshift para guardar como grabación!"
 msgid "No timeout"
 msgstr "Sin plazo"
 
-#
-msgid "No to all"
-msgstr "No a todo"
-
 msgid "No transparency"
 msgstr "Sin transparencia"
 
@@ -19892,6 +19893,9 @@ msgstr "Mostrar detalles de la tarea resaltada"
 msgid "Show directories first"
 msgstr "Mostrar primero las carpetas"
 
+msgid "Show during operation"
+msgstr "Mostrar durante el funcionamiento"
+
 # Menue Anpassungen OSD
 msgid ""
 "Show encryption information in the InfoBar (when supported by the skin)."
@@ -22637,10 +22641,11 @@ msgstr ""
 "Esta opción te permite elegir cómo visualizar el tiempo restante, "
 "transcurrido o ambos."
 
-msgid ""
-"This option allows you choose if the display shows the time or nothing in "
-"Standby."
-msgstr "Esta opción le permite elegir si mostrar la hora o nada en reposo."
+msgid "This option allows you choose how to display the remaining/elapsed time for media playback."
+msgstr "Esta opción le permite elegir cómo mostrar el tiempo restante/transcurrido para la reproducción multimedia."
+
+msgid "This option allows you choose if the display shows the time or nothing in Standby."
+msgstr "Esta opción le permite elegir si la pantalla muestra la hora o nada en reposo."
 
 msgid ""
 "This option allows you choose how to display the remaining/elapsed time for "
@@ -22648,13 +22653,6 @@ msgid ""
 msgstr ""
 "Esta opción te permite elegir cómo visualizar el tiempo restante/"
 "transcurrido de la TV en directo."
-
-msgid ""
-"This option allows you choose how to display the remaining/elapsed time for "
-"media playback."
-msgstr ""
-"Esta opción te permite elegir cómo visualizar el tiempo restante/"
-"transcurrido en el reproductor de recursos."
 
 msgid ""
 "This option allows you choose the background color of transparent picons."
@@ -23292,6 +23290,9 @@ msgstr "Propiedades de título"
 #
 msgid "Titleset mode"
 msgstr "Modo título"
+
+msgid "To be able to record, put the receiver into standby mode."
+msgstr "Para poder grabar ponga el receptor en modo de espera."
 
 msgid ""
 "To complete the setup the %s %s must connect to the Internet.  Connect the "
@@ -25823,10 +25824,6 @@ msgstr "Sí"
 
 msgid "Yes (safe mode)"
 msgstr "Sí (modo seguro)"
-
-#
-msgid "Yes to all"
-msgstr "Si a todo"
 
 msgid "Yes, always"
 msgstr "Sí, siempre"
@@ -28689,7 +28686,7 @@ msgid "Connect to the Internet"
 msgstr "Conectar a internet"
 
 msgid "Continue with package download and installation"
-msgstr "Continuar con la descarga e instalación de paquetes"
+msgstr "Continuar con la descarga e instalación de paquetes básicos"
 
 msgid "Create Expander"
 msgstr "Crear expander"
@@ -28925,7 +28922,7 @@ msgstr "Apagando. Espera por favor..."
 
 msgid "Skip package installation, only core packages will be available"
 msgstr ""
-"Omitir instalación de paquetes, solo estarán disponibles los paquetes básicos"
+"Omitir instalación de paquetes, solo paquetes básicos (sin servicio FTP)"
 
 msgid "Small Box Preparation"
 msgstr "Preparación receptor"

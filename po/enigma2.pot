@@ -1142,10 +1142,6 @@ msgid "%s %sB"
 msgstr ""
 
 #, python-format
-msgid "%s (%04o)"
-msgstr ""
-
-#, python-format
 msgid "%s - Setup"
 msgstr ""
 
@@ -1198,7 +1194,7 @@ msgstr ""
 
 #. TRANSLATORS: The satellite with name '%s' is no longer used after a configuration change. The user is asked whether or not the satellite should be deleted.
 #, python-format
-msgid "%s is no longer used. Should it be deleted?"
+msgid "\n%s is no longer used.\nYou want to delete services?"
 msgstr ""
 
 #, python-format
@@ -1582,6 +1578,9 @@ msgstr ""
 #, python-format
 msgid "A recording has been started:\n"
 "%s"
+msgstr ""
+
+msgid "A recording has started:"
 msgstr ""
 
 msgid "A recording is currently running.\n"
@@ -3655,6 +3654,9 @@ msgstr ""
 msgid "Channel List"
 msgstr ""
 
+msgid "Channel Number"
+msgstr ""
+
 msgid "Channel Selection"
 msgstr ""
 
@@ -3822,7 +3824,7 @@ msgstr ""
 msgid "Chinese (Simplified)"
 msgstr ""
 
-msgid "Choice Box"
+msgid "Choice action"
 msgstr ""
 
 msgid "Choice List Actions"
@@ -5602,6 +5604,9 @@ msgstr ""
 msgid "Delete saved play list"
 msgstr ""
 
+msgid "Delete services"
+msgstr ""
+
 msgid "Delete the character to the left of text cursor"
 msgstr ""
 
@@ -5983,6 +5988,9 @@ msgid "Do not backup the image"
 msgstr ""
 
 msgid "Do not change"
+msgstr ""
+
+msgid "Do not delete services"
 msgstr ""
 
 msgid "Do not flash image"
@@ -11579,9 +11587,6 @@ msgstr ""
 msgid "No timeout"
 msgstr ""
 
-msgid "No to all"
-msgstr ""
-
 msgid "No transparency"
 msgstr ""
 
@@ -16663,6 +16668,9 @@ msgstr ""
 msgid "Show directories first"
 msgstr ""
 
+msgid "Show during operation"
+msgstr ""
+
 msgid "Show encryption information in the InfoBar (when supported by the skin)."
 msgstr ""
 
@@ -18959,6 +18967,12 @@ msgstr ""
 msgid "This option allows you choose how to display the remaining/elapsed time for media playback."
 msgstr ""
 
+msgid "This option allows you choose if the display shows the time or nothing in Standby."
+msgstr ""
+
+msgid "This option allows you choose if the display shows the time, channel number or nothing during operation."
+msgstr ""
+
 msgid "This option allows you choose the background color of transparent picons."
 msgstr ""
 
@@ -19389,6 +19403,9 @@ msgid "Title properties"
 msgstr ""
 
 msgid "Titleset mode"
+msgstr ""
+
+msgid "To be able to record, put the receiver into standby mode."
 msgstr ""
 
 msgid "To complete the setup the %s %s must connect to the Internet.  Connect the %s %s to the Internet now."
@@ -21360,9 +21377,6 @@ msgid "Yes"
 msgstr ""
 
 msgid "Yes (safe mode)"
-msgstr ""
-
-msgid "Yes to all"
 msgstr ""
 
 msgid "Yes, always"
