@@ -732,6 +732,40 @@ class AdapterSetup(ConfigListScreen, Screen):
 								if not isExistBcmWifi:
 									self.list.append(self.encryptionType)
 							self.list.append(self.encryptionKey)
+		wlanactive = "auto wlan"  # start OpenSPA [norhap] check active second interface.
+		wlainactive = "# auto wlan"
+		lanactive = "auto eth"
+		laniactive = "# auto eth"
+		ifaces = False
+		if self.activateInterfaceEntry.value:
+			if exists(interfacesfile):
+				with open(interfacesfile) as f:
+					output = f.read()
+				if not iNetwork.isWirelessInterface(self.iface):
+					if output.find(wlainactive) >= 0:
+						ifaces = False
+					elif output.find(wlanactive) >= 0:
+						ifaces = True
+				else:
+					if output.find(laniactive) >= 0:
+						ifaces = False
+					elif output.find(lanactive) >= 0:
+						ifaces = True
+		else:
+			if exists(interfacesfile):
+				with open(interfacesfile) as f:
+					output = f.read()
+				if not iNetwork.isWirelessInterface(self.iface):
+					if output.find(wlainactive) >= 0:
+						ifaces = False
+					elif output.find(wlanactive) >= 0:
+						ifaces = True
+				else:
+					if output.find(laniactive) >= 0:
+						ifaces = False
+					elif output.find(lanactive) >= 0:
+						ifaces = True
+		self.twoIfacesActive = ifaces  # end OpenSPA [norhap] check active second interface.
 		self["config"].list = self.list
 
 	def newConfig(self):
@@ -768,7 +802,7 @@ class AdapterSetup(ConfigListScreen, Screen):
 		if ret is True:
 			num_configured_if = len(iNetwork.getConfiguredAdapters())
 			if num_configured_if >= 1:
-				if self.iface in iNetwork.getConfiguredAdapters() or (self.iface in iNetwork.onlyWoWifaces and iNetwork.onlyWoWifaces[self.iface] is True):
+				if self.iface in iNetwork.getConfiguredAdapters() and not self.twoIfacesActive:
 					self.applyConfig(True)
 				else:
 					self.session.openWithCallback(self.secondIfaceFoundCB, MessageBox, _("A second configured interface has been found.\n\nDo you want to disable the second network interface?"), default=True)
