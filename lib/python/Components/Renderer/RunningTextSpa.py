@@ -373,7 +373,8 @@ class RunningTextSpa(Renderer):
 				timeout = int(timeout/self.addtime)
 			if self.mStop is not None and (self.mStop + abs(self.mStep) > self.P >= self.mStop):
 				if (self.type == RUNNING) and (self.mOneShot > 0):
-					if (self.mRepeat > 0) and (self.mCount-1 <= 0): return
+					if (self.mRepeat > 0) and (self.mCount-1 <= 0):
+						return
 					timeout = self.mOneShot
 				elif (self.type == SWIMMING) and (self.mPageLength > 0) and (self.mPageDelay > 0):
 					if (self.direction == TOP) and (self.mStep < 0):
