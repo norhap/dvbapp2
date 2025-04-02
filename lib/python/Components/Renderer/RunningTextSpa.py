@@ -212,7 +212,8 @@ class RunningTextSpa(Renderer):
 		Renderer.connect(self, source)
 
 	def changed(self, what):
-		if self.mTimer is not None: self.mTimer.stop()
+		if self.mTimer is not None:
+			self.mTimer.stop()
 		self.addstep=0
 		if what[0] == self.CHANGED_CLEAR:
 			self.txtext = ""
@@ -370,7 +371,7 @@ class RunningTextSpa(Renderer):
 			timeout = self.mStepTimeout
 			if self.mStep<0:
 				timeout = int(timeout/self.addtime)
-			if (self.mStop is not None) and (self.mStop + abs(self.mStep) > self.P >= self.mStop):
+			if self.mStop is not None and (self.mStop + abs(self.mStep) > self.P >= self.mStop):
 				if (self.type == RUNNING) and (self.mOneShot > 0):
 					if (self.mRepeat > 0) and (self.mCount-1 <= 0): return
 					timeout = self.mOneShot
@@ -388,7 +389,8 @@ class RunningTextSpa(Renderer):
 		else:
 			if self.mRepeat > 0:
 				self.mCount -= 1
-				if self.mCount == 0: return
+				if self.mCount == 0:
+					return
 			timeout = self.mLoopTimeout
 			if self.type == RUNNING:
 				if self.P < self.A:
