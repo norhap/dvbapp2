@@ -13061,9 +13061,6 @@ msgid "Consult your receiver's manual for more information on power threshold."
 msgstr ""
 
 msgid "Scheduler"
-msgstr "Temporizadores Programados"
-
-msgid "Scheduler"
 msgstr ""
 
 msgid "Scheduler Actions"
