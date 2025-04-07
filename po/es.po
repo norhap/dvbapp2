@@ -7703,8 +7703,6 @@ msgstr "Habilitar %s pro:"
 msgid "Enable 5V for active antenna"
 msgstr "Habilitar 5V para la antena activa"
 
-#
-
 msgid "Enable automatic shares"
 msgstr "Habilitar acciones automáticas"
 
