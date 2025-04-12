@@ -16433,6 +16433,9 @@ msgstr ""
 msgid "Select what should be done when the %s %s was shutdown incorrectly, or after the Power was lost."
 msgstr ""
 
+msgid "Select what type of device manager you want to use."
+msgstr ""
+
 msgid "Select what you want the Channel +/- button to activate."
 msgstr ""
 
@@ -20741,6 +20744,9 @@ msgid "Type of LNB/Device"
 msgstr ""
 
 msgid "Type of device"
+msgstr ""
+
+msgid "Type of device manager"
 msgstr ""
 
 msgid "Type of scan"

@@ -288,6 +288,13 @@ def InitUsageConfig():
 	config.usage.bouquet_icon_enable = ConfigYesNo(default=False)
 	config.usage.bouquet_icon_enable.addNotifier(refreshServiceList)
 	################################################################
+
+	# OpenSPA [norhap] choose what type of device manager.
+	config.usage.devicemanager = ConfigSelection(default="openspa", choices=[
+		("openspa", _("openspa")),
+		("standard", _("standard"))
+	])
+
 	config.usage.service_icon_enable = ConfigYesNo(default=False)
 	config.usage.service_icon_enable.addNotifier(refreshServiceList)
 	config.usage.servicelist_picon_downsize = ConfigSelectionNumber(default=-2, stepwidth=1, min=-10, max=0, wraparound=True)

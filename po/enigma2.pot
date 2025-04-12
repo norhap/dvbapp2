@@ -19869,6 +19869,9 @@ msgstr ""
 msgid "Type / Model"
 msgstr ""
 
+msgid "Type of device manager"
+msgstr ""
+
 msgid "Type of scan"
 msgstr ""
 
@@ -23454,6 +23457,9 @@ msgid "Show OpenSPA Guide"
 msgstr ""
 
 msgid "Select RED long action"
+msgstr ""
+
+msgid "Select what type of device manager you want to use."
 msgstr ""
 
 msgid "Select what you want the RED long button to activate."
