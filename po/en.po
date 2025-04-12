@@ -19299,9 +19299,6 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-msgid "Type of device manager"
-msgstr ""
-
 msgid "Type of scan"
 msgstr ""
 
@@ -20448,9 +20445,6 @@ msgid "What do you want to scan?"
 msgstr ""
 
 msgid "What would you like to do?"
-msgstr ""
-
-msgid "Select what type of device manager you want to use."
 msgstr ""
 
 msgid "Select 'Yes' to enable the loading of unlinked user bouquets. That is, user bouquets that are not included in the bouquets.tv or bouquets.radio files will be loaded. This allows you to, for example, create bouquets that do not conflict with, or get replaced by, bouquets that came from settings packages."

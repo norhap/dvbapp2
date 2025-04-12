@@ -23816,9 +23816,6 @@ msgstr "Dos líneas"
 msgid "Type"
 msgstr "Tipo"
 
-msgid "Type of device manager"
-msgstr "Tipo de administrador de dispositivos"
-
 msgid "Type / Model"
 msgstr "Tipo/Modelo"
 
@@ -28225,9 +28222,6 @@ msgstr "Zapear en historial"
 #
 msgid "Select OK long action"
 msgstr "Seleccionar acción OK prolongado"
-
-msgid "Select what type of device manager you want to use."
-msgstr "Seleccione el tipo de administrador de dispositivos que desea utilizar."
 
 msgid "Select what you want the OK long button to activate."
 msgstr "Selecciona qué quieres activar con pulsación prolongada del botón OK."
