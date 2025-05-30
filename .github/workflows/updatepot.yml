@@ -12,6 +12,8 @@ jobs:
         with:
           ref: '8.0'
 
+      - uses: jbleyel/gettext-action@v1
+
       - name: updatepot
         run: |
           sudo apt-get -q update
