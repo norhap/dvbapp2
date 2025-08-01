@@ -1279,7 +1279,7 @@ class EPGSelection(Screen):
 			if serviceref is not None:
 				self.session.open(SingleEPG, serviceref)
 
-	def openIMDb(self):
+	def openIMDb(self):  # OpenSPA [norhap] install spzimdb.
 		try:
 			cur = self[f"list{self.activeList}"].getCurrent()
 			event = cur[0]

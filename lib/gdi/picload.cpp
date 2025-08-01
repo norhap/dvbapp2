@@ -407,6 +407,7 @@ static void png_load(Cfilepara* filepara, uint32_t background, bool forceRGB = f
 	filepara->oy = height;
 
 	// When we have indexed (8bit) PNG convert it to standard 32bit png so to preserve transparency and to allow proper alphablending
+	/*
 	if (color_type == PNG_COLOR_TYPE_PALETTE && bit_depth == 8) {
 		color_type = PNG_COLOR_TYPE_RGBA;
 		png_set_expand(png_ptr);
@@ -415,6 +416,7 @@ static void png_load(Cfilepara* filepara, uint32_t background, bool forceRGB = f
 		bit_depth = 32;
 		eTrace("[ePicLoad] Interlaced PNG 8bit -> 32bit");
 	}
+	*/
 
 	if (color_type == PNG_COLOR_TYPE_RGBA || color_type == PNG_COLOR_TYPE_GA) {
 		filepara->transparent = true;
@@ -1357,16 +1359,12 @@ int ePicLoad::getData(ePtr<gPixmap>& result) {
 
 	eTrace("[getData] ox=%d oy=%d max_x=%d max_y=%d bits=%d", m_filepara->ox, m_filepara->oy, scrx, scry,
 		   m_filepara->bits);
-
-	if (m_filepara->ox == scrx && m_filepara->oy == scry) {
+	
+	if (m_filepara->ox == scrx && m_filepara->oy == scry && (m_filepara->bits == 24 || m_filepara->bits == 32)) {
 		unsigned char* origin = m_filepara->pic_buffer;
 		unsigned char* tmp_buffer = ((unsigned char*)(surface->data));
-		if (m_filepara->bits == 8) {
-			surface->clut.data = m_filepara->palette;
-			surface->clut.colors = m_filepara->palette_size;
-			m_filepara->palette = NULL; // transfer ownership
-			memcpy(tmp_buffer, origin, scrx * scry);
-		} else if (m_filepara->bits == 24) {
+		if (m_filepara->bits == 24) {
+#pragma omp parallel for
 			for (int y = 0; y < scry; ++y) {
 				const unsigned char* src = origin + y * scrx * 3;
 				unsigned char* dst = tmp_buffer + y * surface->stride;
@@ -1379,7 +1377,8 @@ int ePicLoad::getData(ePtr<gPixmap>& result) {
 					dst += 4;
 				}
 			}
-		} else if (m_filepara->bits == 32) {
+		} else {
+#pragma omp parallel for
 			for (int y = 0; y < scry; ++y) {
 				const unsigned char* src = origin + y * scrx * 4;
 				unsigned char* dst = tmp_buffer + y * surface->stride;
