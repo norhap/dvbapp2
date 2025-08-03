@@ -27320,7 +27320,7 @@ msgid "no storage devices found"
 msgstr "No se han encontrado dispositivos de almacenamiento"
 
 msgid "normal"
-msgstr "Normal"
+msgstr "normal"
 
 #
 msgid "not"
