@@ -3939,7 +3939,7 @@ class InfoBarInstantRecord:
 			InfoBarTimeshift.SaveTimeshift(self, timeshiftfile=answer[1])
 		if answer[1] != "savetimeshiftEvent":
 			self.saveTimeshiftEventPopupActive = False
-		if movieplayer_notification_exit == True and isMoviePlayerInfoBar(self):
+		if movieplayer_notification_exit is True and isMoviePlayerInfoBar(self):
 			movieplayer_notification_exit = False
 			Notifications.AddNotification(MessageBox, _("Press STOP and then EXIT to exit the movie list."), MessageBox.TYPE_INFO, timeout=8)
 
