@@ -22171,6 +22171,9 @@ msgstr "Directorio temporal (%s)"
 msgid "Temporary directory"
 msgstr "Directorio temporal"
 
+msgid "Temporarily mount as %s"
+msgstr "Montar temporalmente como %s"
+
 # Language
 msgid "Tennis"
 msgstr "Tenis"

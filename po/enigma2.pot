@@ -18877,6 +18877,9 @@ msgstr ""
 msgid "Temporary directory"
 msgstr ""
 
+msgid "Temporarily mount as %s"
+msgstr ""
+
 msgid "Tennis"
 msgstr ""
 
