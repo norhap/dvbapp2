@@ -209,7 +209,7 @@ class MultiBootManager(Screen):
 		else:
 			MultiBoot.wipeChkroot(self.disableChkrootCallback)
 
-	############################################################################################################################		
+	############################################################################################################################
 
 	def disableChkrootCallback(self, result):
 		if result not in (0, 1):
