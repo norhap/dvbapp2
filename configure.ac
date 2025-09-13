@@ -1041,6 +1041,9 @@ lib/python/Plugins/SystemPlugins/WirelessLan/Makefile
 lib/python/Plugins/SystemPlugins/vps/Makefile
 lib/python/Plugins/SystemPlugins/vps/src_cc/Makefile
 lib/python/Plugins/SystemPlugins/vps/src_py/Makefile
+lib/python/Plugins/SkinComponents/Makefile
+lib/python/Plugins/SkinComponents/WeatherComponent/Makefile
+lib/python/Plugins/SkinComponents/WeatherComponent/Components/Makefile
 lib/python/Tools/Makefile
 po/Makefile
 main/Makefile
