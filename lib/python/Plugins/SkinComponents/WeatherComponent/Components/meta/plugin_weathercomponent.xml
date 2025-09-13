@@ -6,7 +6,7 @@
 		<author>Weather OE Alliance</author>
 		<name>WeatherComponent</name>
 		<packagename>enigma2-plugin-skincomponents-weathercomponent</packagename>
-		<shortdescription>Scan devices for playable media files</shortdescription>
+		<shortdescription>Weather Report in OpenSPA OE-A</shortdescription>
 		<description>WeatherComponent Sources for show Weather Report in OpenSPA OE-A.</description>
 	</info>
 	<files type="package"> <!-- without version, without .ipk -->
