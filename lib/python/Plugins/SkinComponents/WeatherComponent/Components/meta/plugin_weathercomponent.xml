@@ -5,11 +5,11 @@
 	<info>
 		<author>Weather OE Alliance</author>
 		<name>WeatherComponent</name>
-		<packagename>enigma2-plugin-skincomponents-weathercomponent</packagename>
+		<packagename>enigma2-plugin-skincomponents-weathercomponent-spa</packagename>
 		<shortdescription>Weather Report in OpenSPA OE-A</shortdescription>
 		<description>WeatherComponent Sources for show Weather Report in OpenSPA OE-A.</description>
 	</info>
 	<files type="package"> <!-- without version, without .ipk -->
-		<file type="package" name="enigma2-plugin-skincomponents-weathercomponent" />
+		<file type="package" name="enigma2-plugin-skincomponents-weathercomponent-spa" />
 	</files>
 </default>
