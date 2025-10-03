@@ -1022,6 +1022,9 @@ class AttributeParser:
 	def conditional(self, value):
 		pass
 
+	def connection(self, value):  # This is only used for Addons.
+		pass
+
 	def cornerRadius(self, value):
 		radius, edgeValue = parseRadius(value)
 		self.guiObject.setCornerRadius(radius, edgeValue)
@@ -1298,11 +1301,11 @@ class AttributeParser:
 		mode = parseZoom(data[2], "selectionZoomSize") if len(data) == 3 else eListbox.zoomContentZoom
 		self.guiObject.setSelectionZoomSize(size[0], size[1], mode)
 
-	def separatorSize(self, value):
-		self.guiObject.setSeparatorSize(eRect(*parseSeparator("separatorSize", value)))
-
-	def separatorColor(self, value):
+	def separatorLineColor(self, value):
 		self.guiObject.setSeparatorColor(parseColor(value, 0x00000000))
+
+	def separatorLineSize(self, value):
+		self.guiObject.setSeparatorSize(eRect(*parseSeparator("separatorLineSize", value)))
 
 	def shadowColor(self, value):
 		self.guiObject.setShadowColor(parseColor(value, 0x00000000))
