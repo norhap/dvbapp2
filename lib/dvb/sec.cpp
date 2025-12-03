@@ -246,7 +246,8 @@ int eDVBSatelliteEquipmentControl::canTune(const eDVBFrontendParametersSatellite
 						int lof = sat.frequency > lnb_param.m_lof_threshold ?
 							lnb_param.m_lof_hi : lnb_param.m_lof_lo;
 						const unsigned int tuner_freq = (unsigned int)abs(sat.frequency - lof);
-						if (tuner_freq < fe_info.frequency_min || tuner_freq > fe_info.frequency_max)
+						if (tuner_freq < (fe_info.type ? fe_info.frequency_min/1000 : fe_info.frequency_min)
+							|| tuner_freq > (fe_info.type ? fe_info.frequency_max/1000 : fe_info.frequency_max))
 						{
 							eSecDebugNoSimulate("[eDVBSatelliteEquipmentControl] can't tune! tuner frequency %u not in range: frequency_min %u frequency_max %u", tuner_freq, fe_info.frequency_min, fe_info.frequency_max);
 							ret = 0;
