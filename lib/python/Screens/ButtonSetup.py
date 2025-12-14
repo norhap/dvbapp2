@@ -277,7 +277,7 @@ def getButtonSetupFunctions():
 		if plugin[2]:
 			ButtonSetupFunctions.append((plugin[0], "MenuPlugin/system/" + plugin[2], textSetup))
 	for plugin in plugins.getPluginsForMenu("video"):
-		ButtonSetupFunctions.append((plugin[0], "MenuPlugin/video/" + plugin[2], textSetup))			
+		ButtonSetupFunctions.append((plugin[0], "MenuPlugin/video/" + plugin[2], textSetup))
 	ButtonSetupFunctions.append((_("Standby"), "Module/Screens.Standby/Standby", textPower))
 	ButtonSetupFunctions.append((_("Restart"), "Module/Screens.Standby/TryQuitMainloop/2", textPower))
 	ButtonSetupFunctions.append((_("Restart enigma"), "Module/Screens.Standby/TryQuitMainloop/3", textPower))
