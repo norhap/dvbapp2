@@ -16701,6 +16701,9 @@ msgstr "Reiniciar softcam"
 msgid "Restart test"
 msgstr "Reiniciar prueba"
 
+msgid "Restart your network connection and interfaces."
+msgstr "Reiniciar la conexión e interfaces de red."
+
 msgid "Restarting..."
 msgstr "Reiniciando..."
 
@@ -17642,22 +17645,22 @@ msgid "Select 'Yes' to enable autostart of '%s'."
 msgstr "Seleccione \"Sí\" para activar el autoinicio de '%s'."
 
 msgid "Select 'Yes' to enable DNS entry rotation. This rotation changes the order in which the list of DNS servers is used and can avoid issues if a DNS server in the list becomes unavailable."
-msgstr ""
+msgstr "Seleccione \"Sí\" para habilitar la rotación de entradas DNS. Esta rotación cambia el orden en que se utiliza la lista de servidores DNS y puede evitar problemas si un servidor DNS de la lista deja de estar disponible."
 
 msgid "Select 'Yes' to enable editing of this device's settings. Selecting 'No' resets the devices settings to their default values."
 msgstr "Seleccione \"Sí\" para permitir la edición de los ajustes de este dispositivo. Si se selecciona \"No\", se restablecen los valores predeterminados de los dispositivos."
 
 msgid "Select 'Yes' to enable preview of channels while in the EPG list."
-msgstr "Si se ajusta a 'sí', podrás previsualizar canales en la lista de EPG."
+msgstr "Si se ajusta a \"Sí\", podrás previsualizar canales en la lista de EPG."
 
 msgid "Select 'Yes' to enable preview of channels while in the EPG list. Press 'OK' to preview the currently selected channel. Press 'OK' again to exit the EPG and zap to the selected channel. Press 'EXIT' to exit the EPG and return to the previously selected channel."
-msgstr "Si se ajusta a 'sí', podrás previsualizar canales en la lista de canales. Pulsa 'OK' para previsualizar el canal escogido. Pulsa otra vez 'OK' para salir y pasar a ese canal. Pulsa 'EXIT' para volver al canal original."
+msgstr "Si se ajusta a \"Sí\", podrás previsualizar canales en la lista de canales. Pulsa 'OK' para previsualizar el canal escogido. Pulsa otra vez 'OK' para salir y pasar a ese canal. Pulsa 'EXIT' para volver al canal original."
 
 msgid "Select 'Yes' to enable the loading of unlinked user bouquets. That is, user bouquets that are not included in the bouquets.tv or bouquets.radio files will be loaded. This allows you to, for example, create bouquets that do not conflict with, or get replaced by, bouquets that came from settings packages."
-msgstr "Cuando está activado, Enigma2 cargará los grupos de usuario de canales desvinculados. Esto significa que los grupos de usuario de canales disponibles, pero no incluidos en los archivos bouquets.tv o bouquets.radio, serán cargados. Esto permite, por ejemplo, conservar tus grupos de usuario cuando los ajustes instalados son actualizados"
+msgstr "Seleccione \"Sí\" para habilitar la carga de bouquets de usuario no vinculados. Es decir, se cargarán los bouquets de usuario que no estén incluidos en los archivos bouquets.tv o bouquets.radio. Esto le permite, por ejemplo, crear bouquets que no entren en conflicto con los bouquets de los paquetes de configuración ni sean reemplazados por ellos."
 
 msgid "Select 'Yes' to enable the monitoring UI web interface for the DNSCrypt subsystem."
-msgstr "Seleccione 'Sí' para habilitar la interfaz web de UI de monitoreo para el subsistema DNSCrypt."
+msgstr "Seleccione \"Sí\" para habilitar la interfaz web de UI de monitoreo para el subsistema DNSCrypt."
 
 msgid "Select 'Yes' to enable use of the LEFT/RIGHT buttons to move PageUp/PageDown when the LEFT/RIGHT buttons are otherwise undefined. This provides legacy navigation for users who prefer it."
 msgstr "Selecciona 'Sí' para habilitar el uso de los botones IZQUIERDO/DERECHO para mover Página arriba/Página abajo cuando los botones IZQUIERDO/DERECHO no están definidos. Esto proporciona una navegación heredada para los usuarios que la prefieran."
@@ -24514,6 +24517,9 @@ msgstr ""
 "Usar las teclas izquierda/derecha del mando para mover la parte superior/"
 "inferior del OSD"
 
+msgid "Use the network wizard to configure your Network."
+msgstr "Utilice el asistente de red para configurar su red."
+
 msgid ""
 "Use the Networkwizard to configure your Network. The wizard will help you to "
 "setup your network"
@@ -27855,10 +27861,6 @@ msgstr "Gestor de dispositivos DVB-USB"
 
 #~ msgid "Press yellow to set this interface as the default interface."
 #~ msgstr "Pulsa la tecla amarilla para establecer esta interfaz como predeterminada."
-
-#
-#~ msgid "Restart your network connection and interfaces."
-#~ msgstr "Reiniciar la conexión e interfaces de red."
 
 #~ msgid "Set interface as the default Interface"
 #~ msgstr "Establecer interfaz como la interfaz predeterminada"
