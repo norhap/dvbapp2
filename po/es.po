@@ -7501,7 +7501,7 @@ msgid "Duplex"
 msgstr "Dúplex"
 
 msgid "During this time, the transmitter and recording destination are checked. If the destination (e.g., NAS) isn't ready in time, this time can be increased."
-msgstr "Durante este tiempo, se verifican el transmisor y el destino de la grabación. Si el destino (p. ej., NAS) no está listo a tiempo, se puede aumentar este tiempo."
+msgstr "Durante este tiempo, se comprueban el transmisor y el destino de grabación. Si el destino (por ejemplo, NAS) no está listo a tiempo, este tiempo se puede aumentar."
 
 msgid "Duplicate the current line"
 msgstr "Duplicar la línea actual"
@@ -19370,8 +19370,8 @@ msgstr ""
 "Configura el retraso entre la repetición en bucle, usa renderizado por "
 "software en algunas skins."
 
-msgid "Set the jump-size of the seekbar."
-msgstr "Configura el tamaño del salto de la barra de búsqueda."
+msgid "Set the jump-size of the SeekBar."
+msgstr "Establece el tamaño del salto de la barra de búsqueda."
 
 msgid ""
 "Set the number of lines to be saved for 'stout' and 'sterr' output in "
