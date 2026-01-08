@@ -4295,8 +4295,8 @@ msgstr "Comprobar HDD"
 msgid "Check for PDC"
 msgstr "Comprobar PDC"
 
-msgid "Check for PDC availability on each service"
-msgstr "Comprobar disponibilidad de PDC en cada servicio"
+msgid "Check for PDC availability on each service."
+msgstr "Comprobar disponibilidad de PDC en cada canal."
 
 msgid "Check Internet and update packages"
 msgstr "Revisar Internet y actualizar paquetes"
@@ -7843,11 +7843,11 @@ msgstr "Active los botones ARRIBA/ABAJO para las funciones 'arriba/abajo' al pri
 msgid "Enable VPS"
 msgstr "Activar VPS"
 
-msgid "Enable VPS by default (new timers)"
-msgstr "Activar VPS por defecto (temporizadores nuevos)"
+msgid "Select 'Yes' to set the VPS flag on all new timers by default."
+msgstr "Seleccione 'Sí' para establecer la bandera VPS en todos los temporizadores nuevos por defecto."
 
-msgid "Enable VPS on instant records"
-msgstr "Activar VPS en grabaciones instantáneas"
+msgid "VPS on instant recordings"
+msgstr "VPS en grabaciones instantáneas"
 
 msgid "Enable VPS-Plugin"
 msgstr "Activar plugin VPS"
@@ -10515,12 +10515,8 @@ msgstr ""
 "Si es 'nunca', se escribirá el registro de fallos a pesar de que para el "
 "primer fallo."
 
-msgid ""
-"If a programme is interrupted and divided into separate events, the plugin "
-"will search for the connected events."
-msgstr ""
-"Si un programa se interrumpe y se divide en eventos separados, el plugin "
-"buscará los eventos conectados."
+msgid "If an event is interrupted and divided into separate recordings, this feature will search for alternate broadcasts of the same event."
+msgstr "Si un programa se interrumpe y se divide en eventos separados, el plugin buscará los eventos conectados."
 
 msgid ""
 "If an action is user-configurable, its help entry will be flagged with a "
@@ -10529,8 +10525,8 @@ msgstr ""
 "Si una acción es configurable por el usuario, su entrada de ayuda se marcará "
 "con un sufijo '(C)'."
 
-msgid "If enabled and necessary, the plugin will wake up the receiver from deep standby for the defined starting time to control whether the programme begins earlier."
-msgstr "Si está habilitado y es necesario, el plugin despertará al receptor del reposo profundo para la hora de inicio definida para controlar si el programa comienza antes."
+msgid "Select 'Yes' to wake the receiver from Shutdown prior to the recording start time to allow the PDC data to make last minute timer adjustments."
+msgstr "Seleccione 'Sí' para reactivar el receptor desde el modo de apagado antes de la hora de inicio de la grabación para permitir que los datos del PDC realicen ajustes de temporizador de último momento."
 
 msgid "If enabled the output resolution of the receiver will try to match the resolution of the video contents resolution."
 msgstr "Si se activa la resolución de salida el receptor, intentará buscar la resolución del contenido del vídeo."
@@ -10556,14 +10552,14 @@ msgstr ""
 msgid "If enabled, a time window is used to detect wake-ups from Deep Standby triggered by a timer. The default setting is disabled, which uses a special signal from the receiver. However, some devices send an incorrect or no signal, causing wake-up detection to fail."
 msgstr "Si está habilitado, se utiliza una ventana de tiempo para detectar reactivaciones desde el modo de espera completo activadas por un temporizador. La configuración predeterminada está deshabilitada y utiliza una señal especial del receptor. Sin embargo, algunos dispositivos envían una señal incorrecta o no envían ninguna, lo que provoca un fallo en la detección de reactivación."
 
-msgid ""
-"If logs are using the set maximum space used the eldest will be deleted."
-msgstr ""
-"Si los logs están usando el espacio máximo asignado, se borrarán los más "
-"antiguos."
+msgid "If logs are using the set maximum space used the eldest will be deleted."
+msgstr "Si los logs están usando el espacio máximo asignado, se borrarán los más antiguos."
 
 msgid "If muted, hide mute icon or mute information after few seconds."
 msgstr "Si se silencia, ocultar el icono de silencio o silenciar la información después de unos segundos."
+
+msgid "Set a time offset before a timer is due to start to allow VPS to scan for the latest event timing. Select '0' to disable this feature."
+msgstr "Establezca un desfase horario antes del inicio del temporizador para que el VPS pueda buscar la última hora del evento. Seleccione '0' para desactivar esta función."
 
 msgid "If set to 'Yes', allows the use of time shift with alternative audio plugins."
 msgstr "Si se ajusta a \"sí\", permite utilizar timeshift con plugins de audio alternativos."
@@ -17482,7 +17478,7 @@ msgstr "Activación de la barra de búsqueda"
 msgid "SeekBar sensibility"
 msgstr "Sensibilidad de la barra de búsqueda"
 
-msgid "Seeking connected events"
+msgid "Find connected events"
 msgstr "Búsqueda de eventos relacionados"
 
 #
@@ -23013,8 +23009,8 @@ msgstr "Esta opción configura la supresión de bordes digitales falsos, resulta
 msgid "This option sets up the picture sharpness, used when the picture is being upscaled."
 msgstr "Esta opción configura la nitidez de la imagen cuando se está ampliando."
 
-msgid "This plugin can determine whether a programme begins earlier or lasts longer. The channel has to provide reliable data."
-msgstr "Este plugin puede determinar si un programa empieza antes o dura más. El canal tiene que proporcionar datos fiables."
+msgid "Select 'Yes' to allow the VPS to adjust recording timers based on broadcast Program Delivery Control (PDC) data. For this to work the service must provide reliable event PDC data."
+msgstr "Seleccione 'Sí' para permitir que el VPS ajuste los temporizadores de grabación según los datos de control de entrega de programas (PDC) de la transmisión. Para que esto funcione, el servicio debe proporcionar datos PDC de eventos fiables."
 
 #
 msgid "This plugin is installed."
@@ -25170,8 +25166,8 @@ msgstr "Encendido"
 msgid "Wake up TV from Standby"
 msgstr "Reactivar TV desde reposo"
 
-msgid "Wake up from Deep-Standby is allowed"
-msgstr "El encendido desde reposo profundo está activado"
+msgid "Wake from Shutdown allowed"
+msgstr "Se permite reactivar desde el apagado"
 
 msgid "Wake up time before a timer begins"
 msgstr "Hora de despertarse antes de que comience el temporizador"
@@ -25720,12 +25716,8 @@ msgstr ""
 msgid "When tuned to a service, the system normally scans the transponder for changes and saves them. Enable only if you know what you're doing."
 msgstr "Al sintonizar un canal, el sistema normalmente escanea el transpondedor en busca de cambios y los guarda. Habilítelo solo si sabe lo que está haciendo."
 
-msgid ""
-"When yes, VPS will be enabled on instant records (stop after current event), "
-"if the channel supports VPS."
-msgstr ""
-"Cuando esté en sí, se habilitará VPS en grabaciones instantáneas (se "
-"detendrá después del evento actual), si el canal es compatible con VPS."
+msgid "Select 'Yes' to use PDC data, if available on the current service, to accurately stop the instant recording at the end of the event."
+msgstr "Seleccione 'Sí' para utilizar los datos PDC, si están disponibles en el servicio actual, para detener con precisión la grabación instantánea al final del evento."
 
 #
 msgid "Where do you want to backup your settings?"
