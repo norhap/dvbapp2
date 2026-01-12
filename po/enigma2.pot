@@ -12733,9 +12733,6 @@ msgstr ""
 msgid "Oromo"
 msgstr ""
 
-msgid "Oscam Information"
-msgstr ""
-
 msgid "Ossetian / Ossetic"
 msgstr ""
 

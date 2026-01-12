@@ -13929,7 +13929,7 @@ msgid "OSCam Information"
 msgstr "Información OSCam"
 
 msgid "OSCam Information Settings"
-msgstr "Información Oscam - Configuración"
+msgstr "Información OSCam - Configuración"
 
 msgid "OSCam webif disabled"
 msgstr "OScam webif desactivado"
@@ -14274,9 +14274,6 @@ msgstr "Oriente"
 
 msgid "Oromo"
 msgstr "Oromo"
-
-msgid "Oscam Information"
-msgstr "Información de OScam"
 
 msgid "Ossetian / Ossetic"
 msgstr "Osetia / ositano"
