@@ -14204,6 +14204,9 @@ msgstr ""
 msgid "Re-enter new PIN"
 msgstr ""
 
+msgid "Read Userdata from 'ncam.conf'"
+msgstr ""
+
 msgid "Read Userdata from 'oscam.conf'"
 msgstr ""
 

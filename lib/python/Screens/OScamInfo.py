@@ -21,7 +21,7 @@ from Components.config import config
 from Components.ScrollLabel import ScrollLabel
 from Components.Sources.List import List
 from Components.Sources.StaticText import StaticText
-from Components.SystemInfo import getSysSoftcam
+from Components.SystemInfo import BoxInfo, getSysSoftcam
 from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
 from Screens.Setup import Setup
@@ -335,9 +335,13 @@ class OSCamInfo(Screen, OSCamGlobals):
 
 	def _triggerDataUpdate(self):
 		"""Trigger data fetch in background thread"""
-		if getSysSoftcam() == "oscam":
+		if getSysSoftcam() == "oscam":  # OpenSPA [norhap] Classifying settings for NCam and OSCam.
+			BoxInfo.setItem("ShowOscamInfo", True)
+			BoxInfo.setItem("ShowNcamInfo", False)
 			self['camlogo'].instance.setPixmapFromFile("/usr/share/enigma2/icons/OscamLogo.png")
 		else:
+			BoxInfo.setItem("ShowOscamInfo", False)
+			BoxInfo.setItem("ShowNcamInfo", True)
 			self['camlogo'].instance.setPixmapFromFile("/usr/share/enigma2/icons/NCamLogo.png")
 		try:
 			self['camlogo'].instance.setPixmap(ePicLoad().getData().__deref__())
