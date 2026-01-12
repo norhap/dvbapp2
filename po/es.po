@@ -15916,8 +15916,11 @@ msgstr "Clasificación no definida"
 msgid "Re-enter new PIN"
 msgstr "Re-introducir PIN nuevo"
 
+msgid "Read Userdata from 'ncam.conf'"
+msgstr "Leer datos de usuario desde ncam.conf"
+
 msgid "Read Userdata from 'oscam.conf'"
-msgstr "Leer datos de usuario de oscam.conf"
+msgstr "Leer datos de usuario desde oscam.conf"
 
 msgid "Reader"
 msgstr "Lector"
