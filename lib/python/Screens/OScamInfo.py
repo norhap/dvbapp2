@@ -498,6 +498,7 @@ class OSCamInfo(Screen, OSCamGlobals):
 		if answer:
 			self.loop.stop()
 			# Execute shutdown/restart in background to avoid blocking
+
 			def doAction():
 				webifok, api, url, signstatus, result = self.openWebIF(part=action)
 				if not webifok:

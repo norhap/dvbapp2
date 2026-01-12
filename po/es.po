@@ -9235,13 +9235,6 @@ msgstr "Paquetes de sistema de archivos"
 msgid "File appears to be busy!\n"
 msgstr "El archivo parece estar ocupado.\n"
 
-msgid ""
-"File oscam.conf not found.\n"
-"Please enter username/password manually."
-msgstr ""
-"No se ha encontrado el archivo oscam.conf.\n"
-"Escribe el nombre de usuario y contraseña manualmente."
-
 msgid "File transfer was canceled by user!"
 msgstr "La transferencia de archivos se canceló por el usuario!"
 
