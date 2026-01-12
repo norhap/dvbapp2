@@ -8098,13 +8098,7 @@ msgstr ""
 msgid "File appears to be busy!\n"
 msgstr ""
 
-msgid "File oscam.conf not found.\n"
-msgstr ""
-
 msgid "File compression"
-msgstr ""
-
-"Please enter username/password manually."
 msgstr ""
 
 msgid "File system"
