@@ -1039,7 +1039,8 @@ class ChannelSelectionEdit:
 		provider = ServiceReference(self.getCurrentSelection())
 		serviceHandler = eServiceCenter.getInstance()
 		services = serviceHandler.list(provider.ref)
-		Screens.InfoBar.InfoBar.instance.ToggleStreamrelay(services and services.getContent("R", True))
+		from Screens.InfoBarGenerics import streamrelay
+		streamrelay.toggle(self.session.nav, services and services.getContent("R", True))
 
 	def removeAlternativeServices(self):
 		cur_service = ServiceReference(self.getCurrentSelection())
@@ -1600,7 +1601,12 @@ class ChannelContextMenu(Screen):
 			applySettings(value and "sidebyside" or config.osd.threeDmode.value)
 
 	def toggleStreamrelay(self):
-		Screens.InfoBar.InfoBar.instance.ToggleStreamrelay(self.csel.getCurrentSelection())
+		from Screens.InfoBarGenerics import streamrelay
+		from enigma import eTimer
+		streamrelay.toggle(self.session.nav, self.csel.getCurrentSelection())
+		self.csel.refreshServiceListTimer = eTimer()
+		self.csel.refreshServiceListTimer.callback.append(self.csel.servicelist.resetRoot)
+		self.csel.refreshServiceListTimer.start(100, True)
 		self.close()
 
 	def addHideVBIFlag(self):
