@@ -1,3 +1,4 @@
+from os.path import exists
 from Components.Label import Label
 from Components.Network import iNetwork
 from Components.Sources.StaticText import StaticText
@@ -5,20 +6,23 @@ from Screens.Screen import Screen
 from Screens.Processing import Processing
 from Tools.ServiceHelper import ServiceHelper
 
+DEAMON_SOCKET = "/tmp/deamon.socket"  # OpenSPA [norhap] sanity check.
+
 
 class RestartNetworkNew:
 	@staticmethod
 	def start(callback):
-		helper = ServiceHelper("netrestarter")
-		Processing.instance.setDescription(_("Please wait while your network is restarting..."))
-		Processing.instance.showProgress(endless=True)
+		if exists(DEAMON_SOCKET):
+			helper = ServiceHelper("netrestarter")
+			Processing.instance.setDescription(_("Please wait while your network is restarting..."))
+			Processing.instance.showProgress(endless=True)
 
-		def restartCallback():
-			iNetwork.getInterfaces()
-			Processing.instance.hideProgress()
-			if callback and callable(callback):
-				callback()
-		helper.restart(callback=restartCallback, timeout=10000)
+			def restartCallback():
+				iNetwork.getInterfaces()
+				Processing.instance.hideProgress()
+				if callback and callable(callback):
+					callback()
+			helper.restart(callback=restartCallback, timeout=10000)
 
 
 class RestartNetwork(Screen):
