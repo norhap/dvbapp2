@@ -2997,6 +2997,9 @@ msgstr ""
 msgid "Black screen till locked"
 msgstr ""
 
+msgid "Blank screen"
+msgstr ""
+
 msgid "Blinking REC"
 msgstr ""
 
@@ -4000,6 +4003,9 @@ msgid "Choose the style/order in which items are displayed in help windows."
 msgstr ""
 
 msgid "Choose time interval to which the graphics will be rounded off."
+msgstr ""
+
+msgid "Choose what appears when the screen saver is active."
 msgstr ""
 
 msgid "Choose what you want the button '0' to do when PiP is active."
@@ -10584,6 +10590,9 @@ msgstr ""
 msgid "Login to IceTV server"
 msgstr ""
 
+msgid "Logo"
+msgstr ""
+
 msgid "Logs Settings"
 msgstr ""
 
@@ -15469,6 +15478,9 @@ msgid "Science fiction/Fantasy/Horror"
 msgstr ""
 
 msgid "Scope"
+msgstr ""
+
+msgid "Screen saver mode"
 msgstr ""
 
 msgid "Screen saver movement"
