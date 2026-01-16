@@ -25243,9 +25243,6 @@ msgstr ""
 msgid "Download the selected image"
 msgstr ""
 
-msgid "Show subservices *"
-msgstr ""
-
 msgid "Storage device full!"
 msgstr ""
 
