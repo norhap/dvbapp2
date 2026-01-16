@@ -5347,9 +5347,6 @@ msgstr ""
 "grabaciones en lugar de compartir un sintonizador que ya está activo "
 "recibiendo el mismo canal de televisión en directo."
 
-msgid "Configure whether multichannel audio tracks should be downmixed to stereo."
-msgstr "Configurar si las pistas de sonido multicanal deben ser mezcladas a estéreo."
-
 msgid "Configure whether the 'recording' symbol (in the display skin and LCD skin) is visible for real recordings only or also for streaming and pseudo recordings (like in EPGrefresh)."
 msgstr "Configurar si el símbolo de grabación (tanto de la pantalla como del LCD) es visible solo durante grabaciones reales o también para retransmisiones y pseudo grabaciones (por ejemplo el refresco de la EPG)."
 
@@ -7848,9 +7845,6 @@ msgstr "Seleccione 'Sí' para establecer la bandera VPS en todos los temporizado
 
 msgid "VPS on instant recordings"
 msgstr "VPS en grabaciones instantáneas"
-
-msgid "Enable VPS-Plugin"
-msgstr "Activar plugin VPS"
 
 msgid "Enable ViaSat EPG"
 msgstr "Habilitar EPG ViaSat"
@@ -13242,18 +13236,12 @@ msgstr "Menú de red"
 msgid "Network mounts"
 msgstr "Montajes de red"
 
-msgid "Network name"
-msgstr "Nombre de la red"
-
 msgid "Network name (SSID)"
 msgstr "Nombre de red (SSID)"
 
 #
 msgid "Network scan"
 msgstr "Escanear red"
-
-msgid "Network status"
-msgstr "Estado de la red"
 
 msgid "Network storage on"
 msgstr "Almacenamiento en red en"
@@ -20409,6 +20397,9 @@ msgstr "Mostrar selección de subcanal"
 msgid "Show subservices"
 msgstr "Mostrar subservicios"
 
+msgid "Show subservices of the active service"
+msgstr "Mostrar subservicios del canal activo"
+
 # Subtitle QuickMenu
 msgid "Show subtitle quick menu"
 msgstr "Mostrar menú rápido de subtítulo"
@@ -26455,9 +26446,6 @@ msgstr "Zapear+Grabar siguiente"
 msgid "ZeroTier Actions"
 msgstr "Acciones de ZeroTier"
 
-msgid "ZeroTier version"
-msgstr "Versión ZeroTier"
-
 msgid "ZeroTier-One"
 msgstr "ZeroTier-One"
 
@@ -29568,10 +29556,6 @@ msgstr "Descargar la imagen seleccionada"
 
 msgid "If EPG available"
 msgstr "Si hay EPG disponible"
-
-#
-msgid "Show subservices *"
-msgstr "Mostrar subservicios *"
 
 msgid "Storage device full!"
 msgstr "Disco lleno!"
