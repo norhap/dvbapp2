@@ -86,7 +86,35 @@ void eStreamClient::notifier(int what)
 	{
 		size_t pos;
 		size_t posdur;
-		if (eSimpleConfig::getBool("config.streaming.authentication", false))
+		/* OPENSPA [morser] Do not request authentication on localhost */
+		bool isLocalClient = false;
+		{
+			sockaddr_storage addr;
+			socklen_t addrlen = sizeof(addr);
+
+			if (getpeername(streamFd, (sockaddr*)&addr, &addrlen) == 0)
+			{
+				if (addr.ss_family == AF_INET)
+				{
+					sockaddr_in *in = (sockaddr_in*)&addr;
+					isLocalClient = (ntohl(in->sin_addr.s_addr) == INADDR_LOOPBACK);
+				}
+				else if (addr.ss_family == AF_INET6)
+				{
+					sockaddr_in6 *in6 = (sockaddr_in6*)&addr;
+					if (IN6_IS_ADDR_LOOPBACK(&in6->sin6_addr))
+						isLocalClient = true;
+					if (IN6_IS_ADDR_V4MAPPED(&in6->sin6_addr))
+					{
+						const uint8_t *b = in6->sin6_addr.s6_addr;
+						if (b[12] == 127)
+							isLocalClient = true;
+					}
+				}
+			}
+		}
+		/*********/
+		if (!isLocalClient && eSimpleConfig::getBool("config.streaming.authentication", false))
 		{
 			bool authenticated = false;
 			if ((pos = request.find("Authorization: Basic ")) != std::string::npos)
