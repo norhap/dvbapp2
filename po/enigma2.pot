@@ -19811,6 +19811,9 @@ msgstr ""
 msgid "The PIN code entered is incorrect!"
 msgstr ""
 
+msgid "The network wizard extension is not installed!\nPlease install it."
+msgstr ""
+
 msgid "The picon directory already exists and must be removed. Do you want to proceed?"
 msgstr ""
 
@@ -21453,6 +21456,9 @@ msgid "Use the current selection and exit"
 msgstr ""
 
 msgid "Use the extended List"
+msgstr ""
+
+msgid "Use the network wizard to configure selected network adapter"
 msgstr ""
 
 msgid "Use the network wizard to configure your Network."

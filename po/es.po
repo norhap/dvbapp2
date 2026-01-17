@@ -4481,6 +4481,9 @@ msgstr ""
 msgid "Choose time interval to which the graphics will be rounded off."
 msgstr "Elige el intervalo de tiempo en el que se redondean los gráficos."
 
+msgid "Choose what appears when the screen saver is active."
+msgstr "Elija lo que aparece cuando el protector de pantalla está activo."
+
 msgid "Choose what you want the button '0' to do when PiP is active."
 msgstr "Elige qué quieres que haga la tecla '0' cuando PIP esté activo."
 
@@ -17333,6 +17336,9 @@ msgstr "Ciencia y tecnología"
 msgid "Scope"
 msgstr "Alcance"
 
+msgid "Screen saver mode"
+msgstr "Modo protector de pantalla"
+
 msgid "Screen saver movement"
 msgstr "Movimiento del protector de pantalla"
 
@@ -22310,6 +22316,9 @@ msgstr ""
 "El plugin Merlin EPG Center no está instalado.\n"
 "Por favor, instálalo."
 
+msgid "The network wizard extension is not installed!\nPlease install it."
+msgstr "¡La extensión del asistente de red no está instalada!\nPor favor, instálelo."
+
 msgid "The PIN code has been changed successfully."
 msgstr "El código PIN ha sido cambiado correctamente."
 
@@ -24521,6 +24530,9 @@ msgstr "Usar la selección actual y salir"
 
 msgid "Use the extended List"
 msgstr "Utilice la lista ampliada"
+
+msgid "Use the network wizard to configure selected network adapter"
+msgstr "Utilice el asistente de red para configurar el adaptador de red seleccionado"
 
 # Erstassi
 msgid "Use the wizard to set up basic features"
@@ -27826,16 +27838,6 @@ msgstr "Gestor de dispositivos DVB-USB"
 #, python-format
 #~ msgid "Set the MAC address of your %s %s."
 #~ msgstr "Configura la dirección MAC de tu %s %s."
-
-#~ msgid ""
-#~ "The network wizard extension is not installed!\n"
-#~ "Please install it."
-#~ msgstr ""
-#~ "¡La extensión del asistente de red no está instalada!\n"
-#~ "Por favor, instálelo."
-
-#~ msgid "Use the network wizard to configure selected network adapter"
-#~ msgstr "Utilice el asistente de red para configurar el adaptador de red seleccionado"
 
 #~ msgid "white"
 #~ msgstr "Blanco"
