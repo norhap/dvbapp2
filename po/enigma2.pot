@@ -9607,6 +9607,9 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
+msgid "Information Settings"
+msgstr ""
+
 msgid "Informational/Educational/School programs"
 msgstr ""
 
@@ -11568,6 +11571,9 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
+msgid "NCam Information"
+msgstr ""
+
 msgid "NEXT"
 msgstr ""
 
@@ -12330,9 +12336,6 @@ msgid "ONID"
 msgstr ""
 
 msgid "OSCam Information"
-msgstr ""
-
-msgid "OSCam Information Settings"
 msgstr ""
 
 msgid "OSCam webif disabled"

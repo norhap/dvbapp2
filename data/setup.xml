@@ -608,7 +608,7 @@
 	<setup key="NetworkZeroTier" title="ZeroTier Settings">
 		<item text="Network-ID" description="Enter the ZeroTier Network ID. The ID should be exactly 16 characters in length.">config.network.ZeroTierNetworkId</item>
 	</setup>
-	<setup key="OSCamInfoSetup" title="OSCam Information Settings">
+	<setup key="OSCamInfoSetup" title="">
 		<item level="0" text="Read Userdata from 'oscam.conf'" description="Read Userdata from 'oscam.conf'" requires="ShowOscamInfo">config.oscaminfo.userDataFromConf</item>
 		<item level="0" text="Read Userdata from 'ncam.conf'" description="Read Userdata from 'ncam.conf'" requires="ShowNcamInfo">config.oscaminfo.userDataFromConf</item>
 		<if conditional="not config.oscaminfo.userDataFromConf.value">
