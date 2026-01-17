@@ -2995,7 +2995,7 @@ msgid "Automatically update Client/Server View"
 msgstr "Actualizar automáticamente la vista Cliente/Servidor"
 
 msgid "Automatically update Log-Fullscreen View"
-msgstr "Actualizar automáticamente el log-Vista pantalla completa"
+msgstr "Actualizar automáticamente el log en la vista de pantalla"
 
 msgid "Autostart"
 msgstr "Autoinicio"
@@ -13016,6 +13016,9 @@ msgstr "N/A"
 msgid "NCam Information"
 msgstr "Información NCam"
 
+msgid "Information Settings"
+msgstr "Configuración de información"
+
 #
 msgid "NEXT"
 msgstr "SIGUIENTE"
@@ -13918,9 +13921,6 @@ msgstr "Mostrar ajuste RFmod"
 
 msgid "OSCam Information"
 msgstr "Información OSCam"
-
-msgid "OSCam Information Settings"
-msgstr "Información OSCam - Configuración"
 
 msgid "OSCam webif disabled"
 msgstr "OScam webif desactivado"
