@@ -6795,7 +6795,10 @@ msgstr "Dispositivo: "
 msgid "Devices"
 msgstr "Dispositivos"
 
-#
+#, spzusbdevices
+msgid "Device not in dictionary"
+msgstr "Dispositivo no incluido en el diccionario"
+
 msgid "DiSEqC"
 msgstr "DiSEqC"
 
@@ -10355,6 +10358,9 @@ msgstr "INFO"
 msgid "INFO button mode"
 msgstr "Modo de la tecla INFO"
 
+msgid "Information Settings"
+msgstr "Configuración de información"
+
 msgid "INS"
 msgstr "INS"
 
@@ -13016,8 +13022,13 @@ msgstr "N/A"
 msgid "NCam Information"
 msgstr "Información NCam"
 
-msgid "Information Settings"
-msgstr "Configuración de información"
+#, spzusbdevices
+msgid "Need reboot to apply changes\nReboot now?"
+msgstr "¿Necesita reiniciar para aplicar los cambios\n¿Reiniciar ahora?"
+
+#, spzusbdevices
+msgid "Need restart GUI to apply changes\nRestart now?"
+msgstr "¿Necesita reiniciar la GUI para aplicar los cambios\n¿Reiniciar ahora?"
 
 #
 msgid "NEXT"

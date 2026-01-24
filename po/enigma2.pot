@@ -5929,6 +5929,10 @@ msgstr ""
 msgid "Device: "
 msgstr ""
 
+#, spzusbdevices
+msgid "Device not in dictionary"
+msgstr ""
+
 msgid "Devices"
 msgstr ""
 
@@ -11572,6 +11576,14 @@ msgid "N/A"
 msgstr ""
 
 msgid "NCam Information"
+msgstr ""
+
+#, spzusbdevices
+msgid "Need reboot to apply changes\nReboot now?"
+msgstr ""
+
+#, spzusbdevices
+msgid "Need restart GUI to apply changes\nRestart now?"
 msgstr ""
 
 msgid "NEXT"
