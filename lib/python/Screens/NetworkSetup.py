@@ -113,7 +113,7 @@ class NetworkAdapterSelection(Screen):
 		if self.selectionChanged not in self["list"].onSelectionChanged:
 			self["list"].onSelectionChanged.append(self.selectionChanged)
 		if len(self.adapters) == 1:
-			self.onFirstExecBegin.append(self.menubuttonClick)  # OpenSPA [norhap] Secure the attributes in the menu screens list.
+			self.onFirstExecBegin.append(self.menubuttonClick)  # OpenSPA [norhap] Open the menu first if there is only one adapter.
 		self.onClose.append(self.cleanup)
 
 	def createSummary(self):
