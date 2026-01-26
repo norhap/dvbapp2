@@ -3,7 +3,7 @@ from ipaddress import ip_address
 from json import dumps, loads
 from glob import glob
 from os import rename, strerror, system
-from os.path import exists
+from os.path import exists, islink
 from process import ProcessList
 from random import Random
 from time import sleep
@@ -335,9 +335,25 @@ class DNSSettings(Setup):
 
 		if hasChanges:
 			self.saveAll()
-			RestartNetworkNew.start(callback=self.close)
+			RestartNetworkNew.start(callback=self.close) if not islink("/sys/class/net/wg0") else self.restartLan()  # OpenSPA [norhap] change method Restart Network with iface WireGuard active.
 		else:
 			self.close()
+
+	def restartLan(self):
+		iNetwork.restartNetwork(self.restartLanDataAvail)
+		self.restartLanRef = self.session.openWithCallback(self.restartfinishedCB, MessageBox, _("Please wait while your network is restarting..."), type=MessageBox.TYPE_INFO, enable_input=False)
+
+	def restartLanDataAvail(self, data):
+		if data:
+			iNetwork.getInterfaces(self.getInterfacesDataAvail)
+
+	def getInterfacesDataAvail(self, data):
+		if data:
+			self.restartLanRef.close(True)
+
+	def restartfinishedCB(self, data):
+		if data:
+			self.session.openWithCallback(self.close, MessageBox, _("Finished configuring your network"), type=MessageBox.TYPE_INFO, timeout=10, default=False)
 
 	def tomlBool(self, val):
 		return "true" if bool(val) else "false"
