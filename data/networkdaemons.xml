@@ -1,5 +1,5 @@
 <!--
-	<daemon 
+	<daemon
 		key="<primary key>"                        Mandatory.
 		title="<display name>"                     Mandatory.
 		installcheck="file to check if installed"  Optional, no install/remove if file doesn't exist.
@@ -32,4 +32,5 @@
 	<daemon key="telnet" title="Telnet" autostart="/etc/rc2.d/S20telnetd.busybox" autostartservice="telnetd.busybox" running="telnetd" startservice="telnetd" />
 	<daemon key="ushare" title="uShare" installcheck="/etc/init.d/ushare" package="ushare" autostart="/etc/rc2.d/S20ushare" autostartservice="ushare" running="ushare" startservice="ushare" />
 	<daemon key="zerotier" title="ZeroTier-One" installcheck="/etc/init.d/zerotier" package="zerotier" autostart="/etc/rc2.d/S20zerotier" autostartservice="zerotier" running="zerotier-one" startservice="zerotier" />
+	<daemon key="transmission" title="Transmission" installcheck="/etc/init.d/transmission-daemon" package="transmission" autostart="/etc/rc2.d/S*transmission-daemon" autostartservice="transmission-daemon" running="transmission-daemon" startservice="transmission-daemon" />
 </daemonsxml>
