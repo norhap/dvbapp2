@@ -7394,9 +7394,6 @@ msgstr ""
 msgid "error starting scanning"
 msgstr ""
 
-msgid "error while scanning"
-msgstr ""
-
 msgid "Error text:"
 msgstr ""
 
