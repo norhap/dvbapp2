@@ -3000,6 +3000,9 @@ msgstr ""
 msgid "Blank screen"
 msgstr ""
 
+msgid "Blank screen"
+msgstr ""
+
 msgid "Blinking REC"
 msgstr ""
 
@@ -9334,9 +9337,6 @@ msgid "If enabled, the new GStreamer playback engine will be used."
 msgstr ""
 
 msgid "If logs are using the set maximum space used the eldest will be deleted."
-msgstr ""
-
-msgid "If set to 'yes', enable autorecord for automatically background timeshift"
 msgstr ""
 
 msgid "If set to 'Yes', allows the use of time shift with alternative audio plugins."

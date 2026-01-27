@@ -3334,6 +3334,9 @@ msgstr "Negro"
 msgid "Black screen till locked"
 msgstr "Pantalla negra hasta el bloqueo"
 
+msgid "Blank screen"
+msgstr "Pantalla en blanco"
+
 msgid "Blinking REC"
 msgstr "Parpadeo de REC"
 
@@ -10569,12 +10572,6 @@ msgid ""
 msgstr ""
 "Si es posible, x minutos antes de que comience un temporizador VPS-Plugin "
 "controlará si el programa comienza antes. (0 desactiva la función)"
-
-msgid ""
-"If set to 'yes', enable autorecord for automatically background timeshift"
-msgstr ""
-"Si está configurado en 'Sí', se activa la autograbación para timeshift "
-"automático en segundo plano"
 
 msgid ""
 "If the deep standby workaround is enabled wait until the system time is "
