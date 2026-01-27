@@ -5961,6 +5961,9 @@ msgstr "Editor de listas de corte…"
 msgid "Cycle PiP(zap)"
 msgstr "Ciclo PIP(zapeo)"
 
+msgid "Cycle through the InfoBars"
+msgstr "Recorrer las barras de información"
+
 msgid "Cycling"
 msgstr "Ciclismo"
 
@@ -8773,7 +8776,7 @@ msgstr "Salir del editor y descartar cambios"
 msgid "Exit editor and save any changes"
 msgstr "Salir del editor y guardar cambios"
 
-msgid "Exit image viewer"
+msgid "Exit picture viewer"
 msgstr "Salir de visualizador de imágenes"
 
 msgid "Exit input device selection."
@@ -9188,10 +9191,10 @@ msgstr "Administrador de archivos: Acciones de Hash/Checksum"
 msgid "File Commander Hashes / Checksums"
 msgstr "Administrador de archivos: Hashes/Checksum"
 
-msgid "File Commander Image Viewer"
+msgid "File Commander Picture Viewer"
 msgstr "Administrador de archivos: Visor de imágenes"
 
-msgid "File Commander Image Viewer Actions"
+msgid "File Commander Picture Viewer Actions"
 msgstr "Administrador de archivos: Acciones del visor de imágenes"
 
 msgid "File Commander Information Actions"
@@ -15094,8 +15097,15 @@ msgstr "Espera mientras los ajustes del tema son restablecidos..."
 msgid "Please wait whilst feeds state is checked."
 msgstr "Espera hasta que se verifique el estado de las fuentes."
 
-msgid "Please wait, loading image..."
+msgid "Please wait, loading picture..."
 msgstr "Por favor espera, cargando imagen..."
+
+msgid "Please wait, copy of flash memory is being deleted. This could take a few minutes to complete."
+msgstr "Por favor espere, se está eliminando la copia de la memoria interna. Esto podría tardar unos minutos en completarse."
+
+msgid "Please wait, flash memory is being copied to this flash expander. This could take a number of minutes to complete."
+msgstr "Por favor espere, la memoria flash se está copiando a flash expander. Esto podría tardar unos minutos en completarse."
+
 
 #, python-format
 msgid "Please wait, restarting %s."
@@ -20146,8 +20156,11 @@ msgstr "Mostrar lista favoritos"
 msgid "Show files backed up by default"
 msgstr "Mostrar archivos predeterminados para copiar"
 
-msgid "Show first image"
+msgid "Show first picture"
 msgstr "Mostrar primera imagen"
+
+msgid "Show free space in timer view"
+msgstr "Mostrar espacio libre en vista de temporizador"
 
 msgid "Show graphical multi EPG"
 msgstr "Mostrar MultiEPG gráfica"
@@ -20186,7 +20199,7 @@ msgstr "Mostrar línea de información"
 msgid "Show job tasks in Extension Menu"
 msgstr "Mostrar tareas en menú extensiones"
 
-msgid "Show last image"
+msgid "Show last picture"
 msgstr "Mostrar última imagen"
 
 msgid "Show list of bouquets"
@@ -20240,9 +20253,6 @@ msgstr "Mostrar archivo del próximo log de depuración"
 
 msgid "Show next event"
 msgstr "Mostrar evento siguiente"
-
-msgid "Show next image"
-msgstr "Mostrar imagen siguiente"
 
 msgid "Show next page"
 msgstr "Mostrar página siguiente"
@@ -20308,9 +20318,6 @@ msgstr "Mostrar archivo previo del log de depuración"
 
 msgid "Show previous event"
 msgstr "Mostrar evento anterior"
-
-msgid "Show previous image"
-msgstr "Mostrar imagen previa"
 
 msgid "Show previous page"
 msgstr "Mostrar página anterior"
@@ -23479,14 +23486,11 @@ msgstr "Alternar entre listas grupos/epg"
 msgid "Toggle between the available TV and RADIO services"
 msgstr "Alternar entre los canales de TV y RADIO disponibles"
 
-msgid "Toggle display of image information"
+msgid "Toggle display of picture information"
 msgstr "Alternar visualización de la información de imagen"
 
-msgid "Cycle through the InfoBars"
-msgstr "Recorrer las barras de información"
-
-msgid "Toggle display of the image status overlay"
-msgstr "Alternar visualización de la superposición de estado de la imagen"
+msgid "Toggle display of the picture status overlay"
+msgstr "Alternar la visualización de la superposición del estado de la imagen"
 
 msgid "Toggle enable/disable of the currently selected timer"
 msgstr "Alternar activación/desactivación del temporizador seleccionado"
@@ -28136,9 +28140,6 @@ msgstr "Memoria interna libre: "
 msgid "Dual Mode"
 msgstr "Modo dual"
 
-msgid "Show free space in timer view"
-msgstr "Mostrar espacio libre en vista de temporizador"
-
 msgid ""
 "When 'Enabled', the timer view will show the free space on the target "
 "device. This will wake the device from sleep mode."
@@ -28885,20 +28886,6 @@ msgstr "Falló la instalación de paquete."
 
 msgid "Perform the upgrade?"
 msgstr "¿Realizar la actualización?"
-
-msgid ""
-"Please wait, copy of flash memory is being deleted. This could take a few "
-"minutes to complete."
-msgstr ""
-"Por favor espere, se está eliminando la copia de la memoria interna. Esto "
-"podría tardar unos minutos en completarse."
-
-msgid ""
-"Please wait, flash memory is being copied to this flash expander. This could "
-"take a number of minutes to complete."
-msgstr ""
-"Por favor espere, se está copiando la memoria interna al dispositivo. Esto "
-"podría tardar unos minutos en completarse."
 
 msgid ""
 "Please wait, swap is is being created. This could take a few minutes to "
