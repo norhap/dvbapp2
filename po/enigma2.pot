@@ -3000,6 +3000,9 @@ msgstr ""
 msgid "Blank screen"
 msgstr ""
 
+msgid "Blank screen"
+msgstr ""
+
 msgid "Blinking REC"
 msgstr ""
 
@@ -7391,9 +7394,6 @@ msgstr ""
 msgid "error starting scanning"
 msgstr ""
 
-msgid "error while scanning"
-msgstr ""
-
 msgid "Error text:"
 msgstr ""
 
@@ -7655,7 +7655,7 @@ msgstr ""
 msgid "Exit editor and save any changes"
 msgstr ""
 
-msgid "Exit image viewer"
+msgid "Exit picture viewer"
 msgstr ""
 
 msgid "Exit input device selection."
@@ -8060,10 +8060,10 @@ msgstr ""
 msgid "File Commander Hashes / Checksums"
 msgstr ""
 
-msgid "File Commander Image Viewer"
+msgid "File Commander Picture Viewer"
 msgstr ""
 
-msgid "File Commander Image Viewer Actions"
+msgid "File Commander Picture Viewer Actions"
 msgstr ""
 
 msgid "File Commander Information Actions"
@@ -9334,9 +9334,6 @@ msgid "If enabled, the new GStreamer playback engine will be used."
 msgstr ""
 
 msgid "If logs are using the set maximum space used the eldest will be deleted."
-msgstr ""
-
-msgid "If set to 'yes', enable autorecord for automatically background timeshift"
 msgstr ""
 
 msgid "If set to 'Yes', allows the use of time shift with alternative audio plugins."
@@ -13454,7 +13451,13 @@ msgstr ""
 msgid "Please wait whilst feeds state is checked."
 msgstr ""
 
-msgid "Please wait, loading image..."
+msgid "Please wait, copy of flash memory is being deleted. This could take a few minutes to complete."
+msgstr ""
+
+msgid "Please wait, flash memory is being copied to this flash expander. This could take a number of minutes to complete."
+msgstr ""
+
+msgid "Please wait, loading picture..."
 msgstr ""
 
 #, python-format
@@ -17691,7 +17694,7 @@ msgstr ""
 msgid "Show files backed up by default"
 msgstr ""
 
-msgid "Show first image"
+msgid "Show first picture"
 msgstr ""
 
 msgid "Show graphical multi EPG"
@@ -17731,7 +17734,7 @@ msgstr ""
 msgid "Show job tasks in Extension Menu"
 msgstr ""
 
-msgid "Show last image"
+msgid "Show last picture"
 msgstr ""
 
 msgid "Show list of bouquets"
@@ -17779,7 +17782,7 @@ msgstr ""
 msgid "Show next event"
 msgstr ""
 
-msgid "Show next image"
+msgid "Show next picture"
 msgstr ""
 
 msgid "Show next page"
@@ -17836,7 +17839,7 @@ msgstr ""
 msgid "Show previous event"
 msgstr ""
 
-msgid "Show previous image"
+msgid "Show previous picture"
 msgstr ""
 
 msgid "Show previous page"
@@ -20557,10 +20560,13 @@ msgstr ""
 msgid "Toggle between bouquet/EPG lists"
 msgstr ""
 
-msgid "Toggle display of image information"
+msgid "Toggle between the available TV and RADIO services"
 msgstr ""
 
-msgid "Toggle display of the image status overlay"
+msgid "Toggle display of picture information"
+msgstr ""
+
+msgid "Toggle display of the picture status overlay"
 msgstr ""
 
 msgid "Toggle enable/disable of the currently selected timer"
@@ -24737,12 +24743,6 @@ msgid "Open the VirtualKeyBoard for text entry"
 msgstr ""
 
 msgid "Package installation failed."
-msgstr ""
-
-msgid "Please wait, copy of flash memory is being deleted. This could take a few minutes to complete."
-msgstr ""
-
-msgid "Please wait, flash memory is being copied to this flash expander. This could take a number of minutes to complete."
 msgstr ""
 
 msgid "Please wait, swap is is being created. This could take a few minutes to complete."
