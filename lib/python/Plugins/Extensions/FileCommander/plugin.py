@@ -1863,6 +1863,8 @@ class FileCommanderContextMenu(Screen):
 		self["actions"] = ActionMap(contexts, actions, prio=0)
 		self["key_menu"] = StaticText(_("MENU"))
 		self["menu"] = ChoiceList(menu)
+		directory = _("None") if not directory else directory  # OpenSPA [norhap] add to translate if directory is None.
+		path = _("None") if not path else path  # OpenSPA [norhap] add to translate if path is None.
 		description = [f"{_("Current directory")}: {directory}"]
 		if path != directory:
 			description.append(f"{_("Highlighted item")}: {path}")
