@@ -18409,9 +18409,6 @@ msgstr "Показать следующий файл лога отладки"
 msgid "Show next event"
 msgstr "Показать следующее событие"
 
-msgid "Show next picture"
-msgstr "Показать следующее изображение"
-
 msgid "Show next page"
 msgstr "Показать следующую страницу"
 
@@ -18474,9 +18471,6 @@ msgstr "Показать предыдущий файл лога отладки"
 
 msgid "Show previous event"
 msgstr "Показать предыдущее событие"
-
-msgid "Show previous picture"
-msgstr "Показать предыдущее изображение"
 
 msgid "Show previous page"
 msgstr "Показать предыдущую страницу"

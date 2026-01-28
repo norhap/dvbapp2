@@ -19194,9 +19194,6 @@ msgstr "Sonraki resmi göster"
 msgid "Show next page"
 msgstr "Sonraki sayfayı göster"
 
-msgid "Show next picture"
-msgstr "Sonraki resmi göster"
-
 msgid "Show next service information screen"
 msgstr "Sonraki kanal bilgisi ekranını göster"
 
@@ -19257,9 +19254,6 @@ msgstr "Önceki hata ayıklama günlük dosyasını göster"
 
 msgid "Show previous event"
 msgstr "Önceki etkinliği göster"
-
-msgid "Show previous picture"
-msgstr "Önceki resmi göster"
 
 msgid "Show previous page"
 msgstr "Önceki sayfayı göster"

@@ -18557,9 +18557,6 @@ msgstr "Toon het volgende debug-log bestand"
 msgid "Show next event"
 msgstr "Toon het volgende programma"
 
-msgid "Show next picture"
-msgstr "Toon volgend image"
-
 msgid "Show next page"
 msgstr "Toon de volgende pagina"
 
@@ -18622,9 +18619,6 @@ msgstr "Toon het vorige debug-log bestand"
 
 msgid "Show previous event"
 msgstr "Toon het vorige programma"
-
-msgid "Show previous picture"
-msgstr "Toon vorig image"
 
 msgid "Show previous page"
 msgstr "Toon de vorige pagina"

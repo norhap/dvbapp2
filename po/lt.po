@@ -18399,9 +18399,6 @@ msgstr ""
 msgid "Show next event"
 msgstr "Rodyti kitą įvykį"
 
-msgid "Show next picture"
-msgstr "Rodyti kitą atvaizdą"
-
 msgid "Show next page"
 msgstr "Rodyti kitą puslapį"
 
@@ -18464,9 +18461,6 @@ msgstr ""
 
 msgid "Show previous event"
 msgstr "Rodyti ankstesnį įvykį"
-
-msgid "Show previous picture"
-msgstr "Rodyti ankstesnį atvaizdą"
 
 msgid "Show previous page"
 msgstr "Rodyti ankstesnį puslapį"

@@ -18410,9 +18410,6 @@ msgstr "Zobraziť ďalší súbor s denníkom ladenia"
 msgid "Show next event"
 msgstr "Zobraziť ďalšiu udalosť"
 
-msgid "Show next picture"
-msgstr "Zobraziť ďalší image"
-
 msgid "Show next page"
 msgstr "Zobraziť ďalšiu stranu"
 
@@ -18475,9 +18472,6 @@ msgstr "Zobraziť predchádzajúci súbor s denníkmi ladenia"
 
 msgid "Show previous event"
 msgstr "Zobraziť predchádzajúcu udalosť"
-
-msgid "Show previous picture"
-msgstr "Zobraziť prechádzajúci image"
 
 msgid "Show previous page"
 msgstr "Zobraziť predchádzajúcu stranu"
