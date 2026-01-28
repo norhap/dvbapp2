@@ -7958,7 +7958,7 @@ msgid "Enable preview"
 msgstr "Habilitar vista previa"
 
 msgid "Enable remote receiver to be tried to tune into services that can't be tuned into locally (e.g. tuner is occupied or service type is unavailable on the local tuner). Specify complete URL including http:// and port number (normally ...:8001), e.g. http://second_receiver:8001."
-msgstr "Permite que el receptor remoto intente sintonizar servicios que no se pueden sintonizar localmente (por ejemplo, el sintonizador está ocupado o el tipo de servicio no está disponible en el sintonizador local). Especifique la URL completa, incluyendo http:// y el número de puerto (normalmente ...:8001), por ejemplo, http://second_receiver:8001."
+msgstr "Permite que el receptor remoto intente sintonizar canales que no se pueden sintonizar localmente (ej.: el sintonizador está ocupado o el canal no está disponible en el sintonizador local). Especifique la URL completa, incluyendo http:// y el número de puerto (normalmente 8001), ej.: http://receptor_remoto:8001."
 
 msgid "Enable teletext caching"
 msgstr "Habilitar caché de teletexto"
@@ -20160,7 +20160,7 @@ msgid "Show first picture"
 msgstr "Mostrar primera imagen"
 
 msgid "Show free space in timer view"
-msgstr "Mostrar espacio libre en vista de temporizador"
+msgstr "Mostrar espacio libre en la vista del temporizador"
 
 msgid "Show graphical multi EPG"
 msgstr "Mostrar MultiEPG gráfica"
@@ -28144,7 +28144,7 @@ msgid ""
 "When 'Enabled', the timer view will show the free space on the target "
 "device. This will wake the device from sleep mode."
 msgstr ""
-"Cuando está 'Habilitado', la vista temporizador mostrará el espacio libre en "
+"Cuando está 'Habilitado', la vista del temporizador mostrará el espacio libre en "
 "el dispositivo de destino. Esto despertará el dispositivo del modo de "
 "suspensión."
 
@@ -28800,13 +28800,13 @@ msgid "Create Swap File"
 msgstr "Crear Archivo Swap"
 
 msgid "Create the flash expander in the selected device"
-msgstr "Crear la extensión de flash en el dispositivo seleccionado"
+msgstr "Crea flash expander en el dispositivo seleccionado"
 
 msgid "Deactivate Expander"
 msgstr "Desactivar FlashExpander"
 
 msgid "Deactivate the flash expander in the selected device"
-msgstr "Desactivar el flash expander en el dispositivo seleccionado"
+msgstr "Desactivar flash expander en el dispositivo seleccionado"
 
 msgid "Delete Expander"
 msgstr "Eliminar extensión de flash"
@@ -28847,7 +28847,7 @@ msgid "Error: mount not successful!"
 msgstr "Error, ¡montaje sin éxito!"
 
 msgid "Flash Expander Actions"
-msgstr "Flash Expander"
+msgstr "Acciones de Flash Expander"
 
 #, python-format
 msgid "FlashExpander on boot is '%s'.  FlashExpander status is '%s'."
@@ -28942,7 +28942,7 @@ msgid "Select Device"
 msgstr "Seleccionar dispositivo"
 
 msgid "Select a device to use as the flash expander"
-msgstr "Selecciona un dispositivo para usar como extensor de flash"
+msgstr "Seleccione un dispositivo para utilizar como flash expander"
 
 #
 msgid ""
