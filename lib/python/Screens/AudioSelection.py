@@ -686,6 +686,18 @@ class QuickSubtitlesConfigMenu(ConfigListScreen, Screen):
 				getConfigMenuItem("subtitle_bad_timing_delay"),
 				getConfigMenuItem("subtitle_noPTSrecordingdelay")
 			])
+		elif sub[3] == "AI": # AITools
+			try:
+				from Plugins.Extensions.AITools.plugin import getAIConfigMenuItem
+				menu.extend([
+					getConfigMenuItem("pango_subtitle_colors"),
+					getConfigMenuItem("subtitle_fontsize"),
+					getAIConfigMenuItem("max_chars_per_line"),
+					getAIConfigMenuItem("max_lines"),
+					getAIConfigMenuItem("subs2lang")
+				])
+			except:
+				pass
 		else: 		# pango
 			menu.extend([
 				getConfigMenuItem("pango_subtitles_delay"),
