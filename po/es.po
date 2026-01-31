@@ -6302,6 +6302,12 @@ msgstr "Logs de depuración"
 msgid "Debug log time format *"
 msgstr "Formato tiempo del log de depuración *"
 
+msgid "Decoder release strategy"
+msgstr "Estrategia de lanzamiento del decodificador"
+
+msgid "Decoder start timeout"
+msgstr "Tiempo de espera de inicio del decodificador"
+
 #
 msgid "Decryption & Parental Control"
 msgstr "Descifrado & control parental"
@@ -8776,9 +8782,6 @@ msgstr "Salir del editor y descartar cambios"
 msgid "Exit editor and save any changes"
 msgstr "Salir del editor y guardar cambios"
 
-msgid "Exit picture viewer"
-msgstr "Salir de visualizador de imágenes"
-
 msgid "Exit input device selection."
 msgstr "Salir de la selección de dispositivo de entrada."
 
@@ -8812,6 +8815,9 @@ msgstr "Salir de la lista de interfaces de red"
 #
 msgid "Exit network wizard"
 msgstr "Salir del asistente de red"
+
+msgid "Exit picture viewer"
+msgstr "Salir de visualizador de imágenes"
 
 msgid "Exit quad PiP"
 msgstr "Salir de Quad PiP"
@@ -9191,12 +9197,6 @@ msgstr "Administrador de archivos: Acciones de Hash/Checksum"
 msgid "File Commander Hashes / Checksums"
 msgstr "Administrador de archivos: Hashes/Checksum"
 
-msgid "File Commander Picture Viewer"
-msgstr "Administrador de archivos: Visor de imágenes"
-
-msgid "File Commander Picture Viewer Actions"
-msgstr "Administrador de archivos: Acciones del visor de imágenes"
-
 msgid "File Commander Information Actions"
 msgstr "Administrador de archivos: Acciones de información"
 
@@ -9211,6 +9211,12 @@ msgstr "Administrador de archivos: Mover"
 
 msgid "File Commander Navigation Actions"
 msgstr "Acciones de navegación del Administrador de archivos"
+
+msgid "File Commander Picture Viewer"
+msgstr "Administrador de archivos: Visor de imágenes"
+
+msgid "File Commander Picture Viewer Actions"
+msgstr "Administrador de archivos: Acciones del visor de imágenes"
 
 msgid "File Commander Selection Actions"
 msgstr "Acciones de selección del Administrador de archivos"
@@ -10317,6 +10323,9 @@ msgstr "Horas Minutos"
 
 msgid "Hours Minutes Seconds"
 msgstr "Horas Minutos Segundos"
+
+msgid "How to release the hardware decoder when switching to software descrambling. 'Quick' releases immediately (faster zapping). 'Normal' performs clean shutdown first (more stable on some boxes)."
+msgstr "Cómo liberar el decodificador de hardware al cambiar a descifrado por software. La opción 'Rápido' libera inmediatamente (zapping más rápido). La opción 'Normal' realiza primero un apagado limpio (más estable en algunas máquinas)."
 
 msgid "Http(s) stream start delay"
 msgstr "Retraso en el inicio del stream http(s)"
@@ -12304,6 +12313,9 @@ msgstr "Número máximo de días en EPG"
 
 msgid "Maximum space used (MB)"
 msgstr "Espacio máximo utilizado (MB):"
+
+msgid "Maximum time to wait for the incoming data and descrambling keys (CW) before starting decoder. Usually both arrive much faster and this is only for special cases."
+msgstr "Tiempo máximo de espera para los datos entrantes y las claves de descifrado (CW) antes de iniciar el decodificador. Normalmente, ambos llegan mucho más rápido y esto solo se aplica en casos especiales."
 
 msgid "Mayotte"
 msgstr "Mayotte"
@@ -18197,6 +18209,9 @@ msgstr ""
 msgid "Select how the arrow buttons 'UP', 'DOWN', 'LEFT' or 'RIGHT' will act during seek actions."
 msgstr "Seleccione cómo actuarán los botones de flecha 'ARRIBA', 'ABAJO', 'IZQUIERDA' y 'DERECHA' durante las acciones de búsqueda."
 
+msgid "Select how the descrambled data stream is processed. 'Automatic' uses asynchronous writes (lower CPU usage) with automatic fallback to synchronous if kernel AIO is not supported. 'Synchronous' forces blocking writes (stable, most compatible)."
+msgstr "Seleccione cómo se procesa el flujo de datos descifrados. 'Automático' utiliza escrituras asíncronas (menor consumo de CPU) con retorno automático a escrituras síncronas si no se admite AIO del kernel. 'Síncrono' fuerza escrituras bloqueantes (estable, máxima compatibilidad)."
+
 msgid "Select how the number buttons will act during seek actions."
 msgstr "Seleccione cómo actuarán los botones numéricos durante las acciones de búsqueda."
 
@@ -18523,9 +18538,8 @@ msgstr "Configura la duración en minutos para el salvapantallas."
 msgid "Select the end time before which this timer can be activated.  After this time the timer won't be activated even if other conditions are met."
 msgstr "Seleccione la hora límite para activar este temporizador. Pasada esta hora, el temporizador no se activará aunque se cumplan otras condiciones."
 
-#, python-format
-msgid "Select the file sort order for the %s column:"
-msgstr "Selecciona el orden de archivos para la columna %s :"
+msgid "Select the file sort order for the %s:"
+msgstr "Seleccione el orden de clasificación de archivos para %s:"
 
 msgid "Select the file system for the device."
 msgstr "Seleccione el sistema de archivos para el dispositivo."
@@ -20958,6 +20972,9 @@ msgstr "Sociedad y cultura"
 msgid "Socket"
 msgstr "Socket"
 
+msgid "SoftCSA Settings"
+msgstr "Configuración SoftCSA"
+
 msgid "Softcam"
 msgstr "Softcam"
 
@@ -21000,6 +21017,9 @@ msgstr "Actualización de software"
 
 msgid "Software Update Actions"
 msgstr "Acciones de software de actualización"
+
+msgid "Software descrambling"
+msgstr "Descifrado de software"
 
 msgid "Software information"
 msgstr "Información de software"
@@ -21902,6 +21922,9 @@ msgstr "Sincronizar hora usando"
 # Zeitenstellung
 msgid "Synchronize system time using transponder or Internet."
 msgstr "Sincronizar hora de sistema mediante transpondedor o internet."
+
+msgid "Synchronous"
+msgstr "Sincrónico"
 
 msgid "Syrian Arab Republic"
 msgstr "República Árabe Siria"
@@ -26652,6 +26675,9 @@ msgstr "Automático"
 msgid "AutoTimer was installed successfully."
 msgstr "AutoTimer se instaló exitosamente."
 
+msgid "Available"
+msgstr "Disponible"
+
 msgid "back"
 msgstr "Atrás"
 
@@ -27119,10 +27145,9 @@ msgstr "Salir del reproductor de películas"
 msgid "left"
 msgstr "Izquierda"
 
-msgid "leisure hobbies (general)"
-msgstr "Ocio aficiones (general)"
+msgid "left column"
+msgstr "columna izquierda"
 
-#
 msgid "length"
 msgstr "Longitud"
 
@@ -27454,6 +27479,9 @@ msgstr "derecha"
 
 msgid "Rock/Pop"
 msgstr "Rock/Pop"
+
+msgid "right column"
+msgstr "columna derecha"
 
 msgid ""
 "satellites.xml not found or corrupted!\n"

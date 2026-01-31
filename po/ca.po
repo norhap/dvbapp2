@@ -23352,7 +23352,9 @@ msgstr "pistes d’àudio"
 msgid "automatic"
 msgstr "automatic"
 
-#
+msgid "Available"
+msgstr "Disponible"
+
 msgid "back"
 msgstr "enrere"
 
