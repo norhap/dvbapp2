@@ -26675,8 +26675,8 @@ msgstr "Automático"
 msgid "AutoTimer was installed successfully."
 msgstr "AutoTimer se instaló exitosamente."
 
-msgid "available"
-msgstr "disponible"
+msgid "Available"
+msgstr "Disponible"
 
 msgid "back"
 msgstr "Atrás"
