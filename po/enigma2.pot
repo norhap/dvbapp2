@@ -23129,7 +23129,7 @@ msgstr ""
 msgid "automatic"
 msgstr ""
 
-msgid "Available"
+msgid "available"
 msgstr ""
 
 msgid "back"
