@@ -9233,6 +9233,9 @@ msgstr "Administrador de archivos: Acciones del editor de texto"
 msgid "File Commander settings"
 msgstr "Ajustes del Administrador de archivos"
 
+msgid "File error"
+msgstr "Error en archivo"
+
 msgid "File system"
 msgstr "Sistema de archivos"
 
