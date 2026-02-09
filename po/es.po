@@ -8952,6 +8952,9 @@ msgstr "F3"
 msgid "F4"
 msgstr "F4"
 
+msgid "Fallback tuner and FCC activated. Activate only one function."
+msgstr "Tuner reserva y FCC activados. Activar solo una función."
+
 msgid "FBC SCR (Unicable/JESS)"
 msgstr "FBC SCR (Unicable/JESS)"
 
