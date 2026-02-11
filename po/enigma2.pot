@@ -1984,6 +1984,9 @@ msgstr ""
 msgid "Adjust the vertical position of the letters used for teletext."
 msgstr ""
 
+msgid "Adjusts compensation for hardware buffer latency for DM9x0."
+msgstr ""
+
 msgid "Adult"
 msgstr ""
 
@@ -2703,6 +2706,9 @@ msgid "Autostart"
 msgstr ""
 
 msgid "Autostart:"
+msgstr ""
+
+msgid "Available"
 msgstr ""
 
 msgid "Available format variables"
@@ -8898,6 +8904,9 @@ msgid "Hardware MultiBoot device"
 msgstr ""
 
 msgid "Hardware information"
+msgstr ""
+
+msgid "Hardware latency correction"
 msgstr ""
 
 msgid "Hardware serial"
@@ -23130,9 +23139,6 @@ msgid "audio tracks"
 msgstr ""
 
 msgid "automatic"
-msgstr ""
-
-msgid "Available"
 msgstr ""
 
 msgid "back"
