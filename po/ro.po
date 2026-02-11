@@ -10696,6 +10696,9 @@ msgstr ""
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Ultima scanare"
+
 msgid "Last speed"
 msgstr "Ultima viteza"
 

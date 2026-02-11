@@ -10607,6 +10607,9 @@ msgstr "Poslednji konfig"
 msgid "Last flash"
 msgstr "Posljednji flash"
 
+msgid "Last Scanned"
+msgstr "Zadnje skenirano"
+
 msgid "Last speed"
 msgstr "Posljednja brzina"
 

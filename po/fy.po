@@ -11354,6 +11354,9 @@ msgstr ""
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Lêst skansearre"
+
 #
 msgid "Last speed"
 msgstr "Lêste faasje"

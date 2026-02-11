@@ -11380,6 +11380,9 @@ msgstr ""
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Pēdējoreiz skenēts"
+
 #
 msgid "Last speed"
 msgstr "Pēdējais ātrums"

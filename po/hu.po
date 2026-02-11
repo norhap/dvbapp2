@@ -10636,6 +10636,9 @@ msgstr "Utolsó konfiguráció"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Utoljára szkennelt"
+
 msgid "Last speed"
 msgstr "Utolsó sebesség"
 

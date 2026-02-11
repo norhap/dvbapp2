@@ -10994,6 +10994,9 @@ msgstr "Última configuração"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Última digitalização"
+
 #
 msgid "Last speed"
 msgstr "Última velocidade"

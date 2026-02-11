@@ -10816,6 +10816,9 @@ msgstr "آخرین پیکربندی"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "اخرین اسکن"
+
 msgid "Last speed"
 msgstr "آخرین سرعت"
 

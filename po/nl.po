@@ -10718,6 +10718,9 @@ msgstr "Laatste configuratie"
 msgid "Last flash"
 msgstr "Laatste flash"
 
+msgid "Last Scanned"
+msgstr "Laatst gescand"
+
 msgid "Last speed"
 msgstr "Laatste snelheid"
 

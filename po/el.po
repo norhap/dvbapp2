@@ -10567,6 +10567,9 @@ msgstr "Τελευταία ρύθμιση"
 msgid "Last flash"
 msgstr "Τελευταίο φλασάρισμα"
 
+msgid "Last Scanned"
+msgstr "Τελευταία σάρωση"
+
 msgid "Last speed"
 msgstr "Τελευταία ταχύτητα"
 

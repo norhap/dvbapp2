@@ -10469,6 +10469,9 @@ msgstr "Siste innstilling"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Sist skannet"
+
 msgid "Last speed"
 msgstr "Siste hastighet"
 

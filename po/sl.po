@@ -11520,6 +11520,9 @@ msgstr "Prejšnje nastavitve"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Nazadnje skenirano"
+
 #
 msgid "Last speed"
 msgstr "Zadnja hitrost"

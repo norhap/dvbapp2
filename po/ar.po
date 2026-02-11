@@ -10982,6 +10982,9 @@ msgstr "التهيئه السابقه"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "آخر مسح ضوئي"
+
 #
 msgid "Last speed"
 msgstr "السرعه السابقه"

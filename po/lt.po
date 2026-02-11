@@ -10614,6 +10614,9 @@ msgstr "Paskutinė konfigūracija"
 msgid "Last flash"
 msgstr "Paskutinis įdiegimas"
 
+msgid "Last Scanned"
+msgstr "Paskutinis nuskaitytas"
+
 msgid "Last speed"
 msgstr "Paskutinis greitis"
 

@@ -10570,6 +10570,9 @@ msgstr "Ultimo flash"
 msgid "Last speed"
 msgstr "Ultima velocità"
 
+msgid "Last Scanned"
+msgstr "Ultima scansione"
+
 msgid "Last update"
 msgstr "Ultimo aggiornamento"
 

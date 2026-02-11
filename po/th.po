@@ -10763,6 +10763,9 @@ msgstr "ค่าที่ตั้งล่าสุด"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "สแกนครั้งล่าสุด"
+
 msgid "Last speed"
 msgstr "ความเร็วล่าสุด"
 

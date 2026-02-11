@@ -11173,6 +11173,9 @@ msgstr "Síðasta stilling"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Síðast skannað"
+
 #
 msgid "Last speed"
 msgstr "Síðasti hraði"

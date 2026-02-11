@@ -11009,6 +11009,9 @@ msgstr "הגדרה קודמת"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "סריקה אחרונה"
+
 #
 msgid "Last speed"
 msgstr "מהירות קודמת"

@@ -10610,6 +10610,9 @@ msgstr "Остання конфігурація"
 msgid "Last flash"
 msgstr "Останній запис"
 
+msgid "Last Scanned"
+msgstr "Останнє сканування"
+
 msgid "Last speed"
 msgstr "Остання швидкість"
 
