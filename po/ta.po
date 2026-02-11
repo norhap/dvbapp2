@@ -10565,6 +10565,9 @@ msgstr "கடைசி கட்டமைப்பு"
 msgid "Last flash"
 msgstr "கடைசி ஃபிளாச்"
 
+msgid "Last Scanned"
+msgstr "கடைசியாக ஸ்கேன் செய்யப்பட்டது"
+
 msgid "Last speed"
 msgstr "கடைசி விரைவு"
 

@@ -10544,6 +10544,9 @@ msgstr "Последна конфигурация"
 msgid "Last flash"
 msgstr "Последен флаш"
 
+msgid "Last Scanned"
+msgstr "Последно сканирано"
+
 msgid "Last speed"
 msgstr "Последна скорост"
 

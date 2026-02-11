@@ -10580,6 +10580,9 @@ msgstr "Aiemmat arvot"
 msgid "Last flash"
 msgstr "Ohjelmisto päivitetty"
 
+msgid "Last Scanned"
+msgstr "Viimeksi skannattu"
+
 msgid "Last speed"
 msgstr "Aikaisempi nopeus"
 

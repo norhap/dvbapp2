@@ -364,6 +364,8 @@ class ChannelSelectionBase(Screen):
 		serviceNameTmp = ServiceReference(serviceReference).getServiceName()
 		serviceName = serviceNameTmp.replace(_("(TV)") if self.mode == MODE_TV else _("(Radio)"), "").replace("  ", " ").strip()
 		# print(f"[ChannelSelection] getServiceName DEBUG: Service Name Before='{serviceNameTmp}', After='{serviceName}'.")
+		if "Last Scanned" in serviceName:  # OpenSPA [norhap] Last Scanned always translated.
+			serviceName = serviceName.replace("Last Scanned", _("Last Scanned"))
 		if "User - bouquets" in serviceName:
 			return _("User - Bouquets")
 		if not serviceName:

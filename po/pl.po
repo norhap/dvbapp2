@@ -10620,6 +10620,9 @@ msgstr "Ostatnie ustawienia"
 msgid "Last flash"
 msgstr "Ostatni flash"
 
+msgid "Last Scanned"
+msgstr "Ostatnie skanowanie"
+
 msgid "Last speed"
 msgstr "Ostatnia prędkość"
 

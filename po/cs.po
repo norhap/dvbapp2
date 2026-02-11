@@ -10608,6 +10608,9 @@ msgstr "Poslední konfigurace"
 msgid "Last flash"
 msgstr "Poslední flash"
 
+msgid "Last Scanned"
+msgstr "Naposledy naskenováno"
+
 msgid "Last speed"
 msgstr "Poslední rychlost"
 

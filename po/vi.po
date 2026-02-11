@@ -10659,6 +10659,9 @@ msgstr "Cấu hình cuối cùng"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Lần quét cuối cùng"
+
 msgid "Last speed"
 msgstr "Tốc độ cuối"
 

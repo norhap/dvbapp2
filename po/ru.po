@@ -10609,6 +10609,9 @@ msgstr "Отменить изменения"
 msgid "Last flash"
 msgstr "Последняя прошивка"
 
+msgid "Last Scanned"
+msgstr "Последнее сканирование"
+
 msgid "Last speed"
 msgstr "Последняя скорость"
 

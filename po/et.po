@@ -10748,6 +10748,9 @@ msgstr "Viimane seadistus"
 msgid "Last flash"
 msgstr ""
 
+msgid "Last Scanned"
+msgstr "Viimati skannitud"
+
 msgid "Last speed"
 msgstr "Eelmine kiirus"
 

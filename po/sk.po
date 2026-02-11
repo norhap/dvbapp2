@@ -10610,6 +10610,9 @@ msgstr "Posledná konfigurácia"
 msgid "Last flash"
 msgstr "Posledné flashovanie"
 
+msgid "Last Scanned"
+msgstr "Posledná kontrola"
+
 msgid "Last speed"
 msgstr "posledná rýchlosť"
 

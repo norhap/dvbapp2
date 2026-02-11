@@ -10996,6 +10996,9 @@ msgstr "Son yapılandırma"
 msgid "Last flash"
 msgstr "Son yükleme"
 
+msgid "Last Scanned"
+msgstr "Son Taranan"
+
 #
 msgid "Last speed"
 msgstr "Son hız"
