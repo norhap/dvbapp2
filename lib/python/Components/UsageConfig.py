@@ -2576,7 +2576,7 @@ def InitUsageConfig():
 	config.timeshift.maxEvents = ConfigSelection(default=12, choices=[(x, ngettext("%d Event", "%d Events", x) % x) for x in range(1, 999)])
 	config.timeshift.maxHours = ConfigSelection(default=12, choices=[(x, ngettext("%d Hour", "%d Hours", x) % x) for x in range(1, 999)])
 	config.timeshift.recoveryBufferDelay = ConfigSelection(default=300, choices=[(x, _("%d ms") % x) for x in range(100, 1500, 100)])
-	config.timeshift.hwLatencyCorrection = ConfigSelection(default=2000, choices=[(x, _("%d ms") % x) for x in range(0, 2100, 100)])	
+	config.timeshift.hwLatencyCorrection = ConfigSelection(default=2000, choices=[(x, _("%d ms") % x) for x in range(0, 2100, 100)])
 	config.timeshift.skipReturnToLive = ConfigYesNo(default=False)
 	config.timeshift.showInfoBar = ConfigYesNo(default=True)
 	config.timeshift.showLiveTVMsg = ConfigYesNo(default=True)
