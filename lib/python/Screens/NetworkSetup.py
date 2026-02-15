@@ -651,6 +651,11 @@ class AdapterSetup(ConfigListScreen, Screen):
 			self.dhcpdefault = False
 		self.hasGatewayConfigEntry = NoSave(ConfigYesNo(default=self.dhcpdefault or False))
 		self.gatewayConfigEntry = NoSave(ConfigIP(default=iNetwork.getAdapterAttribute(self.iface, "gateway") or [0, 0, 0, 0]))
+		nameserver = (iNetwork.getNameserverList() + [[0, 0, 0, 0]] * 2)[0:2]
+		self.primaryDNS = NoSave(ConfigIP(default=nameserver[0]))
+		self.secondaryDNS = NoSave(ConfigIP(default=nameserver[1]))
+		self.ipTypeConfigEntry = NoSave(ConfigYesNo(default=iNetwork.getAdapterAttribute(self.iface, "ipv6") or False))
+		"""
 		# OpenSPA [norhap] Display more intuitive INFO Primary and Secondary DNS and text data input in VK for Wireless LAN.
 		if config.misc.firstrun.value and iNetwork.isWirelessInterface(self.iface):
 			self.activateInterfaceEntry.value = True
@@ -730,7 +735,7 @@ class AdapterSetup(ConfigListScreen, Screen):
 			self.primaryDNS = NoSave(ConfigIP(default=nameserver[0]))
 			self.secondaryDNS = NoSave(ConfigIP(default=nameserver[1]))
 			# END OpenSPA [norhap] Display more intuitive INFO Primary and Secondary DNS.
-		self.ipTypeConfigEntry = NoSave(ConfigYesNo(default=iNetwork.getAdapterAttribute(self.iface, "ipv6") or False))
+		"""
 
 	def createSetup(self):
 		if BoxInfo.getItem("WakeOnLAN"):
