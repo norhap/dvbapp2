@@ -4516,13 +4516,15 @@ void eDVBServicePlay::cleanupSoftwareDescrambling()
 		{
 			eDebug("[eDVBServicePlay] Skipping pause() for faster channel switch");
 		}
-
-		// Clear PIDs - required on all platforms
-		m_decoder->setVideoPID(-1, -1);
-		m_decoder->setAudioPID(-1, -1);
-		m_decoder->setSyncPCR(-1);
-		m_decoder->setTextPID(-1);
-		m_decoder->set();
+		if (!m_soft_decoder)  // [norhap] Do not clear PIDs if decoding with software (such as ExtEplayer3 or GstPlayer)
+		{
+			// Clear PIDs - required on all platforms
+			m_decoder->setVideoPID(-1, -1);
+			m_decoder->setAudioPID(-1, -1);
+			m_decoder->setSyncPCR(-1);
+			m_decoder->setTextPID(-1);
+			m_decoder->set();
+		}
 	}
 
 	if (m_soft_decoder)
