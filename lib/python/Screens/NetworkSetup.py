@@ -655,12 +655,12 @@ class AdapterSetup(ConfigListScreen, Screen):
 		self.primaryDNS = NoSave(ConfigIP(default=nameserver[0]))
 		self.secondaryDNS = NoSave(ConfigIP(default=nameserver[1]))
 		self.ipTypeConfigEntry = NoSave(ConfigYesNo(default=iNetwork.getAdapterAttribute(self.iface, "ipv6") or False))
-		"""
-		# OpenSPA [norhap] Display more intuitive INFO Primary and Secondary DNS and text data input in VK for Wireless LAN.
 		if config.misc.firstrun.value and iNetwork.isWirelessInterface(self.iface):
 			self.activateInterfaceEntry.value = True
 			config.plugins.wlan.encryption.value = "WPA/WPA2"  # set encryption ..prepare to enter password in wizard.
 			config.plugins.wlan.encryption.save()
+		"""
+		# OpenSPA [norhap] Display more intuitive INFO Primary and Secondary DNS and text data input in VK for Wireless LAN.
 		if exists(str(self.resolvFile)):
 			ip = ""
 			dns = open(self.resolvFile, "r").readlines()
