@@ -1651,6 +1651,9 @@ msgstr ""
 msgid "AC3plus transcoding"
 msgstr ""
 
+msgid "Adjusts compensation for hardware buffer latency for DM9x0."
+msgstr ""
+
 msgid "AFL"
 msgstr ""
 
@@ -8898,6 +8901,9 @@ msgid "Harddisk"
 msgstr ""
 
 msgid "Harddisk Setup"
+msgstr ""
+
+msgid "Hardware latency correction"
 msgstr ""
 
 msgid "Hardware MultiBoot device"

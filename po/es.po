@@ -1825,6 +1825,9 @@ msgstr "Transcodificación AC3 plus"
 msgid "AC3plus transcoding"
 msgstr "Transcodificación AC3plus"
 
+msgid "Adjusts compensation for hardware buffer latency for DM9x0."
+msgstr "Ajusta la compensación de la latencia del búfer de hardware para DM9x0."
+
 msgid "AFL"
 msgstr "AFL"
 
@@ -10058,11 +10061,14 @@ msgstr "Disco duro"
 msgid "Harddisk Setup"
 msgstr "Configuración de disco duro"
 
-msgid "Hardware MultiBoot device"
-msgstr "Dispositivo de hardware MultiBoot"
-
 msgid "Hardware information"
 msgstr "Información sobre el hardware"
+
+msgid "Hardware latency correction"
+msgstr "Corrección de latencia de hardware"
+
+msgid "Hardware MultiBoot device"
+msgstr "Dispositivo de hardware MultiBoot"
 
 msgid "Hardware serial"
 msgstr "Hardware numero de serie"
