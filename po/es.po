@@ -6332,6 +6332,9 @@ msgstr "Formato tiempo del log de depuración *"
 msgid "Decoder release strategy"
 msgstr "Estrategia de lanzamiento del decodificador"
 
+msgid "Decoder start delay"
+msgstr "Retardo de inicio del decodificador"
+
 msgid "Decoder start timeout"
 msgstr "Tiempo de espera de inicio del decodificador"
 
@@ -7991,7 +7994,7 @@ msgid "Enable preview"
 msgstr "Habilitar vista previa"
 
 msgid "Enable remote receiver to be tried to tune into services that can't be tuned into locally (e.g. tuner is occupied or service type is unavailable on the local tuner). Specify complete URL including http:// and port number (normally ...:8001), e.g. http://second_receiver:8001."
-msgstr "Permite que el receptor remoto intente sintonizar canales que no se pueden sintonizar localmente (ej.: el sintonizador está ocupado o el canal no está disponible en el sintonizador local). Especifique la URL completa, incluyendo http:// y el número de puerto (normalmente 8001), ej.: http://receptor_remoto:8001."
+msgstr "Permite que el receptor reserva intente sintonizar canales que no se pueden sintonizar localmente (ej.: el sintonizador está ocupado o el canal no está disponible en el sintonizador local). Especifique la URL completa, incluyendo http:// y el número de puerto (normalmente 8001), ej.: http://receptor_reserva:8001."
 
 msgid "Enable teletext caching"
 msgstr "Habilitar caché de teletexto"
@@ -12346,8 +12349,8 @@ msgstr "Número máximo de días en EPG"
 msgid "Maximum space used (MB)"
 msgstr "Espacio máximo utilizado (MB):"
 
-msgid "Maximum time to wait for the incoming data and descrambling keys (CW) before starting decoder. Usually both arrive much faster and this is only for special cases."
-msgstr "Tiempo máximo de espera para los datos entrantes y las claves de descifrado (CW) antes de iniciar el decodificador. Normalmente, ambos llegan mucho más rápido y esto solo se aplica en casos especiales."
+msgid "Maximum time to wait for the first descrambling key (CW) before starting the decoder. 'Disabled' starts the decoder immediately without waiting."
+msgstr "Tiempo máximo de espera para la primera clave de descifrado (CW) antes de iniciar el decodificador. Si se selecciona 'Desactivado', el decodificador se inicia inmediatamente sin esperar."
 
 msgid "Mayotte"
 msgstr "Mayotte"
@@ -18524,6 +18527,9 @@ msgstr ""
 
 msgid "Select the delay before the timer activates."
 msgstr "Seleccione el retardo antes de que se active el temporizador."
+
+msgid "Select the delay to buffer descrambled data before starting playback. This can reduce AC3 audio dropouts by ensuring enough data is available when the decoder starts. Higher values are more stable but increase channel switch time."
+msgstr "Seleccione el retardo para almacenar en búfer los datos decodificados antes de iniciar la reproducción. Esto puede reducir las interrupciones de audio AC3 al garantizar que haya suficientes datos disponibles cuando se inicie el decodificador. Los valores más altos proporcionan mayor estabilidad, pero aumentan el tiempo de cambio de canal."
 
 msgid "Select the delay to use when closing a Stream Relay service before reallocating the tuner for another service. Using '0' is only recommended for receivers with multiple satellite tuners."
 msgstr "Selecciona el retardo que usará al cerrar un servicio Stream Relay antes de reasignar el sintonizador a otro servicio. Solo se recomienda el uso de '0' en receptores con múltiples sintonizadores de satélite."
@@ -25451,10 +25457,10 @@ msgstr ""
 "encienda."
 
 msgid "When enabled, the timer from the fallback tuner is imported."
-msgstr "Cuando está activado, se importa el temporizador del sintonizador de reserva."
+msgstr "Cuando está activado, se importa el temporizador del receptor reserva."
 
 msgid "When enabled, the timer from the fallback tuner is the default timer."
-msgstr "Cuando está habilitado, el temporizador del sintonizador reserva es el temporizador por defecto."
+msgstr "Cuando está activado, el temporizador del receptor reserva es el temporizador por defecto."
 
 msgid "When enabled, you can customize the OpenWebIf settings for the fallback tuner."
 msgstr "Cuando esté activado, podrás personalizar los ajustes OpenWebIf en el sintonizador reserva"
