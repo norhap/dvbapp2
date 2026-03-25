@@ -220,9 +220,9 @@ class BenchmarkInformation(InformationBase):  # This code can't be used until we
 
 	def cpuBenchmarkFinished(self, result, retVal, extraArgs):
 		for line in result.split("\n"):
-			if line.startswith("Open Vision DMIPS"):
+			if line.startswith("DMIPS"):
 				self.cpuBenchmark = int([x.strip() for x in line.split(":")][1])
-			if line.startswith("Open Vision CPU status"):
+			if line.startswith("CPU status"):
 				self.cpuRating = [x.strip() for x in line.split(":")][1]
 		# Serialize the tests for better accuracy.
 		self.console.ePopen(("/usr/bin/streambench", "/usr/bin/streambench"), self.ramBenchmarkFinished)
@@ -232,7 +232,7 @@ class BenchmarkInformation(InformationBase):  # This code can't be used until we
 
 	def ramBenchmarkFinished(self, result, retVal, extraArgs):
 		for line in result.split("\n"):
-			if line.startswith("Open Vision copy rate"):
+			if line.startswith("Copy rate"):
 				self.ramBenchmark = float([x.strip() for x in line.split(":")][1])
 		for callback in self.onInformationUpdated:
 			if callable(callback):
@@ -1190,7 +1190,7 @@ class NetworkInformation(InformationBase):
 				if "Duplex:" in line:
 					self.interfaceData[extraArgs]["duplex"] = _(line.split(":")[1].strip().capitalize())
 				if "Transceiver:" in line:
-					self.interfaceData[extraArgs]["transeiver"] = _(line.split(":")[1].strip().capitalize())
+					self.interfaceData[extraArgs]["transceiver"] = _(line.split(":")[1].strip().capitalize())
 				if "Auto-negotiation:" in line:
 					self.interfaceData[extraArgs]["autoNegotiation"] = line.split(":")[1].strip().lower() == "on"
 				if "Link detected:" in line:
@@ -1222,8 +1222,6 @@ class NetworkInformation(InformationBase):
 							addr, scope = addr6.split()
 							info.append(formatLine("P1", _("IPv6 address"), addr))
 							info.append(formatLine("P3V2", _("Scope"), scope))
-						info.append(formatLine("P1", _("IPv6 address"), "2003:0000:4021:4700:4270:0000:0000:8250/64"))
-						info.append(formatLine("P3V2", _("Scope"), "Global"))
 					if "mac" in self.interfaceData[interface]:
 						info.append(formatLine("P1", _("MAC address"), self.interfaceData[interface]["mac"]))
 					if "speed" in self.interfaceData[interface]:
@@ -1726,7 +1724,6 @@ class ServiceInformation(InformationBase):
 			subtitle = self.service and self.service.subtitle()
 			subList = subtitle and subtitle.getSubtitleList() or []
 			for subtitle in subList:
-				print(subtitle)
 				indent = "P1F0" if subtitle[:3] == subtitleSelected else "P1"
 				subtitleLang = subtitle[4]
 				if subtitle[0] == 0:  # DVB PID.
