@@ -17276,8 +17276,8 @@ msgstr "Guardando archivos timeshift"
 msgid "Scaler sharpness"
 msgstr "Nitidez del escalado"
 
-msgid "Scaler vertical dejagging"
-msgstr "Escalar dejagging vertical"
+msgid "Scaler vertical anti-aliasing"
+msgstr "Escalador suavizado vertical"
 
 msgid "Scaling mode"
 msgstr "Modo escalado"
@@ -22888,11 +22888,11 @@ msgstr ""
 msgid "This option allows you to choose how to display the remaining time, the elapsed time, or both."
 msgstr "Esta opción le permite elegir cómo mostrar el tiempo restante, el tiempo transcurrido o ambos."
 
-msgid "This option allows you enable smoothing filter to control the dithering process."
-msgstr "Esta opción le permite activar el filtro de suavizado para controlar el proceso de tramado."
+msgid "Control the smoothing filter used for the dithering process."
+msgstr "Controlar el filtro de suavizado utilizado para el proceso de tramado."
 
-msgid "This option allows you enable the vertical scaler dejagging."
-msgstr "Esta opción le permite activar la depuración en escala vertical."
+msgid "Control the use of vertical scaler anti-aliasing."
+msgstr "Controlar el uso del suavizado de escala vertical."
 
 msgid "This option allows you to set the layout view (Text or Graphics)."
 msgstr "Esta opción te permite elegir configurar la vista del diseño (texto o gráfico)."
