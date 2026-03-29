@@ -45,16 +45,6 @@ msgid "\n"
 "Recording in progress."
 msgstr ""
 
-msgid "\n"
-"[Installed Plugins]\n"
-msgstr ""
-
-msgid "Installed Plugins"
-msgstr ""
-
-msgid " "
-msgstr ""
-
 msgid "  Menu key : Select quad channel"
 msgstr ""
 
@@ -5043,6 +5033,13 @@ msgid "Creating file system"
 msgstr ""
 
 msgid "Creating hard link to time shift file failed!"
+msgstr ""
+
+#, python-format
+msgid ""
+"Creating or activating the swap file failed.\n"
+"\n"
+"%s"
 msgstr ""
 
 msgid "Creating partition"
@@ -15473,7 +15470,7 @@ msgstr ""
 msgid "Scaler sharpness"
 msgstr ""
 
-msgid "Scaler vertical dejagging"
+msgid "Scaler vertical anti-aliasing"
 msgstr ""
 
 msgid "Scaling mode"
@@ -20103,10 +20100,10 @@ msgstr ""
 msgid "This option allows to set the level of dynamic contrast of the picture."
 msgstr ""
 
-msgid "This option allows you enable smoothing filter to control the dithering process."
+msgid "Control the smoothing filter used for the dithering process."
 msgstr ""
 
-msgid "This option allows you enable the vertical scaler dejagging."
+msgid "Control the use of vertical scaler anti-aliasing."
 msgstr ""
 
 msgid "This option allows you to Power Off the display."
