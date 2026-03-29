@@ -45,16 +45,6 @@ msgid "\n"
 "Recording in progress."
 msgstr ""
 
-msgid "\n"
-"[Installed Plugins]\n"
-msgstr ""
-
-msgid "Installed Plugins"
-msgstr ""
-
-msgid " "
-msgstr ""
-
 msgid "  Menu key : Select quad channel"
 msgstr ""
 
@@ -5043,6 +5033,13 @@ msgid "Creating file system"
 msgstr ""
 
 msgid "Creating hard link to time shift file failed!"
+msgstr ""
+
+#, python-format
+msgid ""
+"Creating or activating the swap file failed.\n"
+"\n"
+"%s"
 msgstr ""
 
 msgid "Creating partition"
