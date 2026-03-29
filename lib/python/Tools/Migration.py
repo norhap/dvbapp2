@@ -137,6 +137,7 @@ def migrateFileCommander():
 		("sortFiles_right", "sortFilesRight"),
 		("unknown_extension_as_text", "useViewerForUnknown")
 	)
+	config.plugins.FileCommander = ConfigSubsection()
 	config.plugins.filecommander = ConfigSubsection()
 	for old, new in attributes:
 		setattr(config.plugins.filecommander, old, ConfigText(default=""))
@@ -151,3 +152,4 @@ def migrateFileCommander():
 			getattr(config.plugins.FileCommander, new).value = value
 		getattr(config.plugins.filecommander, old).value = ""
 	config.plugins.filecommander.save()
+	config.plugins.FileCommander.save()
