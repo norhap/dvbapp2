@@ -2904,23 +2904,23 @@ msgstr "Autor: "
 msgid "Authoring mode"
 msgstr "Modo de autorización"
 
-#
 msgid "Auto"
 msgstr "Auto"
 
 msgid "Auto detect"
 msgstr "Detección automática"
 
-#
 msgid "Auto Language"
 msgstr "Idioma automático"
 
-#
 msgid "Auto Language Selection"
 msgstr "Selección automática de idioma"
 
 msgid "Auto Language Settings"
 msgstr "Selección automática de idioma"
+
+msgid "Auto (not available)"
+msgstr "Auto (no disponible)"
 
 msgid "Auto SCART switching"
 msgstr "Cambio automático de SCART"
@@ -2961,10 +2961,6 @@ msgstr "Apagado automático"
 
 msgid "Auto standby"
 msgstr "Reposo automático"
-
-#
-msgid "Auto (not available)"
-msgstr "Auto (no disponible)"
 
 msgid "AutoBoquetsMaker was installed successfully.\nIt is necessary to restart enigma2 to apply the changes.\nDo you want to do it now?"
 msgstr "AutoBoquetsMaker se instaló correctamente.\nEs necesario reiniciar enigma2 para aplicar los cambios.\n¿Quiere hacerlo ahora?"
@@ -22868,15 +22864,6 @@ msgid "This option allows to set the level of dynamic contrast of the picture."
 msgstr ""
 "Esta opción te permite ajustar el nivel de contraste dinámico de la imagen."
 
-msgid "This option allows you to config the Colordepth for UHD."
-msgstr "Esta opción le permite configurar la profundidad de color para UHD."
-
-msgid "This option allows you to config the Colorimetry for HDR."
-msgstr "Esta opción le permite configurar la colorimetría para HDR."
-
-msgid "This option allows you to config the Colorspace from Auto to RGB."
-msgstr "Esta opción le permite configurar el espacio de colores de Auto a RGB."
-
 msgid "This option allows you to enable or disable the 10 Bit Color Mode."
 msgstr "Esta opción permite activar o desactivar el modo de color de 10 bits."
 
@@ -22901,12 +22888,8 @@ msgstr ""
 msgid "This option allows you to choose how to display the remaining time, the elapsed time, or both."
 msgstr "Esta opción le permite elegir cómo mostrar el tiempo restante, el tiempo transcurrido o ambos."
 
-msgid ""
-"This option allows you enable smoothing filter to control the dithering "
-"process."
-msgstr ""
-"Esta opción le permite activar el filtro de suavizado para controlar el "
-"proceso de tramado."
+msgid "This option allows you enable smoothing filter to control the dithering process."
+msgstr "Esta opción le permite activar el filtro de suavizado para controlar el proceso de tramado."
 
 msgid "This option allows you enable the vertical scaler dejagging."
 msgstr "Esta opción le permite activar la depuración en escala vertical."
@@ -22991,6 +22974,15 @@ msgstr "Esta opción le permite elegir a qué saltará la primera vez que presio
 
 msgid "This option allows you to choose whether or not to display genre information for the event."
 msgstr "Esta opción te permite elegir si quieres visualizar la información del género del evento."
+
+msgid "This option allows you to config the Colordepth for UHD."
+msgstr "Esta opción le permite configurar la profundidad de color para UHD."
+
+msgid "This option allows you to config the Colorimetry for HDR."
+msgstr "Esta opción le permite configurar la colorimetría para HDR."
+
+msgid "This option allows you to config the Colorspace from Auto to RGB."
+msgstr "Esta opción le permite configurar el espacio de color de Automático a RGB."
 
 # A/V Settings
 msgid "This option allows you to enable 3D Surround Sound."
