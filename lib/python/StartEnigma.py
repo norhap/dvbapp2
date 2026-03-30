@@ -770,6 +770,9 @@ config.plugins = ConfigSubsection()
 config.plugins.remotecontroltype = ConfigSubsection()
 config.plugins.remotecontroltype.rctype = ConfigInteger(default=0)
 
+# OpenSPA [norhap] for migrateSettings in FileCommander.
+config.plugins.FileCommander = ConfigSubsection()
+
 config.parental = ConfigSubsection()
 config.parental.lock = ConfigOnOff(default=False)
 config.parental.setuplock = ConfigOnOff(default=False)
