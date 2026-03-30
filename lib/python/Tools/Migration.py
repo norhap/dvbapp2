@@ -1,4 +1,4 @@
-from Components.config import ConfigBoolean, ConfigSubsection, ConfigText, config
+from Components.config import ConfigBoolean, ConfigText, config
 
 
 def migrateSettings():
