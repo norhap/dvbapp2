@@ -1,4 +1,4 @@
-from Components.config import ConfigBoolean, ConfigText, config
+from Components.config import ConfigBoolean, ConfigSubsection, ConfigText, config
 
 
 def migrateSettings():
@@ -137,6 +137,7 @@ def migrateFileCommander():
 		("sortFiles_right", "sortFilesRight"),
 		("unknown_extension_as_text", "useViewerForUnknown")
 	)
+	config.plugins.FileCommander = ConfigSubsection()
 	for old, new in attributes:
 		setattr(config.plugins.filecommander, old, ConfigText(default=""))
 		value = getattr(config.plugins.filecommander, old).value
