@@ -5817,6 +5817,9 @@ msgstr "Creando sistema de archivos"
 msgid "Creating hard link to time shift file failed!"
 msgstr "¡Falló la creación de un enlace físico al archivo timeshift!"
 
+msgid "Creating or activating the swap file failed.\n\n%s"
+msgstr "Error al crear o activar swap.\n\n%s"
+
 msgid "Creating partition"
 msgstr "Creando partición"
 
