@@ -7834,6 +7834,12 @@ msgstr "Habilitar compensaciones Dolby Digital / Dolby AC-3"
 msgid "Enable EIT EPG"
 msgstr "Habilitar EPG EIT"
 
+msgid "Enable extended cut file support"
+msgstr "Habilitar compatibilidad extendida con archivos de corte"
+
+msgid "Enable extended cut file support. This will write cut with more information and not only marker."
+msgstr "Habilitar la compatibilidad con archivos de corte extendidos. Esto generará un archivo de corte con más información y no solo con marcadores"
+
 msgid "Enable Fast Channel Change"
 msgstr "Habiliar el cambio rápido de canal"
 
