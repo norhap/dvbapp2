@@ -23,7 +23,10 @@ if isPluginInstalled("spazeMenu"):
 		DEFAULT_SKIN = "MetrixJRSD/skin.xml"
 else:
 	standardenigma = True
-	DEFAULT_SKIN = "OctEtFHD/skin.xml"
+	if BoxInfo.getItem("HasFullHDSkinSupport"):
+		DEFAULT_SKIN = "OctEtFHD/skin.xml"
+	else:
+		DEFAULT_SKIN = "OctEtHD/skin.xml"
 EMERGENCY_SKIN = "skin_default/skin.xml"
 EMERGENCY_NAME = "Default OE-A"
 DEFAULT_DISPLAY_SKIN = "skin_display_grautec.xml" if BoxInfo.getItem("grautec") else "skin_display.xml"
@@ -1629,10 +1632,17 @@ def loadSingleSkinData(desktop, screenID, domSkin, pathSkin, scope=SCOPE_GUISKIN
 		for label in tag.findall("label"):
 			style.setLabelFont(parseFont(label.attrib.get("font", "Regular;20"), ((1, 1), (1, 1))))
 		for listBox in tag.findall("listbox"):
-			pageSize = parseInteger(listBox.attrib.get("pageSize", eListbox.DefaultPageSize), eListbox.DefaultPageSize)
 			enableWrapAround = parseBoolean("enablewraparound", listBox.attrib.get("enableWrapAround", "True" if eListbox.DefaultWrapAround else "False"))
 			style.setListboxFont(parseFont(listBox.attrib.get("font", "Regular;20"), ((1, 1), (1, 1))))
 			scrollbarBorderWidth = parseInteger(listBox.attrib.get("scrollbarBorderWidth", eListbox.DefaultScrollBarBorderWidth), eListbox.DefaultScrollBarBorderWidth)
+			horizontalAlignment = listBox.attrib.get("horizontalAlignment")
+			if horizontalAlignment:
+				horizontalAlignment = parseHorizontalAlignment(horizontalAlignment)
+				eListbox.setDefaultHorizontalAlignment(horizontalAlignment)
+			verticalAlignment = listBox.attrib.get("verticalAlignment")
+			if verticalAlignment:
+				verticalAlignment = parseVerticalAlignment(verticalAlignment)
+				eListbox.setDefaultVerticalAlignment(verticalAlignment)
 			if "scrollbarBorderWidth" not in scrollLabelStyle:
 				scrollLabelStyle["scrollbarBorderWidth"] = scrollbarBorderWidth
 			scrollbarMode = parseScrollbarMode(listBox.attrib.get("scrollbarMode", scrollbarModes[eListbox.DefaultScrollBarMode]))
@@ -1650,7 +1660,7 @@ def loadSingleSkinData(desktop, screenID, domSkin, pathSkin, scope=SCOPE_GUISKIN
 			scrollbarRadius = parseRadius(listBox.attrib.get("scrollbarRadius", "0"))
 			if "scrollbarRadius" not in scrollLabelStyle:
 				scrollLabelStyle["scrollbarRadius"] = scrollbarRadius
-			eListbox.setDefaultScrollbarStyle(scrollbarWidth, scrollbarOffset, scrollbarBorderWidth, scrollbarScroll, scrollbarMode, enableWrapAround, pageSize)
+			eListbox.setDefaultScrollbarStyle(scrollbarWidth, scrollbarOffset, scrollbarBorderWidth, scrollbarScroll, scrollbarMode, enableWrapAround)
 			eListbox.setDefaultScrollbarRadius(*scrollbarRadius)
 		for scrollLabel in tag.findall("scrolllabel"):
 			scrollLabelStyle["scrollbarBorderWidth"] = parseInteger(scrollLabel.attrib.get("scrollbarBorderWidth", eListbox.DefaultScrollBarBorderWidth), eListbox.DefaultScrollBarBorderWidth)
@@ -1891,7 +1901,8 @@ class SkinContextVertical(SkinContext):
 				self.h -= (height + self.spacing)
 				self.y += (height + self.spacing)
 			elif pos == "center":
-				pos = (left, (self.h - height) / 2)
+				originY = self.by - self.bh
+				pos = (left, originY + (self.bh - height) / 2)
 				size = (width, height)
 			else:
 				if pos in variables:
@@ -1943,7 +1954,8 @@ class SkinContextHorizontal(SkinContext):
 				size = (width, height)
 				self.w -= (width + self.spacing)
 			elif pos == "center":
-				pos = ((self.w - width) / 2, top)
+				originX = self.rx - self.rw
+				pos = (originX + (self.rw - width) / 2, top)
 				size = (width, height)
 			else:
 				if pos in variables:
@@ -2511,14 +2523,25 @@ def readSkin(screen, skin, names, desktop):
 
 	def processPanel(widget, context, stack=None):
 		name = widget.attrib.get("name")
+		panelPosition = widget.attrib.get("position")
+		panelSize = widget.attrib.get("size")
+		panelFont = widget.attrib.get("font")
+		panelLayout = widget.attrib.get("layout")
 		if name:
 			try:
 				screen = domScreens[name]
 			except KeyError:
 				print(f"[Skin] Error: Unable to find screen '{name}' referred in screen '{myName}'!")
 			else:
-				processScreen(screen[0], context)
-		layout = widget.attrib.get("layout")
+				if panelPosition is not None and panelSize is not None:
+					try:
+						includeContext = SkinContext(context, panelPosition, panelSize, panelFont)
+					except Exception as err:
+						raise SkinError(f"Failed to create include context (position='{panelPosition}', size='{panelSize}', font='{panelFont}') in context '{context}': {err}")
+				else:
+					includeContext = context
+				processScreen(screen[0], includeContext)
+		layout = panelLayout
 		classes = {
 			"stack": SkinContextStack,
 			"vertical": SkinContextVertical,
@@ -2526,12 +2549,12 @@ def readSkin(screen, skin, names, desktop):
 		}
 		contextClass = classes.get(layout, SkinContext)
 		try:
-			contextScreen = contextClass(context, widget.attrib.get("position"), widget.attrib.get("size"), widget.attrib.get("font"))
+			contextScreen = contextClass(context, panelPosition, panelSize, panelFont)
 			spacing = widget.attrib.get("spacing")
 			if spacing:
 				contextScreen.spacing = int(spacing)
 		except Exception as err:
-			raise SkinError(f"Failed to create skin context (position='{widget.attrib.get('position')}', size='{widget.attrib.get('size')}', font='{widget.attrib.get('font')}') in context '{context}': {err}")
+			raise SkinError(f"Failed to create skin context (position='{panelPosition}', size='{panelSize}', font='{panelFont}') in context '{context}': {err}")
 		processScreen(widget, contextScreen)
 
 	def processStack(widget, context, stack=None):
