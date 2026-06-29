@@ -4159,7 +4159,7 @@ msgstr "Vyberte název souboru, kam se uloží EPG data, když je %s %s vypnuto.
 msgid "Choose the option to correct invalid EPG data."
 msgstr "Vyberte možnost opravit neplatná data EPG."
 
-msgid "Choose the skin to be used for the GUI interface. Press 'GREEN' to activate the skin."
+msgid "Choose the skin to be used for the graphical user interface (GUI). Press 'GREEN' to activate the skin."
 msgstr "Vyberte vzhled, který chcete použít pro rozhraní GUI. Stisknutím „ZELENÉ“ aktivujte pokožku."
 
 msgid "Choose the skin to be used for the LCD/front panel interface. Press 'GREEN' to activate the skin."
@@ -8297,8 +8297,8 @@ msgstr "Falklandské ostrovy (Malvíny)"
 msgid "Fallback API did not return a valid result."
 msgstr "Záložní API nevrátilo platný výsledek."
 
-msgid "Fallback Font *"
-msgstr "Záložná font *"
+msgid "Fallback Font"
+msgstr "Záložná font"
 
 msgid "Fallback Remote Receiver Settings"
 msgstr "Nastavení záložního dálkového přijímače"
@@ -8894,8 +8894,8 @@ msgstr "Kategorie protokolu ladění GStreamer *"
 msgid "GStreamer debug log level *"
 msgstr "Úroveň protokolu ladění GStreamer *"
 
-msgid "GUI Skin *"
-msgstr "Vzhled GUI *"
+msgid "GUI Skin"
+msgstr "Vzhled GUI"
 
 msgid "Gabon"
 msgstr "Gabon"
@@ -10571,8 +10571,8 @@ msgstr "LAN připojení"
 msgid "LCD scroll speed"
 msgstr "Rychlost rolování LCD"
 
-msgid "LCD/Front panel *"
-msgstr "LCD/přední panel *"
+msgid "LCD/Front panel"
+msgstr "LCD/přední panel"
 
 msgid "LCN Scanner"
 msgstr "LCN skener"
@@ -16269,7 +16269,7 @@ msgstr "Vyberte 'Ano' pokud chcete probudit TV aby se spustil časovač napájen
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "Vyberte 'Ano', aby byl informační panel zobrazen bez časového limitu, zatímco je přehrávání médií pozastaveno."
 
-msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
+msgid "When enabled, allow each storage device detected to be automatically exported as a Samba share."
 msgstr "Chcete-li, aby každé zjištěné úložné zařízení bylo automaticky exportováno jako sdílení samba, vyberte možnost „Ano“."
 
 msgid "Select 'Yes' to allow the VPS to adjust recording timers based on broadcast Program Delivery Control (PDC) data. For this to work the service must provide reliable event PDC data."
@@ -16879,7 +16879,7 @@ msgstr "Vyberte frekvenci uživatelského pásma, která má být přiřazena to
 msgid "Select the Yes / True response"
 msgstr "Vyberte odpověď Ano / Pravda"
 
-msgid "Select the access mode for the automatically exported samba shares."
+msgid "Select the mode of access, Read/Write or Read Only, applied to all automatically exported Samba shares."
 msgstr "Vyberte režim přístupu pro automaticky exportované sdílené položky samba."
 
 #, python-format

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: OpenATV Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-22 11:12+0000\n"
-"PO-Revision-Date: 2026-06-22 23:42+0000\n"
+"PO-Revision-Date: 2026-06-25 15:01+0000\n"
 "Last-Translator: Mcilo <mcilo357104@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/tr/>\n"
 "Language: tr\n"
@@ -1745,7 +1745,7 @@ msgid "AV Setup"
 msgstr "Görüntü / Ses Kurulumu"
 
 msgid "AV receiver, soundbar and remote"
-msgstr "AV alıcısı, soundbar ve uzaktan kumanda"
+msgstr "AV Alıcısı, Soundbar ve Uzaktan Kumanda"
 
 msgid "Abkhazian"
 msgstr "Abhazca"
@@ -4265,7 +4265,7 @@ msgstr "%s %s alıcınız kapatıldığında EPG verilerini içeren dosyanın is
 msgid "Choose the option to correct invalid EPG data."
 msgstr "Geçersiz EPG verilerini düzeltme seçeneğini seçin."
 
-msgid "Choose the skin to be used for the GUI interface. Press 'GREEN' to activate the skin."
+msgid "Choose the skin to be used for the graphical user interface (GUI). Press 'GREEN' to activate the skin."
 msgstr "Kullanıcı arayüzü için kullanılacak arayüzü seçin. Arayüzü etkinleştirmek için 'YEŞİL' tuşa basın."
 
 msgid "Choose the skin to be used for the LCD/front panel interface. Press 'GREEN' to activate the skin."
@@ -8579,8 +8579,8 @@ msgstr "Falkland Adaları (Malvinas)"
 msgid "Fallback API did not return a valid result."
 msgstr "Yedek API geçerli bir sonuç vermedi."
 
-msgid "Fallback Font *"
-msgstr "Yedek Yazı Tipi *"
+msgid "Fallback Font"
+msgstr "Yedek Yazı Tipi"
 
 msgid "Fallback Remote Receiver Settings"
 msgstr "Yedek Uzak Alıcı Ayarları"
@@ -9205,8 +9205,8 @@ msgstr "GStreamer hata ayıklama günlüğü kategorisi *"
 msgid "GStreamer debug log level *"
 msgstr "GStreamer hata ayıklama günlüğü düzeyi *"
 
-msgid "GUI Skin *"
-msgstr "Kullanıcı Arayüzü *"
+msgid "GUI Skin"
+msgstr "Kullanıcı Arayüzü"
 
 msgid "Gabon"
 msgstr "Gabon"
@@ -10955,8 +10955,8 @@ msgstr "Kablolu Ağ Bağlantısı"
 msgid "LCD scroll speed"
 msgstr "LCD kaydırma hızı"
 
-msgid "LCD/Front panel *"
-msgstr "LCD/Ön Panel Arayüzü *"
+msgid "LCD/Front panel"
+msgstr "LCD/Ön Panel Arayüzü"
 
 msgid "LCN Scanner"
 msgstr "LCN Tarayıcı"
@@ -16997,7 +16997,7 @@ msgstr "'Uyandırma' zamanlanmış görevi başladığında TV açılsın istiyo
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "Medya oynatımı duraklatıldığında Bilgi Çubuğunun zaman aşımı olmaksızın görüntülenmeye devam etmesi için 'Evet'i seçin."
 
-msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
+msgid "When enabled, allow each storage device detected to be automatically exported as a Samba share."
 msgstr "Algılanan her depolama aygıtının otomatik olarak Samba paylaşımı olarak dışa aktarılmasına izin vermek için 'Evet'i seçin."
 
 msgid "Select 'Yes' to allow the VPS to adjust recording timers based on broadcast Program Delivery Control (PDC) data. For this to work the service must provide reliable event PDC data."
@@ -17619,7 +17619,7 @@ msgstr "Bu tunere atanacak User Band frekansını seçin. Bu, SCR anahtarının 
 msgid "Select the Yes / True response"
 msgstr "Evet / Doğru yanıtını seçin"
 
-msgid "Select the access mode for the automatically exported samba shares."
+msgid "Select the mode of access, Read/Write or Read Only, applied to all automatically exported Samba shares."
 msgstr "Otomatik olarak dışa aktarılan Samba paylaşımları için erişim modunu seçin."
 
 #, python-format
@@ -21007,13 +21007,13 @@ msgid "TV button mode"
 msgstr "TV tuşu modu"
 
 msgid "TV input and receiver wakeup"
-msgstr "TV girişi ve alıcının başlatılması"
+msgstr "TV Girişi ve Alıcının Başlatılması"
 
 msgid "TV physical address report"
 msgstr "TV fiziksel adres raporu"
 
 msgid "TV power"
-msgstr "TV'nin güç kaynağı"
+msgstr "TV Gücü"
 
 msgid "TXT PID"
 msgstr "TXT PID"
@@ -22247,7 +22247,7 @@ msgid "Timezone"
 msgstr "Zaman dilimi"
 
 msgid "Timing and diagnostics"
-msgstr "Zamanlama ve teşhis"
+msgstr "Zamanlama ve Teşhis"
 
 msgid "Timor-Leste / East Timor"
 msgstr "Doğu Timor / Doğu Timor"
@@ -23892,7 +23892,7 @@ msgid "Wake up to standby"
 msgstr "Bekleme moduna geçmek için uyandır"
 
 msgid "Wake up your AV Receiver or Soundbar from Standby"
-msgstr "AV Alıcınızı veya Soundbar'ınızı Bekleme Modundan çıkarın"
+msgstr "AV alıcınızı veya Soundbarı bekleme modundan çıkarın"
 
 msgid "Wallis and Futuna"
 msgstr "Wallis ve Futuna"

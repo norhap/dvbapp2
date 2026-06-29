@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: OpenATV Italian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-22 11:12+0000\n"
-"PO-Revision-Date: 2026-06-23 09:04+0000\n"
+"PO-Revision-Date: 2026-06-24 14:09+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/it/>\n"
 "Language: it\n"
@@ -1960,7 +1960,7 @@ msgid "Add legacy LEFT/RIGHT actions"
 msgstr "Aggiungi azioni SIN/DES compatibili"
 
 msgid "Add slots"
-msgstr "Aggiungi più slot"
+msgstr "Aggiungi slot"
 
 msgid "Add new CCcam line"
 msgstr "Aggiungi nuova linea CCcam"
@@ -2482,7 +2482,7 @@ msgid "Are you sure you want to delete this?"
 msgstr "Sei sicuro di voler eliminare questo?"
 
 msgid "Disable Chkroot Multiboot?"
-msgstr "Sei sicuro di voler disabilitare Chkroot Multiboot?"
+msgstr "Disabilitare Chkroot Multiboot?"
 
 msgid "Are you sure you want to exit this wizard?"
 msgstr "Sei sicuro di voler uscire dalla procedura guidata?"
@@ -4124,7 +4124,7 @@ msgstr "Scegli il nome del file che contiene i dati EPG quando %s %s verrà spen
 msgid "Choose the option to correct invalid EPG data."
 msgstr "Scegli l'opzione per correggere i dati EPG non validi."
 
-msgid "Choose the skin to be used for the GUI interface. Press 'GREEN' to activate the skin."
+msgid "Choose the skin to be used for the graphical user interface (GUI). Press 'GREEN' to activate the skin."
 msgstr "Scegli la skin da usare per l'interfaccia grafica. Premi VERDE per attivare la skin."
 
 msgid "Choose the skin to be used for the LCD/front panel interface. Press 'GREEN' to activate the skin."
@@ -8257,8 +8257,8 @@ msgstr "Isole Falkland (Malvine)"
 msgid "Fallback API did not return a valid result."
 msgstr "L'API di fallback non ha restituito un risultato valido."
 
-msgid "Fallback Font *"
-msgstr "Carattere di fallback *"
+msgid "Fallback Font"
+msgstr "Carattere di fallback"
 
 msgid "Fallback Remote Receiver Settings"
 msgstr "Configurazione ricevitore remoto fallback"
@@ -8854,8 +8854,8 @@ msgstr "Categoria del registro di debug di GStreamer *"
 msgid "GStreamer debug log level *"
 msgstr "Livello del registro di debug di GStreamer *"
 
-msgid "GUI Skin *"
-msgstr "Skin GUI *"
+msgid "GUI Skin"
+msgstr "Skin GUI"
 
 msgid "Gabon"
 msgstr "Gabon"
@@ -10530,8 +10530,8 @@ msgstr "Connessione LAN"
 msgid "LCD scroll speed"
 msgstr "Velocità scorrimento LCD"
 
-msgid "LCD/Front panel *"
-msgstr "LCD/Pannello frontale *"
+msgid "LCD/Front panel"
+msgstr "LCD/Pannello frontale"
 
 msgid "LCN Scanner"
 msgstr "Scanner LCN"
@@ -16222,7 +16222,7 @@ msgstr "Seleziona 'Sì' se vuoi riattivare la TV per l'avvio del timer di accens
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "Seleziona 'Sì' per mantenere la barra informazioni visualizzata, senza timeout, mentre la riproduzione multimediale è in pausa."
 
-msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
+msgid "When enabled, allow each storage device detected to be automatically exported as a Samba share."
 msgstr "Seleziona 'Sì' per consentire a ciascun dispositivo di archiviazione rilevato di essere automaticamente esportato come condivisione samba."
 
 msgid "Select 'Yes' to allow the VPS to adjust recording timers based on broadcast Program Delivery Control (PDC) data. For this to work the service must provide reliable event PDC data."
@@ -16832,7 +16832,7 @@ msgstr "Seleziona frequenza della banda utente da assegnare a questo tuner. Ques
 msgid "Select the Yes / True response"
 msgstr "Seleziona risposta Sì/Vero"
 
-msgid "Select the access mode for the automatically exported samba shares."
+msgid "Select the mode of access, Read/Write or Read Only, applied to all automatically exported Samba shares."
 msgstr "Seleziona modalità di accesso per le condivisioni samba esportate automaticamente."
 
 #, python-format

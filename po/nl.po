@@ -4136,7 +4136,7 @@ msgstr "Kies de naam van het bestand waarin de EPG-data moet worden opgeslagen w
 msgid "Choose the option to correct invalid EPG data."
 msgstr "Kies de optie om ongeldige EPG-gegevens te corrigeren."
 
-msgid "Choose the skin to be used for the GUI interface. Press 'GREEN' to activate the skin."
+msgid "Choose the skin to be used for the graphical user interface (GUI). Press 'GREEN' to activate the skin."
 msgstr "Kies de skin voor de gebruikersinterface (GUI) en druk op de GROENE knop om die te activeren."
 
 msgid "Choose the skin to be used for the LCD/front panel interface. Press 'GREEN' to activate the skin."
@@ -8402,8 +8402,8 @@ msgstr "Falkland Eilanden (Malvinas)"
 msgid "Fallback API did not return a valid result."
 msgstr "De Fallback-API is niet geldig."
 
-msgid "Fallback Font *"
-msgstr "Reserve lettertype *"
+msgid "Fallback Font"
+msgstr "Reserve lettertype"
 
 msgid "Fallback Remote Receiver Settings"
 msgstr "Fallback tuner instellingen"
@@ -8999,8 +8999,8 @@ msgstr "GStreamer debug log categorie *"
 msgid "GStreamer debug log level *"
 msgstr "GStreamer debug log niveau *"
 
-msgid "GUI Skin *"
-msgstr "GUI skin *"
+msgid "GUI Skin"
+msgstr "GUI skin"
 
 msgid "Gabon"
 msgstr "Gabon"
@@ -10682,8 +10682,8 @@ msgstr "LAN-verbinding"
 msgid "LCD scroll speed"
 msgstr "Display scroll snelheid"
 
-msgid "LCD/Front panel *"
-msgstr "Displayskin *"
+msgid "LCD/Front panel"
+msgstr "Displayskin"
 
 msgid "LCN Scanner"
 msgstr "LCN Scanner"
@@ -16386,7 +16386,7 @@ msgstr "Kies 'Ja' wanneer de TV door een PowerTimer moet worden ingeschakeld."
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "Bij 'ja' zal de informatiebalk continu worden getoond wanneer het afspelen is gepauzeerd."
 
-msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
+msgid "When enabled, allow each storage device detected to be automatically exported as a Samba share."
 msgstr "Selecteer 'Ja' om alle opslagmedia die wordt gevonden automatisch als Samba share in te stellen."
 
 msgid "Select 'Yes' to allow the VPS to adjust recording timers based on broadcast Program Delivery Control (PDC) data. For this to work the service must provide reliable event PDC data."
@@ -17002,7 +17002,7 @@ msgstr "Selecteer het User Band frequentie dat aan deze tuner wordt toegewezen. 
 msgid "Select the Yes / True response"
 msgstr "Selecteer het juiste antwoord"
 
-msgid "Select the access mode for the automatically exported samba shares."
+msgid "Select the mode of access, Read/Write or Read Only, applied to all automatically exported Samba shares."
 msgstr "De toegangsmodus voor de automatisch geëxporteerde Samba shares selecteren."
 
 #, python-format
@@ -22578,7 +22578,7 @@ msgid "Use time jumps for fast forward/backward"
 msgstr "Gebruik tijdssprongen voor snel vooruit of terug spoelen ( << / >> )"
 
 msgid "Use time shift SeekBar while time shifting"
-msgstr "Het gebruik van de zoekbalk tijdens Timeshift toestaan *"
+msgstr "Het gebruik van de zoekbalk tijdens Timeshift toestaan"
 
 msgid "Use viewer for unknown files"
 msgstr "De Viewer gebruiken voor onbekende bestanden"
