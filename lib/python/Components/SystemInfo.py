@@ -3,8 +3,8 @@ from hashlib import md5
 from os.path import exists, isfile, join
 from subprocess import PIPE, Popen
 
-from enigma import eDBoxLCD, eDVBCIInterfaces, eDVBCSAEngine, eDVBResourceManager, eGetEnigmaDebugLvl, getE2Rev, getOARev, Misc_Options
-from Tools.Directories import fileCheck, fileExists, fileHas, fileReadLine, fileReadLines, isPluginInstalled, pathExists, resolveFilename, SCOPE_LIBDIR, SCOPE_SKINS
+from enigma import Misc_Options, eDBoxLCD, eDVBCIInterfaces, eDVBCSAEngine, eDVBResourceManager, eGetEnigmaDebugLvl, getE2Rev, getOARev
+from Tools.Directories import SCOPE_LIBDIR, SCOPE_SKINS, fileCheck, fileExists, fileHas, fileReadLine, fileReadLines, isPluginInstalled, pathExists, resolveFilename
 from Tools.MultiBoot import MultiBoot
 
 MODULE_NAME = __name__.split(".")[-1]

@@ -9,7 +9,7 @@ from enigma import BT_ALPHABLEND, BT_ALPHATEST, BT_HALIGN_CENTER, BT_HALIGN_LEFT
 from Components.config import ConfigEnableDisable, ConfigSelection, ConfigSubsection, ConfigText, config
 from Components.SystemInfo import BoxInfo
 from Components.Sources.Source import ObsoleteSource
-from Tools.Directories import SCOPE_LCDSKIN, SCOPE_GUISKIN, SCOPE_FONTS, SCOPE_SKINS, pathExists, resolveFilename, fileReadXML, isPluginInstalled
+from Tools.Directories import SCOPE_LCDSKIN, SCOPE_GUISKIN, SCOPE_FONTS, SCOPE_SKINS, pathExists, resolveFilename, fileReadXML, clearResolveLists, isPluginInstalled
 from Tools.Import import my_import
 from Tools.LoadPixmap import LoadPixmap
 
@@ -107,7 +107,7 @@ runCallbacks = False
 # E.g. "MySkin/skin_display.xml"
 #
 def InitSkins():
-	global currentPrimarySkin, currentDisplaySkin, resolutions
+	global currentPrimarySkin, currentDisplaySkin
 	# #################################################################################################
 	if isfile("/etc/.restore_skins"):
 		unlink("/etc/.restore_skins")
@@ -238,26 +238,33 @@ def loadSkin(filename, replace = False, scope=SCOPE_SKINS, desktop=getDesktop(GU
 
 
 def reloadSkins():
-	global colors, domScreens, fonts, menus, parameters, setups, switchPixmap
 	domScreens.clear()
 	colors.clear()
-	colors = {
+	colors.update({
 		"key_back": gRGB(0x00313131),
 		"key_blue": gRGB(0x0018188B),
 		"key_green": gRGB(0x001F771F),
 		"key_red": gRGB(0x009F1313),
 		"key_text": gRGB(0x00FFFFFF),
 		"key_yellow": gRGB(0x00A08500)
-	}
+	})
 	fonts.clear()
-	fonts = {
+	fonts.update({
 		"Body": ("Regular", 18, 22, 16),
 		"ChoiceList": ("Regular", 20, 24, 18)
-	}
+	})
 	menus.clear()
+	screens.clear()
 	parameters.clear()
 	setups.clear()
 	switchPixmap.clear()
+	windowStyles.clear()
+	scrollLabelStyle.clear()
+	subtitleFonts.clear()
+	constantWidgets.clear()
+	layouts.clear()
+	variables.clear()
+	clearResolveLists()
 	InitSkins()
 
 
@@ -500,28 +507,19 @@ def parseFont(value, scale=((1, 1), (1, 1))):
 
 
 def parseFontScale(value, scale=((1, 1), (1, 1))):
-	if ";" in value:
-		scaleType, size = value.split(";")
-		try:
-			size = int(size)
-		except ValueError:
-			val = size.replace("f", f"{getSkinFactor()}")
-			try:
-				size = int(eval(val))
-			except Exception as err:
-				print(f"[Skin] Error ({type(err).__name__} - {err}): Font scale size in '{value}', evaluated to '{val}', can't be processed!")
-				size = None
-		if scaleType not in ("size", "width"):
-			print(f"[Skin] Error: Font scale size must be in 'size/width', value:'{value}', can't be processed!")
-			size = None
-			scaleType = 0
-		if size:
-			size = int(size * scale[1][0] / scale[1][1])
-			scaleType = 1 if scaleType == "size" else 2
-	else:
-		scaleType = 0
-		size = None
-	return scaleType, size
+    scaleType, *size = value.split(";")
+    try:
+        size = int(int(size[0] if size else -4) * scale[1][0] / scale[1][1])
+    except ValueError as err:
+        print(f"[Skin] Error ({type(err).__name__} - {err}): Font scale size in '{value}' is '{size}' and is invalid!")
+        size = 0
+    if scaleType in ("size", "width"):
+        scaleType = 1 if scaleType == "size" else 2
+    else:
+        print(f"[Skin] Error: Font scale must be 'size' or 'width' not '{scaleType}'!")
+        size = 0
+        scaleType = 0
+    return scaleType, size
 
 
 def parseGradient(value):
@@ -1458,7 +1456,6 @@ def reloadWindowStyles():
 def loadSingleSkinData(desktop, screenID, domSkin, pathSkin, scope=SCOPE_GUISKIN):
 	"""Loads skin data like colors, windowstyle etc."""
 	assert domSkin.tag == "skin", "root element in skin must be 'skin'!"
-	global colors, fonts, menus, parameters, setups, switchPixmap, resolutions, scrollLabelStyle, subtitleFonts
 	for tag in domSkin.findall("output"):
 		scrnID = parseInteger(tag.attrib.get("id", GUI_SKIN_ID), GUI_SKIN_ID)
 		#### OPENSPA [morser] Update skin.py for old skins compability ##########
@@ -1562,31 +1559,40 @@ def loadSingleSkinData(desktop, screenID, domSkin, pathSkin, scope=SCOPE_GUISKIN
 				skinError(f"Tag 'parameter' needs a name and value, got name='{name}' and size='{value}'")
 	for tag in domSkin.findall("screens"):
 		for screen in tag.findall("screen"):
-			key = screen.attrib.get("key")
 			image = screen.attrib.get("image")
-			if key and image is not None:
-				screens[key] = image
-				# print(f"[Skin] DEBUG: Screen key='{key}', image='{image}'.")
+			key = screen.attrib.get("key", "")
+			keys = screen.attrib.get("keys", "")
+			if image is not None and (key or keys):
+				keys = [x.strip() for x in keys.split(",")] if keys else [key]
+				for key in keys:
+					screens[key] = image
+					# print(f"[Skin] DEBUG: Screen key='{key}', image='{image}'.")
 			else:
-				skinError(f"Tag 'screen' needs key and image, got key='{key}' and image='{image}'")
+				skinError(f"Tag 'screen' needs key or keys and image, got key='{key}' keys='{keys}' and image='{image}'")
 	for tag in domSkin.findall("menus"):
 		for menu in tag.findall("menu"):
-			key = menu.attrib.get("key")
 			image = menu.attrib.get("image")
-			if key and image is not None:
-				menus[key] = image
-				# print(f"[Skin] DEBUG: Menu key='{key}', image='{image}'.")
+			key = menu.attrib.get("key", "")
+			keys = menu.attrib.get("keys", "")
+			if image is not None and (key or keys):
+				keys = [x.strip() for x in keys.split(",")] if keys else [key]
+				for key in keys:
+					menus[key] = image
+					# print(f"[Skin] DEBUG: Menu key='{key}', image='{image}'.")
 			else:
-				skinError(f"Tag 'menu' needs key and image, got key='{key}' and image='{image}'")
+				skinError(f"Tag 'menu' needs key or keys and image, got key='{key}' keys='{keys}' and image='{image}'")
 	for tag in domSkin.findall("setups"):
 		for setup in tag.findall("setup"):
-			key = setup.attrib.get("key")
 			image = setup.attrib.get("image")
-			if key and image is not None:
-				setups[key] = image
-				# print(f"[Skin] DEBUG: Setup key='{key}', image='{image}'.")
+			key = setup.attrib.get("key", "")
+			keys = setup.attrib.get("keys", "")
+			if image is not None and (key or keys):
+				keys = [x.strip() for x in keys.split(",")] if keys else [key]
+				for key in keys:
+					setups[key] = image
+					# print(f"[Skin] DEBUG: Setup key='{key}', image='{image}'.")
 			else:
-				skinError(f"Tag 'setup' needs key and image, got key='{key}' and image='{image}'")
+				skinError(f"Tag 'setup' needs key or keys and image, got key='{key}' keys='{keys}' and image='{image}'")
 	for tag in domSkin.findall("constant-widgets"):
 		for constant_widget in tag.findall("constant-widget"):
 			name = constant_widget.attrib.get("name")
