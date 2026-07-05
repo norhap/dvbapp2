@@ -453,6 +453,7 @@ BoxInfo.setItem("minidlna", exists("/etc/init.d/minidlna"))
 BoxInfo.setItem("ushare", exists("/etc/init.d/ushare"))
 BoxInfo.setItem("udpxy", exists("/etc/init.d/udpxy"))
 BoxInfo.setItem("xupnpd", exists("/etc/init.d/xupnpd"))
+BoxInfo.setItem("nfsserver", exists("/etc/init.d/nfsserver"))
 BoxInfo.setItem("samba", exists("/etc/init.d/samba"))
 BoxInfo.setItem("zerotier", exists("/etc/init.d/zerotier"))
 

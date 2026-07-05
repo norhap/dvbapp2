@@ -61,6 +61,7 @@ colors = {  # Dictionary of skin color names.
 	"key_text": gRGB(0x00FFFFFF),
 	"key_yellow": gRGB(0x00A08500)
 }
+gradients = {}  # Dictionary of skin color names whose value is a gradient spec.
 fonts = {  # Dictionary of predefined and skin defined font aliases.
 	"Body": ("Regular", 18, 22, 16),
 	"ChoiceList": ("Regular", 20, 24, 18)
@@ -248,6 +249,7 @@ def reloadSkins():
 		"key_text": gRGB(0x00FFFFFF),
 		"key_yellow": gRGB(0x00A08500)
 	})
+	gradients.clear()
 	fonts.clear()
 	fonts.update({
 		"Body": ("Regular", 18, 22, 16),
@@ -532,6 +534,7 @@ def parseGradient(value):
 			isColor = False
 		return isColor
 
+	value = gradients.get(value, value)
 	data = [x.strip() for x in value.split(",")]
 	gradientColors = [gRGB(0x00000000), gRGB(0x00FFFFFF), gRGB(0x00FFFFFF)]  # Start color, center color, end color.
 	for index, color in enumerate(data):
@@ -1025,7 +1028,7 @@ class AttributeParser:
 		pass
 
 	def backgroundColor(self, value):
-		if "," in value:
+		if "," in value or value in gradients:
 			self.guiObject.setBackgroundGradient(*parseGradient(value))
 		else:
 			self.guiObject.setBackgroundColor(parseColor(value, 0x00000000))
@@ -1041,7 +1044,7 @@ class AttributeParser:
 		attribDeprecationWarning("backgroundColorRows", "backgroundColorEven")
 
 	def backgroundColorSelected(self, value):
-		if "," in value:
+		if "," in value or value in gradients:
 			self.guiObject.setBackgroundGradientSelected(*parseGradient(value))
 		else:
 			self.guiObject.setBackgroundColorSelected(parseColor(value, 0x00000000))
@@ -1495,7 +1498,10 @@ def loadSingleSkinData(desktop, screenID, domSkin, pathSkin, scope=SCOPE_GUISKIN
 			name = color.attrib.get("name")
 			color = color.attrib.get("value")
 			if name and color:
-				colors[name] = parseColor(color, 0x00FFFFFF)
+				if "," in color:
+					gradients[name] = color
+				else:
+					colors[name] = parseColor(color, 0x00FFFFFF)
 			else:
 				skinError(f"Tag 'color' needs a name and color, got name='{name}' and color='{color}'")
 	#OPENSPA [mpiero] regularHD compatibility check resolution and RegularHD font exist
@@ -2166,7 +2172,19 @@ class TemplateParser:
 		attributes = {"type": node.tag}
 		for attrib, value in skinAttributes:
 			attributes[attrib] = value
-		attributes["_flags"] = horizontalAlignments.get(attributes.get("horizontalAlignment"), 1) + verticalAlignments.get(attributes.get("verticalAlignment"), 0) + wraps.get(attributes.get("wrap"), 0)
+
+		flags = 0
+		if attributes["type"] == "text":
+			attributesFlags = attributes.get("flags", "")
+			for attributesflag in attributesFlags.split(","):
+				if attributesflag == "blend":
+					flags += 256  # RT_BLEND
+				elif attributesflag == "underline":
+					flags += 512  # RT_UNDERLINE
+				elif attributesflag == "scroll":
+					flags += 1024  # RT_SCROLL
+
+		attributes["_flags"] = horizontalAlignments.get(attributes.get("horizontalAlignment"), 1) + verticalAlignments.get(attributes.get("verticalAlignment"), 0) + wraps.get(attributes.get("wrap"), 0) + flags
 		if attributes["type"] == "pixmap":
 			attributes["pixmapType"] = pixmapTypes.get(attributes.get("alpha", ""), eListboxPythonMultiContent.TYPE_PIXMAP)
 			attributes["pixmapFlags"] = parseScale(attributes.get("scale", "off"))
@@ -2440,11 +2458,21 @@ def readSkin(screen, skin, names, desktop):
 					if isinstance(element, converterClass):  # and element.converter_arguments == "widgetTemplates":
 						connection = element
 				if connection is None:
+					itemHeight = int(widget.attrib.get("itemHeight", 0))
+					itemWidth = int(widget.attrib.get("itemWidth", 0))
+					if not itemWidth or not itemHeight:
+						savedState = (context.x, context.y, context.w, context.h)
+						try:
+							_, widgetSize = context.parse(widget.attrib.get("position"), widget.attrib.get("size"), None)
+						finally:
+							context.x, context.y, context.w, context.h = savedState
+						itemWidth = itemWidth or widgetSize[0]
+						itemHeight = itemHeight or widgetSize[1]
 					args = {
 						"scale": context.scale,
 						"dom": widgetTemplates,
-						"itemHeight": int(widget.attrib.get("itemHeight", 0)),
-						"itemWidth": int(widget.attrib.get("itemWidth", 0))
+						"itemHeight": itemHeight,
+						"itemWidth": itemWidth
 					}
 					connection = converterClass(args)
 					connection.connect(source)
