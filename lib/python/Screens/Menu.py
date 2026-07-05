@@ -55,9 +55,9 @@ def menuDom():
 	# Read the menu.
 	#### OPENSPA [morser] if spazemenu, read openspa menu
 	if isPluginInstalled("spazeMenu"):
-		menuFile = open(resolveFilename(SCOPE_SKINS, 'menuspa.xml'))
+		menuFile = resolveFilename(SCOPE_SKINS, 'menuspa.xml')
 	else:
-		menuFile = open(resolveFilename(SCOPE_SKINS, 'menu.xml'))
+		menuFile = resolveFilename(SCOPE_SKINS, 'menu.xml')
 	try:
 		modTime = getmtime(menuFile)
 	except OSError:
