@@ -4500,6 +4500,9 @@ msgstr "Elige la skin que se utilizará para la interfaz GUI. Pulsa \"VERDE\" pa
 msgid "Choose the skin to be used for the LCD/front panel interface. Press 'GREEN' to activate the skin."
 msgstr "Elija la apariencia que se usará para la interfaz. Pulse \"VERDE\" para activar la skin."
 
+msgid "Choose the skin to be used for the graphical user interface (GUI). Press 'GREEN' to activate the skin."
+msgstr "Seleccione la skin que se utilizará para la interfaz gráfica de usuario (GUI). Pulse 'VERDE' para activar la skin."
+
 msgid "Choose the style/order in which items are displayed in help windows."
 msgstr ""
 "Elegir el estilo/orden en el que se muestran los elementos en las ventanas "
@@ -6718,6 +6721,9 @@ msgstr "Eliminar la imagen seleccionada almacenada localmente"
 #, python-format
 msgid "Delete these %d directories/files?"
 msgstr "¿Eliminar las carpeta/archivos %d?"
+
+msgid "Delete this slot?"
+msgstr "¿Eliminar este slot?"
 
 msgid "Delete this tag"
 msgstr "Eliminar esta etiqueta"
@@ -11591,11 +11597,26 @@ msgstr "Selección de entrada QuickSelect estilo LCN"
 msgid "LED Deep Standby"
 msgstr "LED en apagado"
 
+msgid "LED Deep Standby color"
+msgstr "Color del LED en espera profundo"
+
 msgid "LED Normal"
 msgstr "LED normal"
 
+msgid "LED Running brightness"
+msgstr "Brillo del LED en funcionamiento"
+
+msgid "LED Running color"
+msgstr "Color del LED en funcionamiento"
+
 msgid "LED Standby"
 msgstr "LED en espera"
+
+msgid "LED Standby brightness"
+msgstr "Brillo del LED en modo reposo"
+
+msgid "LED Standby color"
+msgstr "Color del LED en modo reposo"
 
 msgid "LED brightness during Deep Standby."
 msgstr "Brillo del LED durante el apagado."
@@ -18499,6 +18520,12 @@ msgstr "Seleccione la acción para '%s'"
 msgid "Select the action to perform when the timer ends."
 msgstr "Seleccione la acción a realizar cuando el temporizador termine."
 
+msgid "Select the action to take when the EnergySaver timer activates."
+msgstr "Seleccione la acción que se realizará cuando se active el temporizador de ahorro de energía."
+
+msgid "Select the action to take when the SleepTimer activates."
+msgstr "Seleccione la acción que se realizará cuando se active el temporizador de suspensión."
+
 msgid "Select the AI-Powered Translation target language."
 msgstr "Seleccione el idioma de destino de traducción impulsada por IA."
 
@@ -18510,6 +18537,12 @@ msgstr ""
 "las pantallas de ayuda. 'Deshabilitado' desactiva la animación para que los "
 "indicadores salten entre los botones."
 
+msgid "Select the brightness of the front panel LED when the receiver is Running."
+msgstr "Seleccione el brillo del LED del panel frontal cuando el receptor esté en funcionamiento."
+
+msgid "Select the brightness of the front panel LED when the receiver is in Standby."
+msgstr "Seleccione el brillo del LED del panel frontal cuando el receptor esté en modo de espera."
+
 msgid "Select the channel from which to record:"
 msgstr "Seleccione el canal desde el que desea grabar:"
 
@@ -18519,6 +18552,15 @@ msgstr ""
 
 msgid "Select the character or action under the keyboard cursor"
 msgstr "Seleccione el carácter o la acción bajo el cursor del teclado"
+
+msgid "Select the color of the front panel power LED when the receiver is Running. This option also allows the LED to be deactivated/turned off."
+msgstr "Seleccione el color del LED de encendido del panel frontal cuando el receptor esté en funcionamiento. Esta opción también permite desactivar/apagar el LED."
+
+msgid "Select the color of the front panel power LED when the receiver is in Deep Standby."
+msgstr "Seleccione el color del LED de encendido del panel frontal cuando el receptor esté en modo de espera profunda."
+
+msgid "Select the color of the front panel power LED when the receiver is in Standby. This option also allows the LED to be deactivated/turned off."
+msgstr "Seleccione el color del LED de encendido del panel frontal cuando el receptor esté en modo de espera. Esta opción también permite desactivar/apagar el LED."
 
 msgid "Select the color to be used for the AI-Powered Translation text."
 msgstr "Seleccione el color que se utilizará para el texto de traducción impulsada por IA."
