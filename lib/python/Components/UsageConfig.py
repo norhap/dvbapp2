@@ -2566,6 +2566,32 @@ def InitUsageConfig():
 		("slow", _("Slow"))
 	])
 	config.plugins.softwaremanager.epgcache = ConfigYesNo(default=False)
+
+	# Picon
+	config.picon = ConfigSubsection()
+	piconPaths = ["/usr/share/enigma2/picon/", "/picon"]
+	for part in harddiskmanager.getMountedPartitions():
+		piconPath = pathjoin(part.mountpoint, "picon")
+		if exists(piconPath):
+			piconPaths.append(piconPath)
+
+	config.picon.allowedPaths = ConfigLocations(default=piconPaths)
+	config.picon.mode = ConfigSelection(default=0, choices=[
+		(0, _("Legacy")),
+		(1, _("Picon set mode"))
+	])
+
+	choices = [(x, _("Set Path %s") % (x + 1)) for x in range(5)]
+	config.picon.infobar = ConfigSelection(default=0, choices=choices)
+	config.picon.channelselection = ConfigSelection(default=0, choices=choices)
+	config.picon.display = ConfigSelection(default=0, choices=choices)
+	config.picon.openwebif = ConfigSelection(default=0, choices=choices)
+
+	for index in range(5):
+		section = ConfigSubsection()
+		section.path = ConfigText(default="/usr/share/enigma2/picon" if index == 0 else "", fixed_size=False)
+		setattr(config.picon, f"set{index}", section)
+
 	#
 	# Time shift settings.
 	#
