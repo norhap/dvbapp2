@@ -306,6 +306,7 @@ class PluginBrowser(Screen, NumericalTextInput, ProtectedScreen):
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "MenuActions"], {
 			"ok": (self.keySelect, _("Start the highlighted plugin")),
 			"cancel": (self.keyCancel, _("Close the Plugin Browser screen")),
+			"close": (self.keyCloseRecursive, _("Close the screen and exit all menus")),
 			"menu": (self.keyMenu, _("Open the Plugin Browser settings screen"))
 		}, prio=0, description=_("Plugin Browser Actions"))
 		self["pluginRemoveActions"] = HelpableActionMap(self, ["ColorActions"], {
@@ -500,6 +501,11 @@ class PluginBrowser(Screen, NumericalTextInput, ProtectedScreen):
 			self.toggleSortMode()
 		self.close()
 
+	def keyCloseRecursive(self, *args):
+		if self.sortMode:
+			self.toggleSortMode()
+		self.close(True)
+
 	def toggleSortMode(self):
 		if self.sortMode:
 			self.sortMode = False
@@ -542,7 +548,12 @@ class PluginBrowser(Screen, NumericalTextInput, ProtectedScreen):
 						self.currentList.master.master.instance.clearForegroundColorSelected()
 				self.currentList.updateList(self.pluginList)
 			else:
-				currentPlugin(session=self.session)
+				if currentPlugin.closeMode == PluginDescriptor.DO_CLOSE:
+					currentPlugin(session=self.session, onClose=self.close)
+				elif currentPlugin.closeMode == PluginDescriptor.DO_CLOSE_RECURSIVE:
+					currentPlugin(session=self.session, onClose=self.keyCloseRecursive)
+				else:
+					currentPlugin(session=self.session)
 
 	def keyMenu(self):
 		def keyMenuCallback():
