@@ -335,21 +335,21 @@ class AutoDiseqc(ConfigListScreen, Screen):
 		self.simple_tone = simple_tone
 		self.simple_sat_change = simple_sat_change
 		self.found_sats = []
-		self.circular_setup = 0
-		if order == "all":
-			self.sat_frequencies = self.universal_central_sats_frequencies[:] + self.universal_east_sats_frequencies[:] + self.universal_west_sats_frequencies[:]
-			if nr_of_ports == 1:
-				self.sat_frequencies += self.circular_sats_frequencies[:]
-		elif order == "astra":
-			self.sat_frequencies = self.universal_central_sats_frequencies[:]
+		self.circular_setup = False
+		centralPositions = {130, 192, 235, 282}
+		eastPositions = centralPositions | {48, 90, 160}
+		westPositions = {3592, 3550, 3300}
+		allUniversal = list(self.sat_frequencies)
+		if order == "astra":
+			self.sat_frequencies = [sat for sat in allUniversal if sat[self.SAT_TABLE_ORBPOS] in centralPositions]
 		elif order == "east":
-			self.sat_frequencies = self.universal_central_sats_frequencies[:] + self.universal_east_sats_frequencies[:]
-			if nr_of_ports == 1:
-				self.sat_frequencies += self.circular_sats_frequencies[:]
+			self.sat_frequencies = [sat for sat in allUniversal if sat[self.SAT_TABLE_ORBPOS] in eastPositions]
 		elif order == "west":
-			self.sat_frequencies = self.universal_west_sats_frequencies[:]
+			self.sat_frequencies = [sat for sat in allUniversal if sat[self.SAT_TABLE_ORBPOS] in westPositions]
 		elif order == "circular":
-			self.sat_frequencies = self.circular_sats_frequencies[:]
+			self.sat_frequencies = list(self.circular_sat_frequencies)
+		else:
+			self.sat_frequencies = allUniversal + (list(self.circular_sat_frequencies) if self.nr_of_ports == 1 else [])
 		if not self.openFrontend():
 			self.oldref = self.session.nav.getCurrentlyPlayingServiceOrGroup()
 			self.session.nav.stopService()
@@ -484,7 +484,7 @@ class AutoDiseqc(ConfigListScreen, Screen):
 				config.Nims[self.feid].dvbs.diseqcMode.value = "diseqc_a_b"
 			else:
 				config.Nims[self.feid].dvbs.diseqcMode.value = "single"
-				if self.sat_frequencies[self.index][self.SAT_TABLE_ORBPOS] == 360 and not self.found_sats:
+				if self.sat_frequencies[self.index][self.SAT_TABLE_ORBPOS] in (360, 560) and not self.found_sats:
 					config.Nims[self.feid].dvbs.simpleDiSEqCSetCircularLNB.value = True
 					self.circular_setup = 1
 				if self.sat_frequencies[self.index][self.SAT_TABLE_ORBPOS] == 560 and not self.found_sats:
