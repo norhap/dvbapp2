@@ -24,8 +24,10 @@ from Screens.Processing import Processing
 from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Tools.Conversions import formatNetworkSpeed
-from Tools.Directories import SCOPE_SKINS, fileReadLine, fileReadLines, fileReadXML, fileWriteLines, resolveFilename
+from Tools.Directories import SCOPE_SKINS, fileReadLine, fileReadLines, fileReadXML, fileWriteLines, resolveFilename, fileExists
 from Tools.ServiceAction import ServiceAction
+from Screens.Standby import TryQuitMainloop
+from time import sleep
 
 MODULE_NAME = __name__.split(".")[-1]
 
