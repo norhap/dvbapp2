@@ -850,9 +850,9 @@ enigma.eProfileWrite("AutoRunPlugins")
 # Initialize autorun plugins and plugin menu entries.
 from Components.PluginComponent import plugins
 
-enigma.eProfileWrite("StartWizard")
+enigma.eProfileWrite("WizardStart")
 config.misc.rcused = ConfigInteger(default=1)
-from Screens.StartWizard import *
+from Screens.WizardStart import *
 from Tools.BoundFunction import boundFunction
 from Plugins.Plugin import PluginDescriptor
 
@@ -900,7 +900,6 @@ InitSkins()
 enigma.eProfileWrite("InitInputDevices")
 from Components.InputDevice import InitInputDevices
 InitInputDevices()
-import Components.InputHotplug
 
 enigma.eProfileWrite("InitAVSwitch")
 from Components.AVSwitch import InitAVSwitch, InitiVideomodeHotplug
@@ -944,8 +943,9 @@ if exists(config.usage.keymap_usermod.value):
 	loadKeymap(config.usage.keymap_usermod.value)
 
 enigma.eProfileWrite("InitNetwork")
-from Components.Network import InitNetwork
-InitNetwork()
+from Components.NetworkManager import discoveryManager, networkManager
+networkManager.startNetworkCheck()
+discoveryManager.start()  # one bounded SMB/NFS mDNS discovery pass per boot, auto-stops after DiscoveryManager.DEFAULT_RUN_MS
 
 enigma.eProfileWrite("InitLCD")
 from Components.Lcd import IconCheck, InitLcd
