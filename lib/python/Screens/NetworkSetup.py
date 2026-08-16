@@ -1893,7 +1893,7 @@ class DNSSettings(Setup):
 			fileWriteLines(tmpPath, newLines)
 			if exists(tmpPath):
 				rename(tmpPath, tomlPath)
-# #############################OpenSPA##########################################				
+# #############################OpenSPA##########################################
 from errno import ETIMEDOUT
 from ipaddress import ip_address
 from json import dumps, loads
@@ -1932,7 +1932,7 @@ from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Tools.Directories import SCOPE_SKINS, SCOPE_GUISKIN, SCOPE_PLUGINS, fileExists, fileReadLines, fileReadXML, fileWriteLine, fileWriteLines, resolveFilename
-from Tools.LoadPixmap import LoadPixmap				
+from Tools.LoadPixmap import LoadPixmap
 
 class NetworkBaseScreen(Screen):
 	def __init__(self, session, showLog=False):
