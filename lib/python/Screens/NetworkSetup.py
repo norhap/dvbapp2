@@ -1893,46 +1893,7 @@ class DNSSettings(Setup):
 			fileWriteLines(tmpPath, newLines)
 			if exists(tmpPath):
 				rename(tmpPath, tomlPath)
-# #############################OpenSPA##########################################
-from errno import ETIMEDOUT
-from ipaddress import ip_address
-from json import dumps, loads
-from glob import glob
-from os import rename, strerror, system
-from os.path import exists, islink
-from process import ProcessList
-from random import Random
-from time import sleep
-from urllib.request import Request, urlopen
 
-from enigma import eConsoleAppContainer, eTimer
-
-from Components.About import about
-from Components.ActionMap import HelpableActionMap, HelpableNumberActionMap
-from Components.config import ConfigIP, ConfigMacText, ConfigNumber, ConfigPassword, ConfigSelection, ConfigText, ConfigYesNo, NoSave, ReadOnly, config, getConfigListEntry
-from Components.ConfigList import ConfigListScreen
-from Components.Console import Console
-from Components.Label import Label, MultiColorLabel
-from Components.MenuList import MenuList
-from Components.Network import iNetwork
-from Components.Pixmap import Pixmap, MultiPixmap
-from Components.ScrollLabel import ScrollLabel
-from Components.SystemInfo import BoxInfo, getBoxDisplayName
-from Components.PluginComponent import plugins
-from Components.FileList import MultiFileSelectList
-from Components.Opkg import OpkgComponent
-from Components.Sources.Boolean import Boolean
-from Components.Sources.List import List
-from Components.Sources.StaticText import StaticText
-from Plugins.Plugin import PluginDescriptor
-from Screens.MessageBox import MessageBox
-from Screens.RestartNetwork import RestartNetworkNew
-from Screens.Processing import Processing
-from Screens.Screen import Screen
-from Screens.Setup import Setup
-from Screens.Standby import TryQuitMainloop
-from Tools.Directories import SCOPE_SKINS, SCOPE_GUISKIN, SCOPE_PLUGINS, fileExists, fileReadLines, fileReadXML, fileWriteLine, fileWriteLines, resolveFilename
-from Tools.LoadPixmap import LoadPixmap
 
 class NetworkBaseScreen(Screen):
 	def __init__(self, session, showLog=False):
