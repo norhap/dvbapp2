@@ -16,7 +16,7 @@ from Components.Label import Label
 from Components.NetworkManager import Adapter, Connection, Encryption, VpnInfo, WiFiConfig, networkManager, encryptionLabels, wpaCliBin
 from Components.Sources.List import List
 from Components.Sources.StaticText import StaticText
-from Components.SystemInfo import BoxInfo
+from Components.SystemInfo import BoxInfo, getBoxDisplayName
 from Screens.ChoiceBox import ChoiceBox
 from Screens.Information import InformationNetwork
 from Screens.MessageBox import MessageBox
