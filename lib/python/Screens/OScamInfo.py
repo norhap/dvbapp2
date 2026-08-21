@@ -593,6 +593,10 @@ class OSCamInfo(Screen, OSCamGlobals):
 		if config.oscaminfo.autoUpdate.value:
 			self.loop.start(config.oscaminfo.autoUpdate.value * 1000, False)
 
+	def _localAction(self, action):
+		sa = ServiceAction("softcam")
+		{"start": sa.start, "stop": sa.stop, "restart": sa.restart}[action](boundFunction(self._afterAction, action))
+
 	def _remoteAction(self, action):
 		def doAction():
 			webifok, api, url, signstatus, result = self.openWebIF(part=action)
