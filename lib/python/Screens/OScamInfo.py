@@ -28,6 +28,7 @@ from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Tools.BoundFunction import boundFunction
 from Components.Pixmap import Pixmap
+from Tools.ServiceAction import ServiceAction
 
 # GLOBALS
 MODULE_NAME = __name__.split(".")[-1]
@@ -608,9 +609,14 @@ class OSCamInfo(Screen, OSCamGlobals):
 	def msgboxCB(self, action, answer):
 		if answer:
 			self.loop.stop()
+			""" ATV Softcam
 			localAction = {"shutdown": "stop", "restart": "restart", "start": "start"}[action]
 			if self.isLocal:
-				self._remoteAction(action)
+				self._localAction(localAction)
+			else:
+			END OF BLOCK ATV Softcam
+			"""
+			self._remoteAction(action)
 
 	def _showActionError(self, result):
 		"""Show action error"""
