@@ -170,15 +170,9 @@ bool eDABDecoder::checkFireCode(const uint8_t *data, size_t length)
 	return crc16(0, data + 2, 9, 0x782f) == expected;
 }
 
-std::string eDABDecoder::decodeLabel(const uint8_t *data, size_t length)
+std::string eDABDecoder::decodeLabel(const uint8_t *data, size_t length, int charset)
 {
-	std::string label;
-	label.reserve(length);
-	for (size_t i = 0; i < length; ++i)
-	{
-		const unsigned char c = data[i];
-		label += (c >= 0x20 && c != 0x7f) ? static_cast<char>(c) : ' ';
-	}
+	std::string label = DABlinPAD::CharsetTools::ConvertTextToUTF8(data, length, charset, false, nullptr);
 	while (!label.empty() && label[label.size() - 1] == ' ')
 		label.resize(label.size() - 1);
 	return label;
@@ -334,6 +328,7 @@ size_t eDABDecoder::processPF(const uint8_t *data, size_t length)
 		collector.addressed = addressed;
 		collector.source = source;
 		collector.destination = destination;
+		collector.arrival = ++m_pf_arrival;
 		collector.fragments.resize(count);
 	}
 	if (collector.fragments[index].empty())
@@ -393,8 +388,18 @@ bool eDABDecoder::reconstructPF(uint16_t, PFCollection &collector, std::vector<u
 
 void eDABDecoder::trimPFCollectors()
 {
+	// Drop by age. begin() is the lowest sequence number, which is the newest
+	// collector right after the 16 bit sequence wraps.
 	while (m_pf_collectors.size() > 8)
-		m_pf_collectors.erase(m_pf_collectors.begin());
+	{
+		auto oldest = m_pf_collectors.begin();
+		for (auto entry = m_pf_collectors.begin(); entry != m_pf_collectors.end(); ++entry)
+		{
+			if (entry->second.arrival < oldest->second.arrival)
+				oldest = entry;
+		}
+		m_pf_collectors.erase(oldest);
+	}
 }
 
 void eDABDecoder::processTags(const uint8_t *data, size_t length)
@@ -451,6 +456,11 @@ void eDABDecoder::parseFIC(const uint8_t *data, size_t length)
 	++m_fic_frames;
 	for (size_t fib = 0; fib + 32 <= length; fib += 32)
 	{
+		if (!checkInvertedCRC(data + fib, 32))  // The last two bytes carry the FIB CRC.
+		{
+			++m_crc_errors;
+			continue;
+		}
 		size_t position = 0;
 		while (position < 30 && data[fib + position] != 0xff)
 		{
@@ -564,6 +574,7 @@ void eDABDecoder::parseFIG1(const uint8_t *data, size_t length)
 		return;
 	const int extension = data[0] & 7;
 	const bool otherEnsemble = data[0] & 8;
+	const int charset = data[0] >> 4;
 	if (otherEnsemble)
 		return;
 	if (extension == 0 && length >= 19)
@@ -571,7 +582,7 @@ void eDABDecoder::parseFIG1(const uint8_t *data, size_t length)
 		const uint16_t eid = read16(data + 1);
 		if (!m_ensemble_id || eid == m_ensemble_id)
 		{
-			const std::string label = decodeLabel(data + 3, 16);
+			const std::string label = decodeLabel(data + 3, 16, charset);
 			if (m_ensemble_label != label)
 			{
 				m_ensemble_label = label;
@@ -582,7 +593,7 @@ void eDABDecoder::parseFIG1(const uint8_t *data, size_t length)
 	else if (extension == 1 && length >= 21)
 	{
 		const uint16_t sid = read16(data + 1);
-		const std::string label = decodeLabel(data + 3, 16);
+		const std::string label = decodeLabel(data + 3, 16, charset);
 		if (m_services[sid].label != label)
 		{
 			m_services[sid].label = label;
@@ -592,7 +603,7 @@ void eDABDecoder::parseFIG1(const uint8_t *data, size_t length)
 	else if (extension == 5 && length >= 23)
 	{
 		const uint32_t sid = read32(data + 1);
-		const std::string label = decodeLabel(data + 5, 16);
+		const std::string label = decodeLabel(data + 5, 16, charset);
 		if (m_services[sid].label != label)
 		{
 			m_services[sid].label = label;

@@ -88,6 +88,7 @@ private:
 		uint16_t destination;
 		std::vector<std::vector<uint8_t> > fragments;
 		size_t received;
+		uint64_t arrival = 0;
 		PFCollection();
 	};
 
@@ -114,7 +115,7 @@ private:
 	static uint16_t crc16(uint16_t crc, const uint8_t *data, size_t length, uint16_t polynomial);
 	static bool checkInvertedCRC(const uint8_t *data, size_t length);
 	static bool checkFireCode(const uint8_t *data, size_t length);
-	static std::string decodeLabel(const uint8_t *data, size_t length);
+	static std::string decodeLabel(const uint8_t *data, size_t length, int charset);
 
 	uint32_t m_service_id;
 	uint16_t m_ensemble_id;
@@ -122,6 +123,7 @@ private:
 	ImageCallback m_image_callback;
 	DABlinPAD::PADDecoder m_pad_decoder;
 	std::map<uint16_t, PFCollection> m_pf_collectors;
+	uint64_t m_pf_arrival = 0;
 	std::map<int, Subchannel> m_subchannels;
 	std::map<uint32_t, Service> m_services;
 	std::string m_service_label;
