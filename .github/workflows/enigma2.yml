@@ -6,11 +6,11 @@ on:
 jobs:
   build:
     name: Build enigma2
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     strategy:
       matrix:
         gcc: [14]
-        python: ['3.13']
+        python: ['3.14']
     steps:
       - name: Install prerequisites
         run: |
@@ -40,9 +40,9 @@ jobs:
           sudo apt-get install libcurl4-openssl-dev
           sudo apt-get install mm-common
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python }}
 
