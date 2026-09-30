@@ -1910,6 +1910,7 @@ void eDVBChannel::frontendStateChanged(iDVBFrontend*fe)
 		ourstate = state_tuning;
 	} else if (state == iDVBFrontend::stateLostLock)
 	{
+		m_event(this, evtSignalLost);
 			/* on managed channels, we try to retune in order to re-acquire lock. */
 		fe->setData(eDVBFrontend::CUR_FREQ,0);
 		if (m_current_frontend_parameters)
