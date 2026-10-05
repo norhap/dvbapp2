@@ -423,15 +423,11 @@ eDVBVideo::eDVBVideo(eDVBDemux *demux, int dev, bool fcc_enable)
 		m_fd_demux = -1;
 	}
 
-#if defined(HAVE_FCC) // [norhap] fixme, This needs to be checked for issues stemming from UHD video with HAVE_FCC
-	eDebug("[eDVBVideo] FCC=%d", m_fcc_enable);
-#else
 	if (demux && m_dev == 0)
 	{
 		m_hdr_detector = new eHEVCHDRDetector(demux, sigc::mem_fun(*this, &eDVBVideo::hdr_gamma_detected));
-		eDebug("[eHEVCHDRDetector] attached to video decoder %d", m_dev);
+		eDebug("[eHEVCHDRDetector] attached to video decoder %d (FCC=%d)", m_dev, m_fcc_enable);
 	}
-#endif
 
 #ifndef DREAMNEXTGEN
 	if (m_fd >= 0)
