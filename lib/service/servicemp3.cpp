@@ -1077,9 +1077,6 @@ eServiceMP3::eServiceMP3(eServiceReference ref)
 	m_pgs_subtitle_parser = new ePGSSubtitleParser();
 	m_pgs_subtitle_parser->connectNewPage(sigc::mem_fun(*this, &eServiceMP3::newDVBSubtitlePage),
 										  m_new_pgs_subtitle_page_connection);
-#ifdef PASSTHROUGH_FIX
-	m_passthrough_fix_timer = eTimer::create(eApp);
-#endif
 	m_stream_tags = 0;
 	m_currentAudioStream = -1;
 	m_currentSubtitleStream = -1;
@@ -1143,9 +1140,6 @@ eServiceMP3::eServiceMP3(eServiceReference ref)
 	CONNECT(m_dvb_subtitle_sync_timer->timeout, eServiceMP3::pushDVBSubtitles);
 	CONNECT(m_pump.recv_msg, eServiceMP3::gstPoll);
 	CONNECT(m_nownext_timer->timeout, eServiceMP3::updateEpgCacheNowNext);
-#ifdef PASSTHROUGH_FIX
-	CONNECT(m_passthrough_fix_timer->timeout, eServiceMP3::forcePassthrough);
-#endif
 	m_aspect = m_width = m_height = m_framerate = m_progressive = m_gamma = -1;
 
 	m_state = stIdle;
@@ -1333,8 +1327,14 @@ eServiceMP3::eServiceMP3(eServiceReference ref)
 	if (strstr(filename, "://"))
 		m_sourceinfo.is_streaming = TRUE;
 	const int mediaHint = m_ref.getData(7) & DVB_I_MEDIA_MASK;
-	m_is_adaptive_stream = (!strncmp(filename, "http://", 7) || !strncmp(filename, "https://", 8))
-		&& (mediaHint == DVB_I_DASH || mediaHint == DVB_I_HLS);
+	const bool isHttp = !strncmp(filename, "http://", 7) || !strncmp(filename, "https://", 8);
+	m_is_adaptive_stream = isHttp && (mediaHint == DVB_I_DASH || mediaHint == DVB_I_HLS);
+#ifndef DREAMNEXTGEN
+	// Use caps discovery on DVB hardware, also for broadcast Internet links.
+	// The Dream-specific fixed DASH pipeline forces AVC instead of byte-stream
+	// and only exposes one audio track; it must not replace normal playbin here.
+	m_is_adaptive_stream = m_is_adaptive_stream || (isHttp && isDashUri(filename));
+#endif
 	if (m_is_adaptive_stream) {
 		m_sourceinfo.is_hls = mediaHint == DVB_I_HLS;
 		m_sourceinfo.is_audio = m_ref.getData(0) == 2;
@@ -1477,6 +1477,12 @@ eServiceMP3::eServiceMP3(eServiceReference ref)
 					g_object_set(dvb_audiosink, "volume", (gdouble)v / 100.0, NULL);
 				g_object_set(m_gst_playbin, "volume", (gdouble)1.0, NULL);
 			}
+		}
+		/* Follow eAudioDecoder to the Bluetooth sink (audio_source 2). */
+		if (dvb_audiosink) {
+			int port = 0;
+			CFile::parseInt(&port, "/sys/class/amhdmitx/amhdmitx0/audio_source");
+			g_object_set(dvb_audiosink, "device", port == 2 ? "dreambt" : "dreamhdmi", NULL);
 		}
 		/* dreamaudiosink and eAlsaOutput share the dmix slave on
 		 * dreamhdmi; only the first writer's bytes get forwarded. */
@@ -1637,15 +1643,6 @@ eServiceMP3::~eServiceMP3() {
 	m_new_dvb_subtitle_page_connection = 0;
 	m_new_pgs_subtitle_page_connection = nullptr;
 }
-
-#ifdef PASSTHROUGH_FIX
-void eServiceMP3::forcePassthrough() {
-	eTrace("[eServiceMP3] Setting 'passthrough' to force correct operation");
-	CFile::writeStr("/proc/stb/audio/ac3", "passthrough");
-	m_clear_buffers = true;
-	clearBuffers();
-}
-#endif
 
 /**
  * @brief Updates the EPG cache for the current and next events.
@@ -3088,10 +3085,6 @@ void eServiceMP3::applyAudioSelection() {
  * @param[in] force If true, forces the clearing of buffers even if not initially started.
  */
 void eServiceMP3::clearBuffers(bool force) {
-#ifdef PASSTHROUGH_FIX
-	if ((!m_initial_start || !m_clear_buffers) && !force)
-		return;
-#endif
 	bool validposition = false;
 	pts_t ppos = 0;
 	if (getPlayPosition(ppos) >= 0) {
