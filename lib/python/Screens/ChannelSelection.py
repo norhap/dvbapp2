@@ -354,7 +354,7 @@ class ChannelSelectionBase(Screen):
 			if exists(path_favourites):
 				with open(path_favourites, "r") as fr:
 					favourites_content = fr.read()
-				if "Favourites" in favourites_content:
+				if _("Favourites") not in favourites_content:
 					with open(path_favourites, "w") as fw:
 						fw.write(favourites_content.replace("Favourites", _("Favourites")))
 					eDVBDB.getInstance().reloadBouquets()
