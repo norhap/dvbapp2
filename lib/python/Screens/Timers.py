@@ -30,7 +30,7 @@ from Tools.Alternatives import GetWithAlternative
 from Tools.BoundFunction import boundFunction
 from Tools.Conversions import fuzzyDate, scaleNumber
 from Tools.Directories import SCOPE_GUISKIN, resolveFilename
-from Tools.FallbackTimer import FallbackTimerList, FallbackTimerDirs
+from Tools.FallbackTimer import FallbackTimerDirs, FallbackTimerList
 from Tools.LoadPixmap import LoadPixmap
 
 # Timer modes.
@@ -505,7 +505,7 @@ class TimerOverviewBase(Screen):
 		self["key_red"] = StaticText()
 		self["key_yellow"] = StaticText()
 		self["key_blue"] = StaticText()
-		self["description"] = Label("")
+		self["description"] = Label()
 		self["actions"] = HelpableActionMap(self, ["TimerActions", "NavigationActions"], {
 			"cancel": (self.keyCancel, _("Close the screen")),
 			"close": (self.keyClose, _("Close the screen and exit all menus")),
