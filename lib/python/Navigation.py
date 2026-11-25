@@ -18,11 +18,11 @@ from Components.SystemInfo import BoxInfo
 from Plugins.Plugin import PluginDescriptor
 from Screens.InfoBar import InfoBar, MoviePlayer
 from Screens.InfoBarGenerics import streamrelay
-from Screens.MessageBox import MessageBox
 import Screens.Standby
+from Screens.Toast import Toast
 from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileWriteLine
-from Tools.Notifications import AddPopup, AddNotification
+from Tools.Notifications import AddNotification
 from Tools.StbHardware import getFPWasTimerWakeup
 
 MODULE_NAME = __name__.split(".")[-1]
@@ -51,7 +51,6 @@ class Navigation:
 		self.indicatorRecordingsCount = None
 		self.anyRecordingsCount = None
 		self.realRecordingsCount = None
-		self.streamRetryOverride = False
 		self.pnav = pNavigation()
 		self.pnav.m_event.get().append(self.dispatchEvent)
 		self.pnav.m_record_event.get().append(self.dispatchRecordEvent)
@@ -329,14 +328,11 @@ class Navigation:
 		bar = InfoBar.instance
 		ref = self.currentlyPlayingServiceOrGroup
 		streamRef = self.hybridPlaybackService or ref
-		isOverride = self.streamRetryOverride  # OpenSPA [norhap] add flag indicator HTTP stream injected into the demux e.g. ExtEplayer3.
 		if (not bar or ServiceEventTracker.getActiveInfoBar() is not bar or Screens.Standby.inStandby
-				or (self.isCurrentServiceDVBI and not isOverride)
-				or self.isCurrentServiceStreamRelay
-				or not ref or ref.flags & eServiceReference.isGroup
-				or (not isOverride and streamRef.type != 4097)
-				or (not isOverride and not streamRef.getPath().lower().startswith(("http://", "https://")))
-				or bar.seekstate != bar.SEEK_STATE_PLAY):
+			or self.isCurrentServiceDVBI or self.isCurrentServiceStreamRelay
+			or not ref or ref.flags & eServiceReference.isGroup or streamRef.type != 4097
+			or not streamRef.getPath().lower().startswith(("http://", "https://"))
+			or bar.seekstate != bar.SEEK_STATE_PLAY):
 			return None
 		service = self.getCurrentService()
 		seek = service and service.seek()
@@ -539,13 +535,6 @@ class Navigation:
 					self.pnav.stopService()
 				else:
 					self.skipServiceReferenceReset = True
-					from enigma import eFCCServiceManager  # OpenSPA [norhap] Set FCC not enabled if fallback tuner is active.
-					if config.usage.remote_fallback_enabled.value:
-						eFCCServiceManager.getInstance().setFCCEnable(False)
-						self.serviceHook(playref)
-						return 1
-					else:
-						eFCCServiceManager.getInstance().setFCCEnable(True)
 				# The addon registers only verified equivalents. The native resolver
 				# has an empty map by default and performs no I/O on the zap path.
 				dvbiRef = dvbiTarget or getDVBIFallbackService(playref, dvbiFallback)
@@ -640,9 +629,7 @@ class Navigation:
 	def serviceHook(self, ref):
 		wrappererror = None
 		nref = ref
-		if config.usage.remote_fallback_enabled.value and BoxInfo.getItem("FCCactive"):
-			return AddPopup(_("Fallback tuner and FCC activated. Activate only one function."), type=MessageBox.TYPE_ERROR, timeout=10)
-		elif hasattr(nref, "getPath"):
+		if hasattr(nref, "getPath"):
 			for p in plugins.getPlugins(PluginDescriptor.WHERE_PLAYSERVICE):
 				(newurl, errormsg) = p(service=nref)
 				if errormsg:
@@ -652,7 +639,7 @@ class Navigation:
 					nref.setAlternativeUrl(newurl)
 					break
 			if wrappererror:
-				AddPopup(text=wrappererror, type=MessageBox.TYPE_ERROR, timeout=5, id="channelzapwrapper")
+				Toast.instance.showToast(text=wrappererror, toastType=Toast.TYPE_ERROR, timeout=5, replaceId="channelzapwrapper")
 		return nref, wrappererror
 
 	def getCurrentlyPlayingServiceReference(self):
